@@ -1,7 +1,7 @@
 # Tiny Tapeout project information
 project:
-  title:        ""      # Project title
-  author:       ""      # Your name
+  title:        "RF Playground"      # Project title
+  author:       "Emilian Miron"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  ""      # One line description of what your project does
   language:     "Analog" # other examples include Verilog, Amaranth, VHDL, etc
@@ -54,6 +54,8 @@ pinout:
   # The first pins is always ua[0], and the pin numbers must be sequential.
   ua[0]: ""
   ua[1]: ""
+  ua[2]: ""
+  ua[3]: ""
 
 # Do not change!
 yaml_version: 6
