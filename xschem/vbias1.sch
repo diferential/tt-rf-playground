@@ -75,8 +75,8 @@ C {devices/lab_pin.sym} -250 -120 0 0 {name=p18 sig_type=std_logic lab=VPBIAS}
 C {devices/lab_pin.sym} -180 -200 0 1 {name=p19 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} -30 60 0 0 {name=p12 sig_type=std_logic lab=VSS}
 C {sky130_fd_pr/res_high_po.sym} 10 -160 0 0 {name=R1
-W=0.5
-L=30
+W=0.35
+L=3
 model=res_high_po
 spiceprefix=X
 mult=1}
