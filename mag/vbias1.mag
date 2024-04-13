@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1713044930
+timestamp 1713046980
 << locali >>
 rect -340 1620 -160 1920
 rect 200 1620 380 1920
@@ -48,4 +48,13 @@ use sky130_fd_pr__res_xhigh_po_0p35_6KR79V  sky130_fd_pr__res_xhigh_po_0p35_6KR7
 timestamp 1713041211
 transform 1 0 -199 0 1 282
 box -201 -882 201 882
+<< labels >>
+flabel metal1 980 1640 1060 1940 0 FreeSans 1600 0 0 0 VDD
+port 0 nsew
+flabel metal1 980 40 1060 140 0 FreeSans 1600 0 0 0 VNBIAS
+port 3 nsew
+flabel metal1 980 -640 1060 -520 0 FreeSans 1600 0 0 0 VSS
+port 1 nsew
+flabel metal1 980 1320 1060 1460 0 FreeSans 1600 0 0 0 VPBIAS
+port 2 nsew
 << end >>

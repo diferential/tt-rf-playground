@@ -16,10 +16,10 @@ L 7 -150 -10 -130 -10 {}
 L 7 130 -10 150 -10 {}
 L 7 130 10 150 10 {}
 L 7 -150 10 -130 10 {}
-B 5 -152.5 -12.5 -147.5 -7.5 {name=VDD dir=inout}
-B 5 147.5 -12.5 152.5 -7.5 {name=VNBIAS dir=inout}
-B 5 147.5 7.5 152.5 12.5 {name=VPBIAS dir=inout}
-B 5 -152.5 7.5 -147.5 12.5 {name=VSS dir=inout}
+B 5 -152.5 -12.5 -147.5 -7.5 {name=VDD dir=inout sim_pinnumber=0 pinnumber=0}
+B 5 -152.5 7.5 -147.5 12.5 {name=VSS dir=inout sim_pinnumber=1}
+B 5 147.5 7.5 152.5 12.5 {name=VPBIAS dir=inout sim_pinnumber=2}
+B 5 147.5 -12.5 152.5 -7.5 {name=VNBIAS dir=inout sim_pinnumber=3}
 T {@symname} -45 -6 0 0 0.3 0.3 {}
 T {@name} 135 -52 0 0 0.2 0.2 {}
 T {VDD} -125 -14 0 0 0.2 0.2 {}
