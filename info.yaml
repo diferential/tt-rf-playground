@@ -3,7 +3,7 @@ project:
   title:        "RF Playground"      # Project title
   author:       "Emilian Miron"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  ""      # One line description of what your project does
+  description:  "Vbias. In the Future other parts for a radio: Opamp. PLL. Mixer."      # One line description of what your project does
   language:     "Analog" # other examples include Verilog, Amaranth, VHDL, etc
   clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
 
