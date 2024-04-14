@@ -96,7 +96,7 @@ lab=VPBIAS}
 N 1460 -1290 1460 -1280 {
 lab=VDD}
 C {sky130_fd_pr/nfet_01v8_lvt.sym} 1150 -1020 0 0 {name=M5
-W=30
+W=32
 L=1
 nf=1
 mult=1
@@ -109,53 +109,14 @@ sa=0 sb=0 sd=0
 model=nfet_01v8_lvt
 spiceprefix=X
 }
-C {sky130_fd_pr/nfet_01v8_lvt.sym} 1480 -1020 0 1 {name=M6
-W=30
-L=1
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_01v8_lvt
-spiceprefix=X
-}
-C {devices/lab_pin.sym} 1430 -1020 0 0 {name=p5 sig_type=std_logic lab=VSS}
-C {devices/lab_pin.sym} 1200 -1020 0 1 {name=p6 sig_type=std_logic lab=VSS}
-C {sky130_fd_pr/nfet_01v8_lvt.sym} 1300 -810 0 0 {name=M7
-W=4
-L=1
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_01v8_lvt
-spiceprefix=X
-}
-C {devices/ammeter.sym} 1320 -890 0 0 {name=vbiasn savecurrent=true}
-C {devices/lab_pin.sym} 1170 -940 2 1 {name=p4 sig_type=std_logic lab=vcom}
-C {sky130_fd_pr/pfet_01v8.sym} 1150 -1290 0 0 {name=M9
-W=8
-L=1
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_01v8
-spiceprefix=X
-}
-C {devices/lab_pin.sym} 1200 -1280 0 1 {name=p14 sig_type=std_logic lab=VDD}
+C {devices/ipin.sym} 1010 -1020 0 0 { name=p17 lab=VIN }
+C {devices/ipin.sym} 1010 -980 0 0 { name=p16 lab=VIN_N }
+C {devices/iopin.sym} 1460 -1120 2 1 { name=p12 lab=VOUT }
+C {devices/iopin.sym} 1170 -1120 0 1 { name=p9 lab=VOUT_N }
+C {devices/iopin.sym} 1040 -1240 0 1 { name=p7 lab=VPBIAS }
+C {devices/iopin.sym} 1240 -810 0 1 { name=p13 lab=VNBIAS }
+C {devices/iopin.sym} 1080 -1320 0 1 { name=p18 lab=VDD }
+C {devices/iopin.sym} 1240 -750 0 1 { name=p2 lab=VSS }
 C {devices/ammeter.sym} 1170 -1220 0 0 {name=vbiasp1 savecurrent=true}
 C {sky130_fd_pr/pfet_01v8.sym} 1440 -1290 0 0 {name=M2
 W=8
@@ -173,11 +134,50 @@ spiceprefix=X
 }
 C {devices/lab_pin.sym} 1490 -1270 0 1 {name=p21 sig_type=std_logic lab=VDD}
 C {devices/ammeter.sym} 1460 -1210 0 0 {name=vbiasp2 savecurrent=true}
-C {devices/iopin.sym} 1240 -750 0 1 { name=p2 lab=VSS }
-C {devices/iopin.sym} 1040 -1240 0 1 { name=p7 lab=VPBIAS }
-C {devices/iopin.sym} 1170 -1120 0 1 { name=p9 lab=VOUT_N }
-C {devices/iopin.sym} 1460 -1120 2 1 { name=p12 lab=VOUT }
-C {devices/iopin.sym} 1240 -810 0 1 { name=p13 lab=VNBIAS }
-C {devices/ipin.sym} 1010 -980 0 0 { name=p16 lab=VIN_N }
-C {devices/ipin.sym} 1010 -1020 0 0 { name=p17 lab=VIN }
-C {devices/iopin.sym} 1080 -1320 0 1 { name=p18 lab=VDD }
+C {devices/lab_pin.sym} 1200 -1280 0 1 {name=p14 sig_type=std_logic lab=VDD}
+C {devices/ammeter.sym} 1320 -890 0 0 {name=vbiasn savecurrent=true}
+C {devices/lab_pin.sym} 1200 -1020 0 1 {name=p6 sig_type=std_logic lab=VSS}
+C {sky130_fd_pr/nfet_01v8_lvt.sym} 1300 -810 0 0 {name=M7
+W=4
+L=1
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8_lvt
+spiceprefix=X
+}
+C {devices/lab_pin.sym} 1170 -940 2 1 {name=p4 sig_type=std_logic lab=vcom}
+C {devices/lab_pin.sym} 1430 -1020 0 0 {name=p5 sig_type=std_logic lab=VSS}
+C {sky130_fd_pr/nfet_01v8_lvt.sym} 1480 -1020 0 1 {name=M6
+W=32
+L=1
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8_lvt
+spiceprefix=X
+}
+C {sky130_fd_pr/pfet_01v8.sym} 1150 -1290 0 0 {name=M9
+W=8
+L=1
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8
+spiceprefix=X
+}
