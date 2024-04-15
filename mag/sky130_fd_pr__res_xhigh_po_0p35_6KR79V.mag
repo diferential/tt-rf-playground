@@ -1,47 +1,46 @@
 magic
 tech sky130A
-magscale 1 2
 timestamp 1713041211
 << pwell >>
-rect -201 -882 201 882
+rect -100 -441 100 441
 << psubdiff >>
-rect -165 812 165 846
-rect -165 -812 -131 812
-rect 131 -812 165 812
-rect -165 -846 -69 -812
-rect 69 -846 165 -812
+rect -82 406 82 423
+rect -82 -406 -65 406
+rect 65 -406 82 406
+rect -82 -423 -34 -406
+rect 34 -423 82 -406
 << psubdiffcont >>
-rect -69 -846 69 -812
+rect -34 -423 34 -406
 << xpolycontact >>
-rect -35 284 35 716
-rect -35 -716 35 -284
+rect -17 142 17 358
+rect -17 -358 17 -142
 << xpolyres >>
-rect -35 -284 35 284
+rect -17 -142 17 142
 << locali >>
-rect -165 812 165 846
-rect -165 -846 -131 812
-rect 131 -846 165 812
+rect -82 406 82 423
+rect -82 -423 -65 406
+rect 65 -423 82 406
 << viali >>
-rect -19 301 19 698
-rect -19 -698 19 -301
-rect -131 -846 -69 -812
-rect -69 -846 69 -812
-rect 69 -846 131 -812
+rect -9 150 9 349
+rect -9 -349 9 -150
+rect -65 -423 -34 -406
+rect -34 -423 34 -406
+rect 34 -423 65 -406
 << metal1 >>
-rect -25 698 25 710
-rect -25 301 -19 698
-rect 19 301 25 698
-rect -25 289 25 301
-rect -25 -301 25 -289
-rect -25 -698 -19 -301
-rect 19 -698 25 -301
-rect -25 -710 25 -698
-rect -143 -812 143 -806
-rect -143 -846 -131 -812
-rect 131 -846 143 -812
-rect -143 -852 143 -846
+rect -12 349 12 355
+rect -12 150 -9 349
+rect 9 150 12 349
+rect -12 144 12 150
+rect -12 -150 12 -144
+rect -12 -349 -9 -150
+rect 9 -349 12 -150
+rect -12 -355 12 -349
+rect -71 -406 71 -403
+rect -71 -423 -65 -406
+rect 65 -423 71 -406
+rect -71 -426 71 -423
 << properties >>
-string FIXED_BBOX -148 -829 148 829
+string FIXED_BBOX -74 -414 74 414
 string gencell sky130_fd_pr__res_xhigh_po_0p35
 string library sky130
 string parameters w 0.350 l 3 m 1 nx 1 wmin 0.350 lmin 0.50 rho 2000 val 18.218k dummy 0 dw 0.0 term 188.2 sterm 0.0 caplen 0 wmax 0.350 guard 1 glc 0 grc 0 gtc 0 gbc 1 compatible {sky130_fd_pr__res_xhigh_po_0p35  sky130_fd_pr__res_xhigh_po_0p69 sky130_fd_pr__res_xhigh_po_1p41  sky130_fd_pr__res_xhigh_po_2p85 sky130_fd_pr__res_xhigh_po_5p73} snake 0 full_metal 1 n_guard 0 hv_guard 0 vias 1 viagb 100 viagt 0 viagl 0 viagr 0
