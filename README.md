@@ -8,8 +8,10 @@ Idac1
 - [X] schematic
 - [X] test bench
 - [X] test with cascaded 2x bits
-- [ ] layout
-- [ ] LVS
+- [X] layout cell
+- [ ] LVS cell
+- [ ] layout all
+- [ ] LVS all
 
 Pll1
 - [X] starved current oscillator test bench
