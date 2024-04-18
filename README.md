@@ -1,24 +1,43 @@
 ![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg)
 
-# Tiny Tapeout Analog Project Template
+# Tiny Tapeout - Emilian's RF Playground project
 
 - [Read the documentation for project](docs/info.md)
 
-## What is Tiny Tapeout?
+Idac1
+- [X] schematic
+- [X] test bench
+- [ ] layout
+- [ ] LVS
 
-TinyTapeout is an educational project that aims to make it easier and cheaper than ever to get your digital designs manufactured on a real chip.
+Pll1
+- [X] starved current oscillator test bench
+- [ ] fast counter
+- [ ] digital phase / frequency detection
+- [ ] external and internal loop mode
+- [ ] LVS
 
-To learn more and get started, visit https://tinytapeout.com.
+Opamp1 + VBias1 -- simple differential pair amplifier
+- [X] schematic
+- [X] test bench
+- [X] magic layout
+- [ ] Fix power routing and vias in layout from Discord message
+- [ ] Add output stage buffer
+- [ ] New symbol and layout cell with all three components
+- [ ] LVS
 
-## Analog projects
+Gilbert cell mixer
+- [X] schematic + test bench
+- [ ] ?vbias
+- [ ] ?internal inverter for LO
+- [ ] layout
+- [ ] LVS
 
-For specifications and instructions, see the [analog specs page](https://tinytapeout.com/specs/analog/).
-
-*Note*: Analog designs are currently in beta. There's a small chance that the changes will change before the deadline for Tiny Tapeout 6, or that we will have to postpone the analog design support to a future shuttle. If you have any questions, please join the [Tiny Tapeout Discord](https://tinytapeout.com/discord) and ask in the #analog channel.
-
-## Enable GitHub actions to build the results page
-
-- [Enabling GitHub Pages](https://tinytapeout.com/faq/#my-github-action-is-failing-on-the-pages-part)
+Putting things together
+- [ ] routing design with pass gates and muxes
+- [ ] take care of long digital paths in routing with buffers
+- [ ] try macros with analog and digital together
+- [ ] ? LVS
 
 ## Resources
 
@@ -28,11 +47,8 @@ For specifications and instructions, see the [analog specs page](https://tinytap
 - [Join the community](https://tinytapeout.com/discord)
 - [Build your design locally](https://docs.google.com/document/d/1aUUZ1jthRpg4QURIIyzlOaPWlmQzr-jBn3wZipVUPt4)
 
-## What next?
+## What is Tiny Tapeout?
 
-- [Submit your design to the next shuttle](https://app.tinytapeout.com/).
-- Edit [this README](README.md) and explain your design, how it works, and how to test it.
-- Share your project on your social network of choice:
-  - LinkedIn [#tinytapeout](https://www.linkedin.com/search/results/content/?keywords=%23tinytapeout) [@TinyTapeout](https://www.linkedin.com/company/100708654/)
-  - Mastodon [#tinytapeout](https://chaos.social/tags/tinytapeout) [@matthewvenn](https://chaos.social/@matthewvenn)
-  - X (formerly Twitter) [#tinytapeout](https://twitter.com/hashtag/tinytapeout) [@matthewvenn](https://twitter.com/matthewvenn)
+TinyTapeout is an educational project that aims to make it easier and cheaper than ever to get your digital designs manufactured on a real chip.
+
+To learn more and get started, visit https://tinytapeout.com.
