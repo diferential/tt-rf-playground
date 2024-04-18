@@ -7,6 +7,7 @@
 Idac1
 - [X] schematic
 - [X] test bench
+- [X] test with cascaded 2x bits
 - [ ] layout
 - [ ] LVS
 
@@ -34,6 +35,7 @@ Gilbert cell mixer
 - [ ] LVS
 
 Putting things together
+- [ ] decoupling caps
 - [ ] routing design with pass gates and muxes
 - [ ] take care of long digital paths in routing with buffers
 - [ ] try macros with analog and digital together
