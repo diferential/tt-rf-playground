@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1713502564
+timestamp 1713553032
 << nwell >>
 rect -480 -1060 -380 500
 rect -980 -1140 -380 -1060
@@ -542,35 +542,35 @@ rect -3772 -2134 -2906 -2133
 rect -3772 -3786 -3652 -2134
 rect -4212 -3906 -3652 -3786
 use idac1cell  idac1cell_0
-timestamp 1713484588
+timestamp 1713553032
 transform -1 0 2000 0 -1 200
 box -400 200 2000 2800
 use idac1cell  idac1cell_1
-timestamp 1713484588
+timestamp 1713553032
 transform 1 0 400 0 1 -200
 box -400 200 2000 2800
 use idac1cell  idac1cell_2
-timestamp 1713484588
+timestamp 1713553032
 transform 1 0 2800 0 1 -200
 box -400 200 2000 2800
 use idac1cell  idac1cell_3
-timestamp 1713484588
+timestamp 1713553032
 transform 1 0 5200 0 1 -200
 box -400 200 2000 2800
 use idac1cell  idac1cell_4
-timestamp 1713484588
+timestamp 1713553032
 transform 1 0 7600 0 1 -200
 box -400 200 2000 2800
 use idac1cell  idac1cell_5
-timestamp 1713484588
+timestamp 1713553032
 transform -1 0 9200 0 -1 200
 box -400 200 2000 2800
 use idac1cell  idac1cell_6
-timestamp 1713484588
+timestamp 1713553032
 transform -1 0 6800 0 -1 200
 box -400 200 2000 2800
 use idac1cell  idac1cell_7
-timestamp 1713484588
+timestamp 1713553032
 transform -1 0 4400 0 -1 200
 box -400 200 2000 2800
 use sky130_fd_pr__pfet_01v8_lvt_ZJ8M88  sky130_fd_pr__pfet_01v8_lvt_ZJ8M88_0
