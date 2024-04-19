@@ -1,0 +1,73 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1713541016
+use sky130_fd_pr__nfet_01v8_lvt_TV58K7  sky130_fd_pr__nfet_01v8_lvt_TV58K7_0
+timestamp 1713539272
+transform 1 0 2083 0 1 1410
+box -683 -1810 683 1810
+use sky130_fd_pr__pfet_01v8_6HGTAW  sky130_fd_pr__pfet_01v8_6HGTAW_0
+timestamp 1713540189
+transform 1 0 4425 0 1 7819
+box -425 -1819 425 1819
+use sky130_fd_pr__nfet_01v8_lvt_HS3BL4  XM1
+timestamp 1713539272
+transform 1 0 -104 0 1 4610
+box -296 -1010 296 1010
+use sky130_fd_pr__nfet_01v8_lvt_HS3BL4  XM2
+timestamp 1713539272
+transform 1 0 696 0 1 4610
+box -296 -1010 296 1010
+use sky130_fd_pr__nfet_01v8_lvt_HS3BL4  XM3
+timestamp 1713539272
+transform 1 0 1696 0 1 4610
+box -296 -1010 296 1010
+use sky130_fd_pr__nfet_01v8_lvt_HS3BL4  XM4
+timestamp 1713539272
+transform 1 0 2496 0 1 4610
+box -296 -1010 296 1010
+use sky130_fd_pr__nfet_01v8_lvt_TV58K7  XM5
+timestamp 1713539272
+transform 1 0 247 0 1 1448
+box -683 -1810 683 1810
+use sky130_fd_pr__pfet_01v8_6HGTAW  XM7
+timestamp 1713540189
+transform 1 0 2025 0 1 7819
+box -425 -1819 425 1819
+use sky130_fd_pr__pfet_01v8_3H68VM  XM8
+timestamp 1713539272
+transform 1 0 -22 0 1 6669
+box -296 -619 296 619
+use sky130_fd_pr__pfet_01v8_3H68VM  XM9
+timestamp 1713539272
+transform 1 0 896 0 1 6655
+box -296 -619 296 619
+use sky130_fd_pr__nfet_01v8_lvt_QGMAL3  XM10
+timestamp 1713539272
+transform 1 0 3296 0 1 210
+box -296 -410 296 410
+use sky130_fd_pr__nfet_01v8_lvt_QGMAL3  XM11
+timestamp 1713539272
+transform 1 0 4296 0 1 210
+box -296 -410 296 410
+use sky130_fd_pr__pfet_01v8_6HGTAW  XM12
+timestamp 1713540189
+transform 1 0 3225 0 1 7819
+box -425 -1819 425 1819
+use sky130_fd_pr__nfet_01v8_lvt_XA7BLB  XM13
+timestamp 1713540189
+transform 1 0 4425 0 1 3810
+box -425 -1810 425 1810
+use sky130_fd_pr__nfet_01v8_lvt_7WXQKD  XM14
+timestamp 1713539272
+transform 1 0 3496 0 1 3810
+box -296 -1810 296 1810
+use sky130_fd_pr__res_xhigh_po_0p35_KNBXRF  XR1
+timestamp 1713539272
+transform 0 -1 4582 1 0 1601
+box -201 -1582 201 1582
+use sky130_fd_pr__res_xhigh_po_0p35_KNBXRF  XR4
+timestamp 1713539272
+transform 0 -1 4582 1 0 1001
+box -201 -1582 201 1582
+<< end >>
