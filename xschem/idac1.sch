@@ -87,3 +87,5 @@ C {devices/lab_pin.sym} -70 110 2 1 {name=p21 sig_type=std_logic lab=IOUT_P
 }
 C {devices/lab_pin.sym} -240 90 0 0 {name=p22 sig_type=std_logic lab=IOUT
 }
+C {devices/lab_pin.sym} -70 30 0 1 {name=p6 sig_type=std_logic lab=VDD
+}

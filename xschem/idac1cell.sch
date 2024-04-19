@@ -215,7 +215,6 @@ C {devices/lab_pin.sym} -160 -410 2 1 {name=p52 sig_type=std_logic lab=OE
 }
 C {devices/lab_pin.sym} -570 -570 3 0 {name=p54 sig_type=std_logic lab=VREF_IN
 }
-C {devices/ammeter.sym} -500 -240 0 0 {name=vref savecurrent=true}
 C {devices/lab_pin.sym} -120 -410 2 0 {name=p57 sig_type=std_logic lab=VSS
 }
 C {devices/ipin.sym} -610 -380 0 0 { name=p1 lab=VSS }
@@ -242,3 +241,4 @@ C {devices/lab_pin.sym} -120 -350 2 0 {name=p17 sig_type=std_logic lab=vdrain2
 C {devices/lab_pin.sym} -120 -580 1 0 {name=p53 sig_type=std_logic lab=IOUT
 }
 C {devices/ammeter.sym} -120 -530 0 1 {name=viout savecurrent=true}
+C {devices/ammeter.sym} -500 -240 0 0 {name=vref savecurrent=true}
