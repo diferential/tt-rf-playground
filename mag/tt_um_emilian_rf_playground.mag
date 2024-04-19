@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1713144495
+timestamp 1713485453
 << metal1 >>
 rect 29638 4278 29938 4308
 rect 29632 3978 29638 4278
@@ -179,6 +179,10 @@ rect 18064 0 18184 200
 rect 22480 0 22600 200
 rect 26896 0 27016 200
 rect 31312 0 31432 3077
+use idac1  idac1_0
+timestamp 1713485344
+transform 0 -1 18130 1 0 15144
+box 0 -2600 9600 2600
 use opamp1  opamp1_0
 timestamp 1713144495
 transform 1 0 22231 0 1 7854

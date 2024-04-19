@@ -6,8 +6,8 @@ V {}
 S {}
 E {}
 B 2 730 -870 1530 -470 {flags=graph
-y1=1e-06
-y2=0.00011
+y1=0
+y2=0.01
 ypos1=0
 ypos2=2
 divy=5
@@ -37,8 +37,8 @@ i(v.xcell5.vref)
 i(v.xcell6.vref)
 i(v.xcell7.vref)"}
 B 2 2330 -1270 3130 -870 {flags=graph
-y1=-9e-06
-y2=0.00011
+y1=-1.45087e-07
+y2=2.11153e-07
 ypos1=0
 ypos2=2
 divy=5
@@ -104,8 +104,8 @@ node="\\"vcmd7 1.8 / 7 +\\"
 \\"vcmd1 1.8 / 1 +\\"
 \\"vcmd0 1.8 / 0 +\\""}
 B 2 1530 -870 2330 -470 {flags=graph
-y1=-0.00092
-y2=-0.00068
+y1=-0.00011
+y2=-9.7e-05
 ypos1=0
 ypos2=2
 divy=5
@@ -132,8 +132,8 @@ logy=0
 color=18
 node=i(vdd_totpw)}
 B 2 2330 -870 3130 -470 {flags=graph
-y1=-7.8e-06
-y2=0.00022
+y1=-9.9e-07
+y2=4e-06
 ypos1=0
 ypos2=2
 divy=5
@@ -159,12 +159,6 @@ logy=0
 
 color=18
 node=i(vout)}
-N 1740 -1480 1740 -1470 {
-lab=VPB}
-N 1740 -1410 1740 -1400 {
-lab=GND}
-N 1740 -1500 1740 -1480 {
-lab=VPB}
 N 1430 -1490 1430 -1480 {
 lab=VSS}
 N 1540 -1490 1540 -1480 {
@@ -185,18 +179,20 @@ N 1680 -1240 1680 -1180 {
 lab=vin0}
 N 1600 -1180 1680 -1180 {
 lab=vin0}
-N 1400 -1290 1400 -1270 {
-lab=VDD}
-N 1400 -1210 1400 -1190 {
+N 1400 -1260 1400 -1240 {
+lab=VOUT_IOUT_P}
+N 1400 -1180 1400 -1170 {
 lab=#net2}
-N 1400 -1130 1400 -1120 {
-lab=VOUT}
 N 1540 -1590 1540 -1570 {
 lab=VDD}
 N 1540 -1510 1540 -1490 {
 lab=#net1}
 N 1600 -1210 1600 -1180 {
 lab=vin0}
+N 1400 -1080 1400 -1060 {
+lab=VSS}
+N 1400 -1170 1400 -1140 {
+lab=#net2}
 C {devices/code.sym} 1950 -1570 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
@@ -243,16 +239,6 @@ VCMD0 VCMD0 0 pulse 1.8 0 0n 1n 1n 50n 100n
     end
 .endc
 "}
-C {devices/vsource.sym} 1630 -1440 0 0 {name=V5 value=0 savecurrent=false}
-C {devices/gnd.sym} 1630 -1410 0 0 {name=l5 lab=GND}
-C {devices/lab_pin.sym} 1630 -1470 2 1 {name=p6 sig_type=std_logic lab=VNB
-
-}
-C {devices/vsource.sym} 1740 -1440 0 0 {name=V6 value=1.8 savecurrent=false}
-C {devices/gnd.sym} 1740 -1400 0 0 {name=l6 lab=GND}
-C {devices/lab_pin.sym} 1740 -1500 2 1 {name=p14 sig_type=std_logic lab=VPB
-
-}
 C {devices/vsource.sym} 1540 -1450 0 0 {name=V1 value=1.8 savecurrent=false}
 C {devices/gnd.sym} 1540 -1410 0 0 {name=l2 lab=GND}
 C {devices/lab_pin.sym} 1540 -1590 2 1 {name=p19 sig_type=std_logic lab=VDD
@@ -261,7 +247,6 @@ C {devices/vsource.sym} 1430 -1450 0 0 {name=V2 value=0 savecurrent=false}
 C {devices/gnd.sym} 1430 -1410 0 0 {name=l3 lab=GND}
 C {devices/lab_pin.sym} 1430 -1490 2 1 {name=p28 sig_type=std_logic lab=VSS
 }
-C {devices/gnd.sym} 1630 -1410 0 0 {name=l8 lab=GND}
 C {devices/lab_pin.sym} 1600 -1340 2 1 {name=p2 sig_type=std_logic lab=VDD
 }
 C {sky130_fd_pr/pfet_01v8_lvt.sym} 1620 -1240 0 1 {name=M3
@@ -280,9 +265,7 @@ spiceprefix=X
 }
 C {devices/lab_pin.sym} 1720 -1240 3 0 {name=p5 sig_type=std_logic lab=vin0
 }
-C {devices/lab_pin.sym} 1400 -1290 1 0 {name=p1 sig_type=std_logic lab=VDD
-}
-C {devices/ammeter.sym} 1400 -1240 0 1 {name=vout savecurrent=true}
+C {devices/ammeter.sym} 1400 -1110 0 1 {name=vout savecurrent=true}
 C {sky130_fd_pr/res_high_po_0p35.sym} 1600 -1150 0 0 {name=R1
 L=4
 model=res_high_po_0p35
@@ -293,17 +276,15 @@ C {devices/lab_pin.sym} 1580 -1150 2 1 {name=p43 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} 1600 -1240 2 1 {name=p44 sig_type=std_logic lab=VDD
 }
-C {sky130_fd_pr/res_high_po_0p35.sym} 1400 -1160 0 0 {name=R2
+C {sky130_fd_pr/res_high_po_0p35.sym} 1400 -1210 0 0 {name=R2
 L=1
 model=res_high_po_0p35
 spiceprefix=X
 mult=1}
-C {devices/lab_pin.sym} 1400 -1120 3 0 {name=p11 sig_type=std_logic lab=VOUT
-}
 C {devices/ammeter.sym} 1540 -1540 0 1 {name=vdd_totpw savecurrent=true}
 C {devices/lab_pin.sym} 1600 -1060 2 1 {name=p3 sig_type=std_logic lab=VSS
 }
-C {devices/lab_pin.sym} 2150 -1170 0 1 {name=p8 sig_type=std_logic lab=VOUT
+C {devices/lab_pin.sym} 2150 -1170 0 1 {name=p8 sig_type=std_logic lab=VOUT_IOUT_P
 }
 C {idac1.sym} 2060 -1170 0 0 {name=x1}
 C {devices/lab_pin.sym} 1960 -1260 0 0 {name=p13 sig_type=std_logic lab=VCMD0
@@ -326,5 +307,9 @@ C {devices/lab_pin.sym} 2060 -1290 2 1 {name=p23 sig_type=std_logic lab=VDD
 }
 C {devices/lab_pin.sym} 2060 -1050 2 1 {name=p24 sig_type=std_logic lab=VSS
 }
-C {devices/lab_pin.sym} 1960 -1100 3 0 {name=p4 sig_type=std_logic lab=vin0
+C {devices/lab_pin.sym} 1960 -1090 0 0 {name=p4 sig_type=std_logic lab=vin0
+}
+C {devices/lab_pin.sym} 1400 -1260 1 0 {name=p11 sig_type=std_logic lab=VOUT_IOUT_P
+}
+C {devices/lab_pin.sym} 1400 -1060 2 1 {name=p1 sig_type=std_logic lab=VSS
 }
