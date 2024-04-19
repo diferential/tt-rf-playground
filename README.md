@@ -9,9 +9,9 @@ Idac1
 - [X] test bench
 - [X] test with cascaded 2x bits
 - [X] layout cell
-- [ ] LVS cell
-- [ ] layout all
-- [ ] LVS all
+- [X] LVS cell
+- [X] layout all
+- [X] LVS all
 
 Pll1
 - [X] starved current oscillator test bench
@@ -42,6 +42,11 @@ Putting things together
 - [ ] take care of long digital paths in routing with buffers
 - [ ] try macros with analog and digital together
 - [ ] ? LVS
+
+
+TODO: check the idac1 changes.
+TODO: need stronger transistors to pins also.
+
 
 ## Resources
 
