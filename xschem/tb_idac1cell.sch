@@ -6,8 +6,8 @@ V {}
 S {}
 E {}
 B 2 1840 -1680 2640 -1280 {flags=graph
-y1=0.00021
-y2=1.7
+y1=0.00012
+y2=1.8
 ypos1=0
 ypos2=2
 divy=5
@@ -27,8 +27,8 @@ logx=0
 logy=0
 }
 B 2 1840 -1280 2640 -880 {flags=graph
-y1=-8.3e-08
-y2=8.9e-05
+y1=-9.94142e-06
+y2=0.000104123
 ypos1=0
 ypos2=2
 divy=5
@@ -40,8 +40,9 @@ divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
-node=i(vout)
-color=4
+node="i(vout)
+i(vin)"
+color="4 5"
 dataset=-1
 unitx=1
 logx=0
@@ -71,8 +72,8 @@ color="4 5"
 node="x1.vdrain2
 vref_out"}
 B 2 2640 -1280 3440 -880 {flags=graph
-y1=-8.3e-08
-y2=9e-05
+y1=-5.4e-08
+y2=4.6e-05
 ypos1=0
 ypos2=2
 divy=5
@@ -219,7 +220,7 @@ L=4
 model=res_high_po_0p35
 spiceprefix=X
 mult=1}
-C {devices/ammeter.sym} 1600 -1300 0 0 {name=vdbg111 savecurrent=true}
+C {devices/ammeter.sym} 1600 -1300 0 0 {name=vin savecurrent=true}
 C {devices/lab_pin.sym} 1580 -1150 2 1 {name=p43 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} 1600 -1240 2 1 {name=p44 sig_type=std_logic lab=VDD
