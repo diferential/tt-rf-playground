@@ -594,7 +594,7 @@ VRF_N VRF_N 0 sin 0.9 -0.01 4MEG
     save all
     tran 500p 10000n
     remzerovec
-    write gilbert_mixer.raw
+    write tb_gilbert_mixer.raw
     set appendwrite
     reset
     end
