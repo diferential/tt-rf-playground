@@ -6,22 +6,22 @@ V {}
 S {}
 E {}
 B 2 2180 -770 2980 -370 {flags=graph
-y1=-0.064
-y2=0.057
+y1=-0.072
+y2=0.067
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2.55936e-06
-x2=2.83476e-06
+x1=0.000224306
+x2=0.000329164
 divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
 
 
-dataset=1
+dataset=-1
 unitx=1
 logx=0
 logy=0
@@ -39,15 +39,15 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2.55936e-06
-x2=2.83476e-06
+x1=0.000224306
+x2=0.000329164
 divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
 
 
-dataset=1
+dataset=-1
 unitx=1
 logx=0
 logy=0
@@ -60,22 +60,22 @@ color="4 5"
 node="VLO_N
 VLO"}
 B 2 2180 -370 2980 30 {flags=graph
-y1=-0.02
-y2=0.02
+y1=-0.0002
+y2=0.0002
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2.55936e-06
-x2=2.83476e-06
+x1=0.000224306
+x2=0.000329164
 divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
 
 
-dataset=1
+dataset=-1
 unitx=1
 logx=0
 logy=0
@@ -88,22 +88,22 @@ logy=0
 color=5
 node="\\"VRF VRF_N -\\""}
 B 2 2980 -770 3780 -370 {flags=graph
-y1=0.12
+y1=0.57
 y2=0.8
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2.55936e-06
-x2=2.83476e-06
+x1=0.000224306
+x2=0.000329164
 divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
 
 
-dataset=1
+dataset=-1
 unitx=1
 logx=0
 logy=0
@@ -117,22 +117,22 @@ color="10 4"
 node="VSUM
 VSUM_EXT"}
 B 2 2980 -1170 3780 -770 {flags=graph
-y1=0.37
-y2=0.41
+y1=0.4
+y2=0.5
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2.55936e-06
-x2=2.83476e-06
+x1=0.000224306
+x2=0.000329164
 divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
 
 
-dataset=1
+dataset=-1
 unitx=1
 logx=0
 logy=0
@@ -145,22 +145,22 @@ color="4 5"
 node="VOUT
 VOUT_P"}
 B 2 2980 -370 3780 30 {flags=graph
-y1=-7.7e-05
-y2=7.9e-05
+y1=-3.7e-05
+y2=5.6e-05
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2.55936e-06
-x2=2.83476e-06
+x1=0.000224306
+x2=0.000329164
 divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
 
 
-dataset=1
+dataset=-1
 unitx=1
 logx=0
 logy=0
@@ -428,6 +428,8 @@ N 1110 -470 1110 -420 {
 lab=VOUT}
 N 1150 -440 1150 -400 {
 lab=VSUM}
+N 1660 -390 1660 -370 {
+lab=VSS}
 C {sky130_fd_pr/nfet_01v8_lvt.sym} 1590 -740 0 0 {name=M1
 W=8
 L=1
@@ -587,12 +589,14 @@ VLO VLO 0 pulse 1.8 0 5n 1n 1n 500n 1000n
 VLO_N VLO_N 0 pulse 0 1.8 5n 1n 1n 500n 1000n
 * VRF VRF 0 pulse 0.91 0.9 5n 1n 1n 30n 60n
 * VRF_N 0 VRF_N pulse 0.91 .9 5n 1n 1n 30n 60n
-VRF VRF 0 sin 0.9 0.01 4MEG
-VRF_N VRF_N 0 sin 0.9 -0.01 4MEG
+* VRF VRF 0 sin 0.9 0.01 4MEG
+* VRF_N VRF_N 0 sin 0.9 -0.01 4MEG
+VRF VRF 0 sin 0.9 0.01 1.1MEG
+VRF_N VRF_N 0 sin 0.9 -0.01 1.1MEG
 .control
-  repeat 10
+  repeat 1
     save all
-    tran 500p 10000n
+    tran 500p 500u
     remzerovec
     write tb_gilbert_mixer.raw
     set appendwrite
@@ -699,7 +703,7 @@ C {devices/lab_pin.sym} 850 -280 0 0 {name=p27 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 1040 -400 0 1 {name=p28 sig_type=std_logic lab=VSUM}
 C {devices/capa.sym} 1400 -370 0 0 {name=C1
 m=1
-value=10p
+value=1n
 footprint=1206
 device="ceramic capacitor"}
 C {devices/ammeter.sym} 1220 -400 1 0 {name=vmeas_out savecurrent=true}
@@ -734,3 +738,4 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {devices/lab_wire.sym} 1110 -420 0 0 {name=p23 sig_type=std_logic lab=VOUT}
+C {devices/lab_pin.sym} 1660 -370 0 0 {name=p30 sig_type=std_logic lab=VSS}

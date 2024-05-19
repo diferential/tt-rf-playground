@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1713553032
+timestamp 1716123115
 << locali >>
 rect 24372 3954 25136 3960
 rect 24372 3952 24378 3954
@@ -170,6 +170,14 @@ rect 18064 0 18184 200
 rect 22480 0 22600 200
 rect 26896 0 27016 216
 rect 31312 0 31432 200
+use gilbert_mixer  gilbert_mixer_0
+timestamp 1716076243
+transform 1 0 13010 0 1 18000
+box -1010 -1000 6620 10400
+use gilbert_mixer  gilbert_mixer_1
+timestamp 1716076243
+transform 1 0 13010 0 1 31000
+box -1010 -1000 6620 10400
 use idac1  idac1_0
 timestamp 1713553032
 transform 0 -1 27526 1 0 4292
