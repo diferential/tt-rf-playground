@@ -1,3 +1,7 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
 MACRO tt_um_emilian_rf_playground
   CLASS BLOCK ;
   FOREIGN tt_um_emilian_rf_playground ;
@@ -33,7 +37,7 @@ MACRO tt_um_emilian_rf_playground
     ANTENNADIFFAREA 13.920000 ;
     PORT
       LAYER met4 ;
-        RECT 156.560 0.000 157.160 1.000 ;
+        RECT 156.410 0.000 157.310 1.000 ;
     END
   END ua[0]
   PIN ua[1]
@@ -42,7 +46,7 @@ MACRO tt_um_emilian_rf_playground
     ANTENNAGATEAREA 64.000000 ;
     PORT
       LAYER met4 ;
-        RECT 134.480 0.000 135.080 1.000 ;
+        RECT 134.330 0.000 135.230 1.000 ;
     END
   END ua[1]
   PIN ua[2]
@@ -51,7 +55,7 @@ MACRO tt_um_emilian_rf_playground
     ANTENNAGATEAREA 64.000000 ;
     PORT
       LAYER met4 ;
-        RECT 112.400 0.000 113.000 1.000 ;
+        RECT 112.250 0.000 113.150 1.000 ;
     END
   END ua[2]
   PIN ua[3]
@@ -61,7 +65,7 @@ MACRO tt_um_emilian_rf_playground
     ANTENNADIFFAREA 1.160000 ;
     PORT
       LAYER met4 ;
-        RECT 90.320 0.000 90.920 1.000 ;
+        RECT 90.170 0.000 91.070 1.000 ;
     END
   END ua[3]
   PIN ua[4]
@@ -69,7 +73,7 @@ MACRO tt_um_emilian_rf_playground
     USE SIGNAL ;
     PORT
       LAYER met4 ;
-        RECT 68.240 0.000 68.840 1.000 ;
+        RECT 68.090 0.000 68.990 1.000 ;
     END
   END ua[4]
   PIN ua[5]
@@ -77,7 +81,7 @@ MACRO tt_um_emilian_rf_playground
     USE SIGNAL ;
     PORT
       LAYER met4 ;
-        RECT 46.160 0.000 46.760 1.000 ;
+        RECT 46.010 0.000 46.910 1.000 ;
     END
   END ua[5]
   PIN ua[6]
@@ -85,7 +89,7 @@ MACRO tt_um_emilian_rf_playground
     USE SIGNAL ;
     PORT
       LAYER met4 ;
-        RECT 24.080 0.000 24.680 1.000 ;
+        RECT 23.930 0.000 24.830 1.000 ;
     END
   END ua[6]
   PIN ua[7]
@@ -93,7 +97,7 @@ MACRO tt_um_emilian_rf_playground
     USE SIGNAL ;
     PORT
       LAYER met4 ;
-        RECT 2.000 0.000 2.600 1.000 ;
+        RECT 1.850 0.000 2.750 1.000 ;
     END
   END ua[7]
   PIN ui_in[0]
@@ -3773,7 +3777,19 @@ MACRO tt_um_emilian_rf_playground
         RECT 2.500 146.250 6.250 147.750 ;
         RECT 89.895 119.995 90.905 121.005 ;
         RECT 2.500 62.750 5.750 64.250 ;
+        RECT 12.180 28.590 29.140 30.090 ;
+        RECT 12.180 21.030 13.680 28.590 ;
+        RECT 2.500 19.530 13.680 21.030 ;
+        RECT 19.590 19.810 21.090 28.590 ;
+        RECT 27.640 19.990 29.140 28.590 ;
+        RECT 12.180 16.090 13.680 19.530 ;
+        RECT 12.180 14.590 28.780 16.090 ;
+        RECT 27.280 12.520 28.780 14.590 ;
+        RECT 19.590 11.020 28.780 12.520 ;
+        RECT 27.000 8.040 28.500 11.020 ;
         RECT 50.500 10.600 54.200 12.100 ;
+        RECT 12.910 6.540 28.500 8.040 ;
+        RECT 12.910 4.470 14.410 6.540 ;
         RECT 89.900 5.320 90.900 119.995 ;
         RECT 100.650 37.530 101.650 219.500 ;
         RECT 114.390 219.115 114.690 224.760 ;
@@ -3809,29 +3825,14 @@ MACRO tt_um_emilian_rf_playground
         RECT 155.245 44.095 157.160 44.500 ;
         RECT 102.170 37.970 103.230 39.030 ;
         RECT 100.620 36.470 101.680 37.530 ;
-        RECT 89.900 1.000 91.070 5.320 ;
-        RECT 1.850 0.000 2.000 1.000 ;
-        RECT 2.600 0.000 2.750 1.000 ;
-        RECT 23.930 0.000 24.080 1.000 ;
-        RECT 24.680 0.000 24.830 1.000 ;
-        RECT 46.010 0.000 46.160 1.000 ;
-        RECT 46.760 0.000 46.910 1.000 ;
-        RECT 68.090 0.000 68.240 1.000 ;
-        RECT 68.840 0.000 68.990 1.000 ;
-        RECT 89.900 0.800 90.320 1.000 ;
-        RECT 90.170 0.000 90.320 0.800 ;
-        RECT 90.920 0.000 91.070 1.000 ;
+        RECT 12.910 2.970 27.950 4.470 ;
+        RECT 89.900 1.610 91.070 5.320 ;
+        RECT 90.170 1.000 91.070 1.610 ;
         RECT 112.250 1.000 113.150 4.140 ;
-        RECT 112.250 0.000 112.400 1.000 ;
-        RECT 113.000 0.000 113.150 1.000 ;
         RECT 134.330 1.000 135.230 7.230 ;
         RECT 155.250 6.450 157.160 44.095 ;
-        RECT 156.500 1.400 157.160 6.450 ;
-        RECT 156.560 1.000 157.160 1.400 ;
-        RECT 134.330 0.000 134.480 1.000 ;
-        RECT 135.080 0.000 135.230 1.000 ;
-        RECT 156.410 0.000 156.560 1.000 ;
-        RECT 157.160 0.000 157.310 1.000 ;
+        RECT 156.500 3.390 157.160 6.450 ;
+        RECT 156.410 1.000 157.310 3.390 ;
   END
 END tt_um_emilian_rf_playground
 END LIBRARY
