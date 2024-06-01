@@ -1,9 +1,9 @@
 # Tiny Tapeout project information
 project:
-  title:        "IDAC8 based on divide current by 2"      # Project title
+  title:        "RF playground - oscillator and mixer"      # Project title
   author:       "Emilian Miron"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "IDAC8 based on divide current by 2."      # One line description of what your project does
+  description:  "RF playground - oscillator and mixer"      # One line description of what your project does
   language:     "Analog" # other examples include Verilog, Amaranth, VHDL, etc
   clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
 
@@ -20,28 +20,28 @@ project:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: "bit0"
-  ui[1]: "bit1"
-  ui[2]: "bit2"
-  ui[3]: "bit3"
-  ui[4]: "bit4"
-  ui[5]: "bit5"
-  ui[6]: "bit6"
-  ui[7]: "bit7"
+  ui[0]: "DCO current bit0"
+  ui[1]: "DCO current bit1"
+  ui[2]: "DCO current bit2"
+  ui[3]: "DCO current bit3"
+  ui[4]: "DCO current bit4"
+  ui[5]: "DCO current bit5"
+  ui[6]: "DCO current bit6"
+  ui[7]: "DCO current bit7"
 
   # Outputs
-  uo[0]: "n/a"
-  uo[1]: "n/a"
-  uo[2]: "n/a"
-  uo[3]: "n/a"
+  uo[0]: "Oscillator output"
+  uo[1]: "Oscillator output/2"
+  uo[2]: "Oscillator output/4"
+  uo[3]: "Oscillator output/4 negated"
   uo[4]: "n/a"
   uo[5]: "n/a"
   uo[6]: "n/a"
   uo[7]: "n/a"
 
   # Bidirectional pins
-  uio[0]: "n/a"
-  uio[1]: "n/a"
+  uio[0]: "Input Mixer LO"
+  uio[1]: "Input Mixer LO_neg"
   uio[2]: "n/a"
   uio[3]: "n/a"
   uio[4]: "n/a"
@@ -52,9 +52,10 @@ pinout:
   # Analog pins - you can add more if you use them, up to 6.
   # Keep only the "ua" pins you are actually using, and *delete* any unused "ua" pins.
   # The first pins is always ua[0], and the pin numbers must be sequential.
-  ua[0]: "VREF_OUT for current level/256"
-  ua[1]: "IOUT - output current"
-  ua[2]: "VREF_IN for current level"
+  ua[0]: "VREF_IN for PLL current level"
+  ua[1]: "Mixer RF in"
+  ua[2]: "Mixer RF in negative"
+  ua[3]: "Mixer output"
 
 # Do not change!
 yaml_version: 6
