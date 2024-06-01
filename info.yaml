@@ -34,23 +34,23 @@ pinout:
 
   # Outputs
   uo[0]: "Oscillator output"
-  uo[1]: "Oscillator output/2"
-  uo[2]: "Oscillator output/4"
-  uo[3]: "Oscillator output/4 negated"
-  uo[4]: "n/a"
-  uo[5]: "n/a"
-  uo[6]: "n/a"
-  uo[7]: "n/a"
+  uo[1]: "Oscillator output negated"
+  uo[2]: ""
+  uo[3]: ""
+  uo[4]: ""
+  uo[5]: ""
+  uo[6]: ""
+  uo[7]: ""
 
   # Bidirectional pins
   uio[0]: "Input Mixer LO"
   uio[1]: "Input Mixer LO_neg"
-  uio[2]: "n/a"
-  uio[3]: "n/a"
-  uio[4]: "n/a"
-  uio[5]: "n/a"
-  uio[6]: "n/a"
-  uio[7]: "n/a"
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
 
   # Analog pins - you can add more if you use them, up to 6.
   # Keep only the "ua" pins you are actually using, and *delete* any unused "ua" pins.
@@ -59,6 +59,8 @@ pinout:
   ua[1]: "Mixer RF in negative"
   ua[2]: "Mixer RF in"
   ua[3]: "VREF_IN for PLL current level"
+  ua[4]: ""
+  ua[5]: ""
 
 # Do not change!
 yaml_version: 6
