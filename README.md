@@ -15,6 +15,12 @@ Idac1
 
 Pll1
 - [X] starved current oscillator test bench
+- DCO
+  - [X] inverter ring
+  - [X] decoupling cap
+  - [ ] output buffer chain
+  - [ ] divide by 2, 4
+  - [ ] ports
 - [ ] fast counter
 - [ ] digital phase / frequency detection
 - [ ] external and internal loop mode
@@ -31,9 +37,7 @@ Opamp1 + VBias1 -- simple differential pair amplifier
 
 Gilbert cell mixer
 - [X] schematic + test bench
-- [ ] ?vbias
-- [ ] ?internal inverter for LO
-- [ ] layout
+- [X] layout
 - [ ] LVS
 
 Putting things together
