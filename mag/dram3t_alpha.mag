@@ -1,0 +1,98 @@
+magic
+tech sky130A
+timestamp 1719752019
+<< pwell >>
+rect 1970 -1060 2331 -850
+<< nmos >>
+rect 2055 -925 2070 -880
+rect 2095 -925 2110 -880
+rect 2150 -925 2165 -880
+<< ndiff >>
+rect 2020 -890 2055 -880
+rect 2020 -915 2025 -890
+rect 2045 -915 2055 -890
+rect 2020 -925 2055 -915
+rect 2070 -925 2095 -880
+rect 2110 -890 2150 -880
+rect 2110 -910 2120 -890
+rect 2140 -910 2150 -890
+rect 2110 -925 2150 -910
+rect 2165 -925 2200 -880
+<< ndiffc >>
+rect 2025 -915 2045 -890
+rect 2120 -910 2140 -890
+<< poly >>
+rect 2055 -880 2070 -865
+rect 2095 -880 2110 -865
+rect 2150 -880 2165 -865
+rect 1980 -935 2010 -880
+rect 2055 -935 2070 -925
+rect 1980 -940 2070 -935
+rect 2095 -940 2110 -925
+rect 2150 -940 2165 -925
+rect 1960 -950 2070 -940
+rect 1960 -970 1975 -950
+rect 2015 -965 2055 -950
+rect 2015 -970 2035 -965
+rect 1960 -985 2035 -970
+<< polycont >>
+rect 1975 -970 2015 -950
+<< locali >>
+rect 1975 -935 1995 -880
+rect 2020 -890 2050 -850
+rect 2020 -925 2050 -920
+rect 2110 -890 2150 -880
+rect 2110 -910 2120 -890
+rect 2140 -910 2150 -890
+rect 2110 -925 2150 -910
+rect 1960 -945 1995 -935
+rect 1960 -950 2070 -945
+rect 1960 -970 1975 -950
+rect 2015 -970 2070 -950
+rect 1960 -985 2070 -970
+<< viali >>
+rect 2020 -915 2025 -890
+rect 2025 -915 2045 -890
+rect 2045 -915 2050 -890
+rect 2020 -920 2050 -915
+rect 2120 -910 2140 -890
+<< metal1 >>
+rect 1975 -935 2000 -880
+rect 2020 -887 2050 -850
+rect 2120 -887 2140 -865
+rect 2014 -890 2056 -887
+rect 2014 -920 2020 -890
+rect 2050 -920 2056 -890
+rect 2114 -890 2146 -887
+rect 2114 -910 2120 -890
+rect 2140 -910 2146 -890
+rect 2114 -913 2146 -910
+rect 2014 -923 2056 -920
+rect 1960 -950 2000 -935
+rect 1960 -980 1965 -950
+rect 1995 -980 2000 -950
+rect 1960 -985 2000 -980
+rect 2020 -985 2050 -923
+rect 2120 -995 2140 -913
+<< via1 >>
+rect 1965 -980 1995 -950
+<< metal2 >>
+rect 1975 -935 2050 -880
+rect 1960 -945 2050 -935
+rect 1960 -950 2180 -945
+rect 1960 -980 1965 -950
+rect 1995 -980 2180 -950
+rect 1960 -985 2180 -980
+<< labels >>
+flabel polycont 1975 -970 2010 -950 0 FreeSans 160 0 0 0 VG
+port 0 nsew
+flabel ndiffc 2030 -910 2045 -895 0 FreeSans 160 90 0 0 VSS
+port 2 nsew
+flabel ndiffc 2120 -910 2135 -895 0 FreeSans 160 90 0 0 VBL
+port 1 nsew
+<< properties >>
+string FIXED_BBOX -79 -99 79 99
+string gencell sky130_fd_pr__nfet_01v8
+string library sky130
+string parameters w 0.420 l 0.150 m 1 nf 1 diffcov 100 polycov 100 guard 1 glc 1 grc 1 gtc 1 gbc 1 tbcov 100 rlcov 100 topc 1 botc 1 poverlap 0 doverlap 1 lmin 0.15 wmin 0.42 compatible {sky130_fd_pr__nfet_01v8 sky130_fd_pr__nfet_01v8_lvt  sky130_fd_bs_flash__special_sonosfet_star  sky130_fd_pr__nfet_g5v0d10v5 sky130_fd_pr__nfet_05v0_nvt  sky130_fd_pr__nfet_03v3_nvt} full_metal 1 viasrc 100 viadrn 100 viagate 100 viagb 0 viagr 0 viagl 0 viagt 0
+<< end >>
