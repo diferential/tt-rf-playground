@@ -1,0 +1,26 @@
+* Journal entries
+** <2024-06-30 Sun> dram testing - 1T1C
+- all sorts of tests done over the last weeks
+- hard to get large enough capacitance .. although did not account for diffusion capacitance that much and there could be more gains with that
+- parasitic capacitance pulls up/down when bit line changes
+- close-to-cell tiny differential pair writing to differential next in line, keep a chain
+- seemed like a good idea but upon testing with mismatch there is a large probability that the VT differences will ruin the first amplifier in chain.
+** <2024-06-30 Sun> dram testing - 3T - alpha, beta, charlie
+- 3T cell seems most stable and promising
+*** capacitance and error margins
+- capacitance from bit lines to storage capacitor is pretty large
+  - 0 state is most susceptible to be brought up past VT
+  - have to be careful *which one (BL or BLB) is closer to VG*
+  - if BLB is the write line for VG, keep it farther away from VG
+  - when BLB goes back to precharge from the 0 write state it will pull VG up
+  - limiting the sense preload time (RD high prior to sense amplifier turn-on) may also lower the amount of capacitance interference (though this one feedback sort of is self-limiting - by the time it is problematic the bit lines have seen a big swing already). we have to stop read time quick enough that we preserve a difference -- otherwise the other bit line has time to catch up and lower our difference between BL/BLB.
+- wide margin against errors, differential pair VS shared would seem to guard against that more
+*** layout
+- tried alpha, beta, charlie and in trymosfets.mag
+- all horizontal 2 cells seems like the best with 3.6um x 1.7um for pair of cells
+- stacked pairs vertically did not scale well as word lines need one direction and bitlines the other
+- need *tap cells* -- it looks like rule is 6um for tap distance, with only some small areas allowed to be 15um if marked as low tap density.
+  - tap cells as rows seem like a good and easy strategy .. some 1.7um height means 6 cell rows are 10.2 - well below 12um. Each cell will be half-distance that from a tap cell so below 12um.
+** <2024-07-01 Mon> DRC / layout rules ruler
+- in trymosfets.mag placed some atomic via sizes between levels to see the minimal sizes on a 0.05um grid (rounding up sizes as needed)
+- it would probably be a good idea to move these out into their own mag file for reference
