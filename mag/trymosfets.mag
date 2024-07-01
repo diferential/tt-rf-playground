@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1719781273
+timestamp 1719784689
 << error_p >>
 rect 191 -286 249 -280
 rect 191 -320 203 -286
@@ -23,10 +23,7 @@ rect 5709 -601 5767 -595
 rect 5709 -635 5721 -601
 rect 5709 -641 5767 -635
 << pwell >>
-rect -5330 740 9558 6652
-rect -5330 620 3530 740
-rect 3670 620 9558 740
-rect -5330 -5380 9558 620
+rect -11640 -11730 20630 9310
 << nmos >>
 rect 4780 210 4810 300
 rect 4890 210 4920 300
@@ -863,6 +860,11 @@ use dram3t_alpha  dram3t_alpha_5
 timestamp 1719752019
 transform -1 0 7652 0 -1 -1520
 box 3920 -2120 4662 -1700
+use dram3t_charlie  dram3t_charlie_0
+array 0 2 720 0 5 340
+timestamp 1719784265
+transform 1 0 1030 0 1 1760
+box -5270 -6820 -4550 -6460
 use sky130_fd_pr__nfet_01v8_EDB9KC  sky130_fd_pr__nfet_01v8_EDB9KC_0
 timestamp 1719781273
 transform 1 0 5738 0 1 -521
