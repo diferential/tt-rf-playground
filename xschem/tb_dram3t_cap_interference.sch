@@ -6,15 +6,15 @@ V {}
 S {}
 E {}
 B 2 1840 -1680 2640 -1280 {flags=graph
-y1=-0.071
-y2=1.3
+y1=-0.057
+y2=1.2
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2.55366e-08
-x2=3.86439e-08
+x1=0
+x2=5e-08
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -36,8 +36,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2.55366e-08
-x2=3.86439e-08
+x1=0
+x2=5e-08
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -54,14 +54,14 @@ logy=0
 }
 B 2 1845 -2080 2645 -1680 {flags=graph
 y1=-2.5e-07
-y2=8.7e-05
+y2=8.6e-05
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2.55366e-08
-x2=3.86439e-08
+x1=0
+x2=5e-08
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -99,20 +99,16 @@ N 1725 -1490 1765 -1490 {
 lab=VDD}
 N 1340 -1545 1340 -1520 {
 lab=#net2}
-N 1320 -1575 1340 -1575 {
-lab=VSS}
 N 1620 -1450 1620 -1415 {
 lab=VG}
 N 1620 -1490 1665 -1490 {
 lab=VG}
 N 1620 -1490 1620 -1450 {
 lab=VG}
-N 1340 -1620 1340 -1605 {
-lab=#net3}
 N 1540 -1490 1590 -1490 {
 lab=VG}
 N 1340 -1460 1340 -1425 {
-lab=#net4}
+lab=#net3}
 N 1340 -1365 1340 -1310 {
 lab=VSS}
 N 1590 -1490 1620 -1490 {
@@ -123,28 +119,18 @@ N 1620 -1355 1620 -1325 {
 lab=VGRDB}
 N 1340 -1255 1340 -1245 {
 lab=VDD}
-N 1320 -1055 1340 -1055 {
-lab=VSS}
 N 1695 -1110 1695 -1055 {
 lab=VSS}
 N 1695 -1015 1695 -990 {
 lab=VWR}
 N 1725 -1055 1765 -1055 {
 lab=VSS}
-N 1340 -1110 1340 -1085 {
-lab=#net5}
-N 1320 -1140 1340 -1140 {
-lab=VSS}
 N 1620 -1015 1620 -980 {
 lab=VGB}
 N 1620 -1055 1620 -1015 {
 lab=VGB}
-N 1340 -1185 1340 -1170 {
-lab=#net6}
 N 1540 -1055 1590 -1055 {
 lab=VGB}
-N 1340 -1025 1340 -990 {
-lab=#net7}
 N 1340 -930 1340 -875 {
 lab=VSS}
 N 1590 -1055 1620 -1055 {
@@ -155,6 +141,24 @@ N 1440 -1055 1540 -1055 {
 lab=VGB}
 N 1620 -1055 1665 -1055 {
 lab=VGB}
+N 1340 -1620 1340 -1600 {
+lab=#net4}
+N 1380 -1570 1400 -1570 {
+lab=VRD}
+N 1320 -1570 1340 -1570 {
+lab=VSS}
+N 1320 -1050 1340 -1050 {
+lab=VSS}
+N 1340 -1105 1340 -1080 {
+lab=#net5}
+N 1340 -1020 1340 -985 {
+lab=#net6}
+N 1380 -1130 1400 -1130 {
+lab=VRD}
+N 1320 -1130 1340 -1130 {
+lab=VSS}
+N 1340 -1180 1340 -1160 {
+lab=#net7}
 C {devices/code.sym} 780 -1615 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
@@ -215,20 +219,6 @@ C {devices/lab_pin.sym} 1695 -1545 3 1 {name=p43 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} 1340 -1310 2 1 {name=p3 sig_type=std_logic lab=VSS
 }
-C {sky130_fd_pr/nfet_01v8_lvt.sym} 1360 -1490 0 1 {name=M1
-L=0.15
-W=0.45
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_01v8_lvt
-spiceprefix=X
-}
 C {devices/lab_pin.sym} 1320 -1490 2 1 {name=p1 sig_type=std_logic lab=VSS
 }
 C {sky130_fd_pr/nfet_01v8_lvt.sym} 1695 -1470 3 0 {name=M2
@@ -249,29 +239,11 @@ C {devices/lab_pin.sym} 1740 -1490 3 1 {name=p6 sig_type=std_logic lab=VDD
 }
 C {devices/lab_pin.sym} 1695 -1425 2 1 {name=p13 sig_type=std_logic lab=VWR
 }
-C {sky130_fd_pr/nfet_01v8_lvt.sym} 1360 -1575 0 1 {name=M3
-L=0.15
-W=0.45
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_01v8_lvt
-spiceprefix=X
-}
-C {devices/lab_pin.sym} 1320 -1575 2 1 {name=p4 sig_type=std_logic lab=VSS
-}
-C {devices/lab_pin.sym} 1380 -1575 2 0 {name=p5 sig_type=std_logic lab=VRD
-}
 C {devices/lab_pin.sym} 1620 -1450 0 0 {name=p7 sig_type=std_logic lab=VG
 }
 C {devices/capa.sym} 1620 -1385 0 0 {name=C1
 m=1
-value=0.30f
+value=0.40f
 footprint=1206
 device="ceramic capacitor"
 }
@@ -294,22 +266,6 @@ C {devices/lab_pin.sym} 1695 -1110 3 1 {name=p11 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} 1340 -875 2 1 {name=p12 sig_type=std_logic lab=VSS
 }
-C {sky130_fd_pr/nfet_01v8_lvt.sym} 1360 -1055 0 1 {name=M4
-L=0.15
-W=0.45
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_01v8_lvt
-spiceprefix=X
-}
-C {devices/lab_pin.sym} 1320 -1055 2 1 {name=p14 sig_type=std_logic lab=VSS
-}
 C {sky130_fd_pr/nfet_01v8_lvt.sym} 1695 -1035 3 0 {name=M5
 L=0.15
 W=0.45
@@ -328,29 +284,11 @@ C {devices/lab_pin.sym} 1745 -1055 3 1 {name=p15 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} 1695 -990 2 1 {name=p16 sig_type=std_logic lab=VWR
 }
-C {sky130_fd_pr/nfet_01v8_lvt.sym} 1360 -1140 0 1 {name=M6
-L=0.15
-W=0.45
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_01v8_lvt
-spiceprefix=X
-}
-C {devices/lab_pin.sym} 1320 -1140 2 1 {name=p17 sig_type=std_logic lab=VSS
-}
-C {devices/lab_pin.sym} 1380 -1140 2 0 {name=p18 sig_type=std_logic lab=VRD
-}
 C {devices/lab_pin.sym} 1620 -1015 0 0 {name=p20 sig_type=std_logic lab=VGB
 }
 C {devices/capa.sym} 1620 -950 0 0 {name=C3
 m=1
-value=0.3f
+value=0.4f
 footprint=1206
 device="ceramic capacitor"
 }
@@ -364,5 +302,71 @@ device="ceramic capacitor"
 }
 C {devices/lab_pin.sym} 1620 -1115 3 1 {name=p22 sig_type=std_logic lab=VSS
 }
-C {devices/ammeter.sym} 1340 -960 0 0 {name=vin4 savecurrent=true}
 C {devices/ammeter.sym} 1410 -1055 3 0 {name=vin5 savecurrent=true}
+C {sky130_fd_pr/nfet_01v8.sym} 1360 -1490 0 1 {name=M7
+L=0.15
+W=0.45
+nf=1 
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {sky130_fd_pr/nfet_01v8.sym} 1360 -1570 0 1 {name=M1
+L=0.15
+W=0.45
+nf=1 
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {devices/lab_pin.sym} 1400 -1570 3 1 {name=p23 sig_type=std_logic lab=VRD
+}
+C {devices/lab_pin.sym} 1320 -1570 2 1 {name=p4 sig_type=std_logic lab=VSS
+}
+C {devices/lab_pin.sym} 1320 -1050 2 1 {name=p5 sig_type=std_logic lab=VSS
+}
+C {devices/ammeter.sym} 1340 -955 0 0 {name=vin3 savecurrent=true}
+C {sky130_fd_pr/nfet_01v8.sym} 1360 -1050 0 1 {name=M3
+L=0.15
+W=0.45
+nf=1 
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {sky130_fd_pr/nfet_01v8.sym} 1360 -1130 0 1 {name=M4
+L=0.15
+W=0.45
+nf=1 
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {devices/lab_pin.sym} 1400 -1130 3 1 {name=p14 sig_type=std_logic lab=VRD
+}
+C {devices/lab_pin.sym} 1320 -1130 2 1 {name=p17 sig_type=std_logic lab=VSS
+}
