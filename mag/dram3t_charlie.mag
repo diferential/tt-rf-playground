@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1719784978
+timestamp 1719885249
 << pwell >>
 rect 0 0 360 170
 << nmos >>
@@ -100,7 +100,7 @@ rect 310 60 330 80
 << metal1 >>
 rect 0 105 360 120
 rect 0 85 40 90
-rect 65 88 85 105
+rect 65 88 85 90
 rect 0 65 10 85
 rect 30 65 40 85
 rect 0 60 40 65
@@ -108,8 +108,10 @@ rect 59 85 91 88
 rect 59 65 65 85
 rect 85 65 91 85
 rect 59 62 91 65
+rect 65 40 85 62
 rect 150 60 155 90
 rect 185 60 190 90
+rect 255 83 275 105
 rect 249 80 281 83
 rect 249 60 255 80
 rect 275 60 281 80
@@ -117,7 +119,7 @@ rect 249 57 281 60
 rect 300 80 340 85
 rect 300 60 310 80
 rect 330 60 340 80
-rect 255 40 275 57
+rect 255 55 275 57
 rect 300 55 340 60
 rect 0 25 360 40
 << via1 >>
