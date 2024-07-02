@@ -15,6 +15,7 @@
   - when BLB goes back to precharge from the 0 write state it will pull VG up
   - limiting the sense preload time (RD high prior to sense amplifier turn-on) may also lower the amount of capacitance interference (though this one feedback sort of is self-limiting - by the time it is problematic the bit lines have seen a big swing already). we have to stop read time quick enough that we preserve a difference -- otherwise the other bit line has time to catch up and lower our difference between BL/BLB.
 - wide margin against errors, differential pair VS shared would seem to guard against that more
+- [2024-07-01 Mon] limiting preload voltage protects against misreading 0 and improves margin, up to 0.7 VG-VGB margin now with 1.2 preload instead of 1.8.
 *** layout
 - tried alpha, beta, charlie and in trymosfets.mag
 - all horizontal 2 cells seems like the best with 3.6um x 1.7um for pair of cells
