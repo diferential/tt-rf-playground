@@ -13,8 +13,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=3.9529e-08
-x2=1.54955e-07
+x1=0
+x2=2e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -40,8 +40,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=3.9529e-08
-x2=1.54955e-07
+x1=0
+x2=2e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -73,8 +73,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=3.9529e-08
-x2=1.54955e-07
+x1=0
+x2=2e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -103,15 +103,15 @@ node="\\"VCMD7 1.8 / 70 +\\"
 \\"VCMD1 1.8 / 10 +\\"
 \\"VCMD0 1.8 / 0 +\\""}
 B 2 1530 -870 2330 -470 {flags=graph
-y1=0.00025
-y2=0.00027
+y1=0.00023
+y2=0.00026
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=3.9529e-08
-x2=1.54955e-07
+x1=0
+x2=2e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -132,15 +132,15 @@ logy=0
 color=4
 node=i(vdd_totpw)}
 B 2 2330 -870 3130 -470 {flags=graph
-y1=6.19869e-07
-y2=3.78787e-06
+y1=3.4e-07
+y2=4.2e-06
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=3.9529e-08
-x2=1.54955e-07
+x1=0
+x2=2e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -228,27 +228,27 @@ simulator=ngspice
 only_toplevel=false 
 value="
 .options savecurrents 
-* VCMD7 VCMD7 0 pulse 1.8 0 0n 1n 1n 6400n 12800n
-* VCMD6 VCMD6 0 pulse 1.8 0 0n 1n 1n 3200n 6400n
-* VCMD5 VCMD5 0 pulse 1.8 0 0n 1n 1n 1600n 3200n
-* VCMD4 VCMD4 0 pulse 1.8 0 0n 1n 1n 800n 1600n
-* VCMD3 VCMD3 0 pulse 1.8 0 0n 1n 1n 400n 800n
-* VCMD2 VCMD2 0 pulse 1.8 0 0n 1n 1n 200n 400n
-* VCMD1 VCMD1 0 pulse 1.8 0 0n 1n 1n 100n 200n
-* VCMD0 VCMD0 0 pulse 1.8 0 0n 1n 1n 50n 100n
-VCMD7 VCMD7 0 pulse 0 0 0n 1n 1n 500n 1000n
-VCMD6 VCMD6 0 pulse 0 0 0n 1n 1n 3200n 6400n
-VCMD5 VCMD5 0 pulse 0 0 0n 1n 1n 1600n 3200n
-VCMD4 VCMD4 0 pulse 0 0 0n 1n 1n 800n 1600n
-VCMD3 VCMD3 0 pulse 0 0 0n 1n 1n 400n 800n
-VCMD2 VCMD2 0 pulse 0 0 0n 1n 1n 200n 400n
-VCMD1 VCMD1 0 pulse 0 1.8 0n 1n 1n 100n 200n
-VCMD0 VCMD0 0 pulse 1.8 1.8 0n 1n 1n 50n 100n
+VCMD7 VCMD7 0 pulse 1.8 0 0n 1n 1n 6400n 12800n
+VCMD6 VCMD6 0 pulse 1.8 0 0n 1n 1n 3200n 6400n
+VCMD5 VCMD5 0 pulse 1.8 0 0n 1n 1n 1600n 3200n
+VCMD4 VCMD4 0 pulse 1.8 0 0n 1n 1n 800n 1600n
+VCMD3 VCMD3 0 pulse 1.8 0 0n 1n 1n 400n 800n
+VCMD2 VCMD2 0 pulse 1.8 0 0n 1n 1n 200n 400n
+VCMD1 VCMD1 0 pulse 1.8 0 0n 1n 1n 100n 200n
+VCMD0 VCMD0 0 pulse 1.8 0 0n 1n 1n 50n 100n
+** VCMD7 VCMD7 0 pulse 0 0 0n 1n 1n 500n 1000n
+* VCMD6 VCMD6 0 pulse 0 0 0n 1n 1n 3200n 6400n
+* VCMD5 VCMD5 0 pulse 0 0 0n 1n 1n 1600n 3200n
+* VCMD4 VCMD4 0 pulse 0 0 0n 1n 1n 800n 1600n
+* VCMD3 VCMD3 0 pulse 0 0 0n 1n 1n 400n 800n
+* VCMD2 VCMD2 0 pulse 0 0 0n 1n 1n 200n 400n
+* VCMD1 VCMD1 0 pulse 0 1.8 0n 1n 1n 100n 200n
+* VCMD0 VCMD0 0 pulse 1.8 1.8 0n 1n 1n 50n 100n
 .control
   repeat 1
     save all
-    * tran 0.1n 13900n
-    tran 0.001n 200n
+    tran 0.1n 13900n
+    * tran 0.001n 200n
     remzerovec
     write tb_pll1.raw
     set appendwrite
