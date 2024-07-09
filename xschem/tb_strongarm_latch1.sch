@@ -6,7 +6,7 @@ V {}
 S {}
 E {}
 B 2 1930 -1230 2730 -830 {flags=graph
-y1=1.7
+y1=1.6
 y2=1.8
 ypos1=0
 ypos2=2
@@ -35,7 +35,7 @@ color="5 4"
 node="VIN1
 VIN2"}
 B 2 1930 -1630 2730 -1230 {flags=graph
-y1=-0.55
+y1=-0.48
 y2=2.7
 ypos1=0
 ypos2=2
@@ -68,8 +68,8 @@ color="4 5"
 node="VSENSE1
 VSENSE2"}
 B 2 1930 -830 2730 -430 {flags=graph
-y1=-0.54
-y2=2.6
+y1=-0.81
+y2=2.7
 ypos1=0
 ypos2=2
 divy=5
@@ -93,7 +93,7 @@ logy=0
 
 
 hilight_wave=0
-color="4 5 12"
+color="5 4 12"
 node="VOUT1
 VOUT2
 CK"}
@@ -112,11 +112,11 @@ lab=GND}
 N 1340 -1510 1340 -1480 {
 lab=VDD}
 N 1230 -870 1230 -800 {
-lab=VOUT1}
+lab=VOUT2}
 N 1230 -740 1230 -720 {
 lab=VSENSE1}
 N 1430 -870 1430 -800 {
-lab=VOUT2}
+lab=VOUT1}
 N 1430 -740 1430 -720 {
 lab=VSENSE2}
 N 1230 -600 1230 -580 {
@@ -144,43 +144,43 @@ lab=VSS}
 N 1340 -500 1380 -500 {
 lab=VNB}
 N 1270 -770 1310 -770 {
-lab=VOUT2}
+lab=VOUT1}
 N 1310 -820 1310 -770 {
-lab=VOUT2}
+lab=VOUT1}
 N 1310 -820 1430 -820 {
-lab=VOUT2}
+lab=VOUT1}
 N 1230 -720 1230 -660 {
 lab=VSENSE1}
 N 1430 -720 1430 -660 {
 lab=VSENSE2}
 N 1330 -770 1390 -770 {
-lab=VOUT1}
+lab=VOUT2}
 N 1330 -810 1330 -770 {
-lab=VOUT1}
+lab=VOUT2}
 N 1230 -810 1330 -810 {
-lab=VOUT1}
+lab=VOUT2}
 N 1340 -900 1340 -850 {
-lab=VOUT1}
+lab=VOUT2}
 N 1360 -900 1390 -900 {
-lab=VOUT1}
+lab=VOUT2}
 N 1270 -900 1300 -900 {
-lab=VOUT2}
+lab=VOUT1}
 N 1300 -900 1300 -860 {
-lab=VOUT2}
+lab=VOUT1}
 N 1300 -860 1430 -860 {
-lab=VOUT2}
+lab=VOUT1}
 N 1340 -900 1360 -900 {
-lab=VOUT1}
+lab=VOUT2}
 N 1230 -850 1340 -850 {
-lab=VOUT1}
+lab=VOUT2}
 N 1070 -870 1070 -850 {
-lab=VOUT1}
+lab=VOUT2}
 N 1070 -850 1230 -850 {
-lab=VOUT1}
+lab=VOUT2}
 N 1600 -860 1600 -850 {
-lab=VOUT2}
+lab=VOUT1}
 N 1430 -850 1600 -850 {
-lab=VOUT2}
+lab=VOUT1}
 N 1750 -860 1750 -700 {
 lab=VSENSE2}
 N 1430 -700 1750 -700 {
@@ -295,15 +295,15 @@ only_toplevel=false
 value="
 .param VPWR=1.8
 .param VHIGH=1.80
-.param VLOW=1.70
+.param VLOW=1.60
 .options savecurrents 
 VIN1 VIN1 0 pulse VLOW VHIGH 0.8n 1p 1p 1n 4n
 VIN2 VIN2 0 pulse VHIGH VLOW 0.8n 1p 1p 1n 4n
 VCK CK 0 pulse 0 1.8 1n 1p 1p 1n 2n
 .control
   repeat 20
-    let vpwr_act=1.7
-    while vpwr_act < 1.8
+    let vpwr_act=1.8
+    while vpwr_act <= 1.8
       alterparam VPWR=$&vpwr_act
       let vpwr_act = vpwr_act + 0.1
       
@@ -337,8 +337,8 @@ C {devices/gnd.sym} 1340 -1410 0 0 {name=l2 lab=GND}
 C {devices/lab_pin.sym} 1340 -1510 2 1 {name=p19 sig_type=std_logic lab=VDD
 }
 C {sky130_fd_pr/pfet_01v8_lvt.sym} 1250 -900 0 1 {name=M7
-W=2
-L=0.5
+W=1
+L=0.35
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -365,8 +365,8 @@ model=nfet_01v8_lvt
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8_lvt.sym} 1410 -900 0 0 {name=M9
-W=2
-L=0.5
+W=1
+L=0.35
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -465,7 +465,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8_lvt.sym} 950 -900 0 0 {name=M15
 W=2
-L=0.5
+L=0.35
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -478,8 +478,8 @@ model=pfet_01v8_lvt
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8_lvt.sym} 1620 -890 0 1 {name=M16
-W=2
-L=0.5
+W=1
+L=0.35
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -493,7 +493,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8_lvt.sym} 1770 -890 0 1 {name=M17
 W=2
-L=0.5
+L=0.35
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -519,9 +519,9 @@ device="ceramic capacitor"
 }
 C {devices/lab_pin.sym} 1690 -530 2 1 {name=p43 sig_type=std_logic lab=VSS
 }
-C {devices/lab_pin.sym} 1430 -820 2 0 {name=p44 sig_type=std_logic lab=VOUT2
+C {devices/lab_pin.sym} 1430 -820 2 0 {name=p44 sig_type=std_logic lab=VOUT1
 }
-C {devices/lab_pin.sym} 1230 -820 2 1 {name=p45 sig_type=std_logic lab=VOUT1
+C {devices/lab_pin.sym} 1230 -820 2 1 {name=p45 sig_type=std_logic lab=VOUT2
 }
 C {devices/capa.sym} 1030 -580 0 0 {name=C1
 m=1
