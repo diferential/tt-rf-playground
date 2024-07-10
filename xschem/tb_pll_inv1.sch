@@ -6,32 +6,33 @@ V {}
 S {}
 E {}
 B 2 1930 -1230 2730 -830 {flags=graph
-y1=-0.23
-y2=1.9
+y1=-0.4
+y2=2
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=3.90035e-09
-x2=4.36728e-09
+x1=3.93946e-09
+x2=5.01319e-09
 divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
 
 
-dataset=0
+dataset=-1
 unitx=1
 logx=0
 logy=0
 
 
 
-color="4 8 10"
+color="4 8 10 9"
 node="VIN
 VINV1
-VINV2"
+VINV2
+VOUT"
 hilight_wave=0}
 B 2 1930 -1630 2730 -1230 {flags=graph
 y1=0.8
@@ -41,15 +42,15 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=3.90035e-09
-x2=4.36728e-09
+x1=3.93946e-09
+x2=5.01319e-09
 divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
 
 
-dataset=0
+dataset=-1
 unitx=1
 logx=0
 logy=0
@@ -72,15 +73,15 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=3.90035e-09
-x2=4.36728e-09
+x1=3.93946e-09
+x2=5.01319e-09
 divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
 
 
-dataset=0
+dataset=-1
 unitx=1
 logx=0
 logy=0
@@ -226,12 +227,11 @@ C {devices/vsource.sym} 1430 -1450 0 0 {name=V2 value=0 savecurrent=false}
 C {devices/gnd.sym} 1430 -1410 0 0 {name=l3 lab=GND}
 C {devices/lab_pin.sym} 1430 -1490 2 1 {name=p28 sig_type=std_logic lab=VSS
 }
-C {devices/gnd.sym} 1630 -1410 0 0 {name=l8 lab=GND}
 C {devices/lab_pin.sym} 1270 -1100 2 1 {name=p2 sig_type=std_logic lab=VDD
 }
 C {sky130_fd_pr/pfet_01v8_lvt.sym} 1250 -1000 0 0 {name=M3
-W=2
-L=0.5
+W=1
+L=0.35
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -279,8 +279,8 @@ C {devices/lab_pin.sym} 1800 -920 2 0 {name=p10 sig_type=std_logic lab=VOUT
 C {devices/lab_pin.sym} 1740 -1100 2 1 {name=p7 sig_type=std_logic lab=VPB
 }
 C {sky130_fd_pr/pfet_01v8_lvt.sym} 1720 -1000 0 0 {name=M2
-W=2
-L=0.5
+W=1
+L=0.35
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -328,7 +328,7 @@ C {devices/lab_pin.sym} 1360 -750 2 1 {name=p15 sig_type=std_logic lab=VSS
 }
 C {devices/capa.sym} 1800 -800 0 0 {name=C3
 m=1
-value=1f
+value=4f
 footprint=1206
 device="ceramic capacitor"
 }
@@ -337,8 +337,8 @@ C {devices/lab_pin.sym} 1800 -750 2 1 {name=p16 sig_type=std_logic lab=VSS
 C {devices/lab_pin.sym} 1520 -1100 2 1 {name=p1 sig_type=std_logic lab=VDD
 }
 C {sky130_fd_pr/pfet_01v8_lvt.sym} 1500 -1000 0 0 {name=M5
-W=2
-L=0.5
+W=1
+L=0.35
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
