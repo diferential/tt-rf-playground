@@ -11,12 +11,12 @@ rect 305 -135 365 -115
 rect 755 -135 815 -115
 rect 1195 -135 1255 -115
 rect 1340 -135 1455 -115
-use pll_inv1  pll_inv1_0
+use pll_inv1_buf  pll_inv1_0
 array 0 2 -450 0 0 -290
 timestamp 1720664591
 transform -1 0 400 0 -1 -25
 box -50 -45 400 245
-use pll_inv1  pll_inv1_1
+use pll_inv1_buf  pll_inv1_1
 array 0 3 450 0 0 290
 timestamp 1720664591
 transform 1 0 50 0 1 45

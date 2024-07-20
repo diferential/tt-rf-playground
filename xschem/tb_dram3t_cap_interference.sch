@@ -6,15 +6,15 @@ V {}
 S {}
 E {}
 B 2 450 -1680 1250 -1280 {flags=graph
-y1=-0.026
+y1=-0.099
 y2=1.3
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=7.20947e-09
-x2=3.79295e-08
+x1=0
+x2=6e-08
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -36,8 +36,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=7.20947e-09
-x2=3.79295e-08
+x1=0
+x2=6e-08
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -54,14 +54,14 @@ logy=0
 }
 B 2 1840 -1680 2640 -1280 {flags=graph
 y1=-2.5e-07
-y2=6.7e-05
+y2=5.8e-05
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=7.20947e-09
-x2=3.79295e-08
+x1=0
+x2=6e-08
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -76,15 +76,15 @@ color="4 6"
 node="i(vin)
 i(vinb)"}
 B 2 1840 -2080 2640 -1680 {flags=graph
-y1=0.388906
-y2=1.23851
+y1=0.1
+y2=1.3
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=7.20947e-09
-x2=3.79295e-08
+x1=0
+x2=6e-08
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -105,8 +105,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=7.20947e-09
-x2=3.79295e-08
+x1=0
+x2=6e-08
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -391,15 +391,15 @@ value="* ngspice commands
 
 .options savecurrents
 
-VWR VWR 0 pulse 0 1.8 5n 2n 2n 2n 200n
-VRD VRD 0 pulse 0 1.8 10n 1n 1n 5n 20n
-VGRD VGRD 0 pulse 0 1.2 15n 1n 1n 2n 4n
-VGRDB VGRDB 0 pulse 1.2 0 15n 1n 1n 2n 4n
+VWR VWR     0 pulse 0 1.8  4n 0.2n 0.2n 2n 200n
+VRD VRD     0 pulse 0 1.8 10n 0.2n 0.2n 2n 10n
+VGRD VGRD   0 pulse 0 1.2 25n 0.2n 0.2n 2n 4n
+VGRDB VGRDB 0 pulse 1.2 0 25n 0.2n 0.2n 2n 4n
 
 .control
   repeat 20
     save all
-    tran 0.05n 50n
+    tran 0.05n 60n
     remzerovec
     write tb_dram3t_cap_interference.raw
     set appendwrite
