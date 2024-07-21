@@ -13,8 +13,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=3.56555e-06
-x2=4.11117e-06
+x1=0
+x2=4e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -44,8 +44,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=3.56555e-06
-x2=4.11117e-06
+x1=0
+x2=4e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -73,8 +73,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=3.56555e-06
-x2=4.11117e-06
+x1=0
+x2=4e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -106,8 +106,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=3.56555e-06
-x2=4.11117e-06
+x1=0
+x2=4e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -128,15 +128,15 @@ logy=0
 color=4
 node=i(vdd_totpw)}
 B 2 2330 -870 3130 -470 {flags=graph
-y1=-8.4e-08
-y2=1.3
+y1=1.5e-07
+y2=1.6
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=3.56555e-06
-x2=4.11117e-06
+x1=0
+x2=4e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -179,7 +179,7 @@ N 1980 -1840 1980 -1820 {
 lab=VDD}
 N 1980 -1760 1980 -1740 {
 lab=#net1}
-N 2140 -1490 2140 -1440 {
+N 2340 -1740 2340 -1690 {
 lab=VSS}
 N 980 -1730 1010 -1730 {
 lab=DN}
@@ -299,7 +299,7 @@ value="
                         
 "
 spice_ignore=false}
-C {devices/launcher.sym} 2200 -1410 0 0 {name=h17 
+C {devices/launcher.sym} 2200 -1540 0 0 {name=h17 
 descr="Load waves" 
 tclcommand="
 xschem raw_read $netlist_dir/[file tail [file rootname [xschem get current_name]]].raw tran
@@ -315,7 +315,7 @@ VA VA 0 pulse 1.8 0 0n 1p 1p 15n 30n
 .control
   repeat 1
     save all
-    tran 50p 6u
+    tran 50p 4u
     remzerovec
     write tb_pll3.raw
     set appendwrite
@@ -342,18 +342,16 @@ C {devices/gnd.sym} 1870 -1660 0 0 {name=l3 lab=GND}
 C {devices/lab_pin.sym} 1870 -1740 2 1 {name=p28 sig_type=std_logic lab=VSS
 }
 C {devices/ammeter.sym} 1980 -1790 2 1 {name=vdd_totpw savecurrent=true}
-C {sky130_stdcells/inv_1.sym} 970 -1040 0 0 {name=x1[6..0] VGND=VGND VNB=VGND VPB=VDD VPWR=VPWR_OSC prefix=sky130_fd_sc_hd__ }
-C {devices/lab_pin.sym} 1010 -1040 0 1 {name=p7 sig_type=std_logic lab=A[6..0]}
-C {devices/lab_pin.sym} 930 -1040 0 0 {name=p9 sig_type=std_logic lab=A[5..0],A6}
-C {devices/ammeter.sym} 2140 -1520 2 1 {name=Vmeasn1 savecurrent=true}
-C {devices/lab_pin.sym} 2140 -1550 2 0 {name=p12 sig_type=std_logic lab=VGND
+C {devices/lab_pin.sym} 1060 -1030 0 1 {name=p7 sig_type=std_logic lab=A[4..0]}
+C {devices/lab_pin.sym} 990 -1030 0 0 {name=p9 sig_type=std_logic lab=A[3..0],A4}
+C {devices/ammeter.sym} 2340 -1770 2 1 {name=Vmeasn1 savecurrent=true}
+C {devices/lab_pin.sym} 2340 -1800 2 0 {name=p12 sig_type=std_logic lab=VGND
 }
-C {devices/lab_pin.sym} 2140 -1450 2 0 {name=p26 sig_type=std_logic lab=VSS
+C {devices/lab_pin.sym} 2340 -1700 2 0 {name=p26 sig_type=std_logic lab=VSS
 }
-C {sky130_stdcells/inv_1.sym} 1630 -995 0 0 {name=x2 VGND=VGND VNB=VGND VPB=VDD VPWR=VPWR_OSC prefix=sky130_fd_sc_hd__ }
-C {devices/lab_pin.sym} 1590 -995 2 1 {name=p29 sig_type=std_logic lab=A1
+C {devices/lab_pin.sym} 1590 -990 2 1 {name=p29 sig_type=std_logic lab=A1
 }
-C {devices/lab_pin.sym} 1670 -995 0 1 {name=p30 sig_type=std_logic lab=B2
+C {devices/lab_pin.sym} 1660 -990 0 1 {name=p30 sig_type=std_logic lab=B2
 }
 C {pll_pfd.sym} 900 -1730 0 0 {name=x3 VSS=VSS VNB=VSS VPB=VDD VDD=VDD}
 C {devices/lab_pin.sym} 820 -1780 2 1 {name=p25 sig_type=std_logic lab=VA
@@ -468,8 +466,10 @@ C {sky130_stdcells/dfxbp_2.sym} 1950 -1120 0 0 {name=x1 VGND=VGND VNB=VNB VPB=VP
 C {sky130_stdcells/dfxbp_2.sym} 1950 -1030 0 0 {name=x5 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
 C {devices/lab_pin.sym} 2040 -1040 0 1 {name=p18 sig_type=std_logic lab=C1
 }
-C {sky130_stdcells/inv_1.sym} 1630 -925 0 0 {name=x17 VGND=VGND VNB=VGND VPB=VDD VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {devices/lab_pin.sym} 1590 -925 2 1 {name=p16 sig_type=std_logic lab=B1
+C {devices/lab_pin.sym} 1590 -930 2 1 {name=p16 sig_type=std_logic lab=B1
 }
-C {devices/lab_pin.sym} 1670 -925 0 1 {name=p23 sig_type=std_logic lab=B0
+C {devices/lab_pin.sym} 1660 -930 0 1 {name=p23 sig_type=std_logic lab=B0
 }
+C {pll_inv1.sym} 1040 -1030 0 0 {name=x1[4..0] VSS=VSS VNB=VNB VPB=VPB VDD=VPWR_OSC}
+C {pll_inv1.sym} 1640 -990 0 0 {name=x17 VSS=VSS VNB=VNB VPB=VPB VDD=VDD}
+C {pll_inv1.sym} 1640 -930 0 0 {name=x2 VSS=VSS VNB=VNB VPB=VPB VDD=VDD}
