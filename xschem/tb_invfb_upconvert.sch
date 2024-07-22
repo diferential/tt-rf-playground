@@ -6,15 +6,15 @@ V {}
 S {}
 E {}
 B 2 1720 -1540 2520 -1140 {flags=graph
-y1=4.9e-08
-y2=1.5
+y1=0
+y2=1.8
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
 x1=0
-x2=1e-07
+x2=2e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -43,7 +43,7 @@ divy=5
 subdivy=1
 unity=1
 x1=0
-x2=1e-07
+x2=2e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -72,7 +72,7 @@ divy=5
 subdivy=1
 unity=1
 x1=0
-x2=1e-07
+x2=2e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -94,6 +94,64 @@ VIN1
 VOUT1
 VOUT1M1
 VOUT1M2"}
+B 2 2520 -1540 3320 -1140 {flags=graph
+y1=0
+y2=1.9
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=0
+x2=2e-07
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+
+
+dataset=-1
+unitx=1
+logx=0
+logy=0
+
+
+
+
+
+color="4 8 7"
+node="VSLOW
+VINS2
+VOUTS2"}
+B 2 2520 -1140 3320 -740 {flags=graph
+y1=9.8e-05
+y2=1.8
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=0
+x2=2e-07
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+
+
+dataset=-1
+unitx=1
+logx=0
+logy=0
+
+
+
+
+
+color="4 8 7"
+node="VFAST
+VINF2
+VOUTF2"}
 N 970 -1480 970 -1470 {
 lab=VSS}
 N 1080 -1480 1080 -1470 {
@@ -144,7 +202,51 @@ N 1430 -1080 1430 -1060 {
 lab=VINF}
 N 1430 -1080 1510 -1080 {
 lab=VINF}
-C {devices/code.sym} 1160 -1480 0 0 {name=TT_MODELS
+N 1430 -680 1500 -680 {
+lab=VINS2}
+N 1430 -680 1430 -590 {
+lab=VINS2}
+N 1350 -670 1350 -650 {
+lab=VINS2}
+N 1350 -670 1430 -670 {
+lab=VINS2}
+N 1500 -680 1600 -680 {
+lab=VINS2}
+N 1600 -680 1600 -670 {
+lab=VINS2}
+N 1600 -610 1600 -590 {
+lab=VOUTS2}
+N 1500 -590 1600 -590 {
+lab=VOUTS2}
+N 1670 -610 1670 -600 {
+lab=GND}
+N 1640 -670 1670 -670 {
+lab=#net1}
+N 1640 -670 1640 -640 {
+lab=#net1}
+N 1430 -530 1500 -530 {
+lab=VINF2}
+N 1430 -530 1430 -440 {
+lab=VINF2}
+N 1350 -520 1350 -500 {
+lab=VINF2}
+N 1350 -520 1430 -520 {
+lab=VINF2}
+N 1500 -530 1600 -530 {
+lab=VINF2}
+N 1600 -530 1600 -520 {
+lab=VINF2}
+N 1600 -460 1600 -440 {
+lab=VOUTF2}
+N 1500 -440 1600 -440 {
+lab=VOUTF2}
+N 1670 -460 1670 -450 {
+lab=GND}
+N 1640 -520 1670 -520 {
+lab=#net2}
+N 1640 -520 1640 -490 {
+lab=#net2}
+C {devices/code.sym} 1160 -1480 0 0 {name=TT_MM_MODELS
 only_toplevel=true
 format="tcleval( @value )"
 value="
@@ -165,13 +267,15 @@ simulator=ngspice
 only_toplevel=false 
 value="
 .options savecurrents
-VSLOW VSLOW 0 sin 0.2 0.2 20MEG
-* VSLOW VSLOW 0 pulse 0.4 0 0n 5n 5n 25n 50n
+* VSLOW VSLOW 0 sin 0.2 0.2 20MEG
+* VSLOW VSLOW 0 pulse 0.4 0 0n 2n 2n 25n 50n
+VSLOW VSLOW 0 pulse 0.4 0 0n 0.1n 0.1n 5n 10n
 VFAST VFAST 0 sin 0.2 0.2 1000MEG
+* VFAST VFAST 0 pulse 0.4 0 0n 10p 10p 0.5n 1n
 .control
-  repeat 1
+  repeat 5
     save all
-    tran 10p 100n
+    tran 10p 200n
     remzerovec
     write tb_invfb_upconvert.raw
     set appendwrite
@@ -230,3 +334,49 @@ C {devices/lab_pin.sym} 1430 -1000 0 0 {name=p12 sig_type=std_logic lab=VFAST}
 C {sky130_fd_pr/cap_mim_m3_1.sym} 1430 -1030 0 0 {name=C3 model=cap_mim_m3_1 W=5 L=5 MF=1 spiceprefix=X}
 C {devices/lab_pin.sym} 1580 -1000 0 1 {name=p13 sig_type=std_logic lab=VOUTF}
 C {devices/lab_pin.sym} 1510 -1000 0 0 {name=p14 sig_type=std_logic lab=VINF}
+C {pll_inv1.sym} 1480 -590 0 0 {name=x6 VSS=VSS VNB=VNB VPB=VPB VDD=VDD}
+C {devices/lab_pin.sym} 1350 -590 0 0 {name=p15 sig_type=std_logic lab=VSLOW}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 1350 -620 0 0 {name=C4 model=cap_mim_m3_1 W=5 L=5 MF=1 spiceprefix=X}
+C {devices/lab_pin.sym} 1510 -590 3 1 {name=p16 sig_type=std_logic lab=VOUTS2}
+C {devices/lab_pin.sym} 1600 -640 2 1 {name=p18 sig_type=std_logic lab=VPB
+}
+C {devices/lab_pin.sym} 1430 -590 0 0 {name=p17 sig_type=std_logic lab=VINS2}
+C {devices/vsource.sym} 1670 -640 0 0 {name=V5 value=1.5 savecurrent=false}
+C {devices/gnd.sym} 1670 -600 0 0 {name=l5 lab=GND}
+C {sky130_fd_pr/pfet_01v8_lvt.sym} 1620 -640 0 1 {name=M2
+L=0.35
+W=1
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8_lvt
+spiceprefix=X
+}
+C {pll_inv1.sym} 1480 -440 0 0 {name=x7 VSS=VSS VNB=VNB VPB=VPB VDD=VDD}
+C {devices/lab_pin.sym} 1350 -440 0 0 {name=p20 sig_type=std_logic lab=VFAST}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 1350 -470 0 0 {name=C5 model=cap_mim_m3_1 W=5 L=5 MF=1 spiceprefix=X}
+C {devices/lab_pin.sym} 1510 -440 3 1 {name=p21 sig_type=std_logic lab=VOUTF2}
+C {devices/lab_pin.sym} 1600 -490 2 1 {name=p22 sig_type=std_logic lab=VPB
+}
+C {devices/lab_pin.sym} 1430 -440 0 0 {name=p23 sig_type=std_logic lab=VINF2}
+C {devices/vsource.sym} 1670 -490 0 0 {name=V6 value=1.5 savecurrent=false}
+C {devices/gnd.sym} 1670 -450 0 0 {name=l6 lab=GND}
+C {sky130_fd_pr/pfet_01v8_lvt.sym} 1620 -490 0 1 {name=M1
+L=0.35
+W=1
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8_lvt
+spiceprefix=X
+}

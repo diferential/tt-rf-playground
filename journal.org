@@ -44,3 +44,7 @@
 *** some oscillation seen in PLL
 - may need to tune feedback loop, thinking of doing it dynamically - when around lock point change feedback ratio
 - noise after charge pump buffer opamp is much higher than CP output, have to look into this
+*** Inverter resistor FB size reduction
+- used a PMOS LVT with ~1.4-1.6 gate voltage instead of a resistor
+- much smaller size and very good response
+- since frequency is VCO frequency, may be able to also reduce coupling capacitor but already 5x5 is not too bad
