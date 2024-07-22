@@ -25,3 +25,22 @@
 ** <2024-07-01 Mon> DRC / layout rules ruler
 - in trymosfets.mag placed some atomic via sizes between levels to see the minimal sizes on a 0.05um grid (rounding up sizes as needed)
 - it would probably be a good idea to move these out into their own mag file for reference
+** <2024-07-21 Sun> PLL testing. inverter
+- lots of testing for PLL
+*** charge pump for PLL after PFD
+- charge pump noise seems better with Resistor and VOUT inverted
+  - PLL CP without buffer yields low vout around 0.8V
+  - not enough power from CP and opamp2 buffer caps around 1.2V
+  - may be easiest to CP up to 5V or such and then buffer
+*** opamp2
+- using native nmos transistors yields good response all the way pretty close to VSS
+*** level conversion needed post VCO otherwise DFF won't divide frequency
+- VCO output levels can be some 0.5-0.6V only
+- tried to use a differential amplifier and some cross-coupled feedback like a sense amplifier
+- but it was finicky to get right
+- resistor feedback inverter works really well and is virtually no-tune-needed
+- coupling capacitor is needed
+- resistor feedback and coupling capacitor can get pretty large in area .. for some applications multiple stages are smaller and may be better
+*** some oscillation seen in PLL
+- may need to tune feedback loop, thinking of doing it dynamically - when around lock point change feedback ratio
+- noise after charge pump buffer opamp is much higher than CP output, have to look into this

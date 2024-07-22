@@ -170,7 +170,7 @@ lab=VSS}
 C {devices/lab_pin.sym} 1520 -100 0 0 {name=p29 sig_type=std_logic lab=VSS}
 C {sky130_fd_pr/res_high_po.sym} 1560 -510 0 0 {name=R1
 W=0.35
-L=10
+L=20
 model=res_high_po
 spiceprefix=X
 mult=1}

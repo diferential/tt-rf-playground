@@ -6,15 +6,15 @@ V {}
 S {}
 E {}
 B 2 1960 -1100 2760 -700 {flags=graph
-y1=1.3e-06
+y1=0.41
 y2=1.8
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=4e-08
+x1=8.97706e-08
+x2=9.23376e-08
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -38,8 +38,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=4e-08
+x1=8.97706e-08
+x2=9.23376e-08
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -57,15 +57,15 @@ logy=0
 color=8
 node="\\"VOUT VRF -\\""}
 B 2 1960 -700 2760 -300 {flags=graph
-y1=-0.18
-y2=1.4
+y1=0.88
+y2=1.8
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=4e-08
+x1=8.97706e-08
+x2=9.23376e-08
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -80,10 +80,9 @@ logy=0
 
 
 
-color="4 5 8"
-node="VP
-VN
-\\"VP VN -\\""}
+color="4 7"
+node="VOUT2
+VPULSE"}
 N 970 -1480 970 -1470 {
 lab=VSS}
 N 1080 -1480 1080 -1470 {
@@ -110,6 +109,24 @@ N 1710 -1340 1850 -1340 {
 lab=VOUT}
 N 1850 -1240 1850 -1220 {
 lab=#net1}
+N 1840 -1050 1840 -1010 {
+lab=VOUT2}
+N 1630 -1010 1630 -980 {
+lab=VDD}
+N 1630 -900 1630 -870 {
+lab=VSS}
+N 1700 -1050 1700 -940 {
+lab=VOUT2}
+N 1570 -1050 1700 -1050 {
+lab=VOUT2}
+N 1570 -1050 1570 -950 {
+lab=VOUT2}
+N 1490 -910 1570 -910 {
+lab=VPULSE}
+N 1700 -1050 1840 -1050 {
+lab=VOUT2}
+N 1840 -950 1840 -930 {
+lab=#net2}
 C {devices/code.sym} 1160 -1480 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
@@ -132,10 +149,11 @@ only_toplevel=false
 value="
 .options savecurrents
 VRF VRF 0 sin 0.9 0.9 100MEG
+VPULSE VPULSE   0 pulse 1.0 1.8 1n 1p 1p 1n 1u
 .control
-  repeat 5
+  repeat 2
     save all
-    tran 10p 40n
+    tran 10p 100n
     remzerovec
     write tb_opamp_buf1.raw
     set appendwrite
@@ -165,3 +183,17 @@ C {devices/iopin.sym} 1640 -1300 0 1 { name=p18 lab=VDD }
 C {devices/lab_pin.sym} 1500 -1200 0 0 {name=p21 sig_type=std_logic lab=VRF}
 C {devices/lab_pin.sym} 1830 -1190 0 0 {name=p1 sig_type=std_logic lab=VSS}
 C {devices/ammeter.sym} 1850 -1270 0 0 {name=viout savecurrent=true}
+C {devices/lab_pin.sym} 1840 -1050 0 1 {name=p2 sig_type=std_logic lab=VOUT2}
+C {sky130_fd_pr/res_high_po.sym} 1840 -900 0 0 {name=R1
+W=0.35
+L=10
+model=res_high_po
+spiceprefix=X
+mult=1}
+C {devices/lab_pin.sym} 1840 -870 0 0 {name=p4 sig_type=std_logic lab=VSS}
+C {opamp2.sym} 1630 -940 0 0 {name=x2}
+C {devices/lab_pin.sym} 1630 -870 0 0 {name=p5 sig_type=std_logic lab=VSS}
+C {devices/iopin.sym} 1630 -1010 0 1 { name=p6 lab=VDD }
+C {devices/lab_pin.sym} 1490 -910 0 0 {name=p7 sig_type=std_logic lab=VPULSE}
+C {devices/lab_pin.sym} 1820 -900 0 0 {name=p8 sig_type=std_logic lab=VSS}
+C {devices/ammeter.sym} 1840 -980 0 0 {name=viout1 savecurrent=true}
