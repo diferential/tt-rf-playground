@@ -6,15 +6,15 @@ V {}
 S {}
 E {}
 B 2 2330 -1270 3130 -870 {flags=graph
-y1=-0.011
+y1=-0.0021
 y2=3.9
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=7.0606e-06
-x2=7.08479e-06
+x1=5.25842e-06
+x2=5.37391e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -35,15 +35,15 @@ color="4 5"
 node="\\"UP 2 +\\"
 DN"}
 B 2 2330 -1670 3130 -1270 {flags=graph
-y1=0.08
+y1=-0.021
 y2=5.9
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=7.0606e-06
-x2=7.08479e-06
+x1=5.25842e-06
+x2=5.37391e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -68,15 +68,15 @@ node="\\"VA 4 +\\"
 \\"C1 2 +\\"
 \\"B1\\""}
 B 2 1530 -870 2330 -470 {flags=graph
-y1=0.102076
-y2=1.86108
+y1=0.013
+y2=0.87
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=7.0606e-06
-x2=7.08479e-06
+x1=5.25842e-06
+x2=5.37391e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -100,15 +100,15 @@ node="A1
 VIN2
 B1"}
 B 2 2330 -870 3130 -470 {flags=graph
-y1=4.2e-07
-y2=0.92
+y1=0.799172
+y2=2.1792
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=7.0606e-06
-x2=7.08479e-06
+x1=5.25842e-06
+x2=5.37391e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -125,10 +125,37 @@ logy=0
 
 
 
-color="18 8 4"
-node="VCP
-VOUT_CP
+color="18 8"
+node="VOUT_CP
 VPWR_OSC"}
+B 2 730 -870 1530 -470 {flags=graph
+y1=0.791453
+y2=0.797853
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=5.25842e-06
+x2=5.37391e-06
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+
+
+dataset=-1
+unitx=1
+logx=0
+logy=0
+
+
+
+
+
+
+color=18
+node=VCP}
 T {Voltage restorer} 1540 -1150 0 0 0.4 0.4 {}
 T {VCO controlled by VPWR_OSC} 1520 -1280 0 0 0.3 0.3 {}
 T {Divide by 16} 1880 -1370 0 0 0.4 0.4 {}
@@ -182,7 +209,7 @@ lab=VSS}
 N 1690 -1790 1690 -1680 {
 lab=VOUT_CP}
 N 1560 -1790 1560 -1690 {
-lab=VOUT_CP}
+lab=#net5}
 N 1480 -1650 1560 -1650 {
 lab=VCP}
 N 1670 -1490 1670 -1480 {
@@ -196,25 +223,21 @@ lab=GND}
 N 2260 -1750 2260 -1730 {
 lab=VPWR}
 N 2040 -1110 2040 -1080 {
-lab=#net5}
+lab=#net6}
 N 1860 -1080 2040 -1080 {
-lab=#net5}
+lab=#net6}
 N 1860 -1110 1860 -1080 {
-lab=#net5}
+lab=#net6}
 N 2040 -1020 2040 -990 {
-lab=#net6}
+lab=#net7}
 N 1860 -990 2040 -990 {
-lab=#net6}
+lab=#net7}
 N 1860 -1020 1860 -990 {
-lab=#net6}
+lab=#net7}
 N 1860 -1170 1860 -1130 {
 lab=#net4}
 N 1860 -1080 1860 -1040 {
-lab=#net5}
-N 1560 -1790 1690 -1790 {
-lab=VOUT_CP}
-N 1670 -1420 1790 -1420 {
-lab=VOUT_CP}
+lab=#net6}
 N 1260 -1580 1260 -1570 {
 lab=VDDCP}
 N 1260 -1510 1260 -1500 {
@@ -231,6 +254,20 @@ N 1550 -1090 1550 -1070 {
 lab=VIN2}
 N 1550 -1090 1630 -1090 {
 lab=VIN2}
+N 1660 -1790 1690 -1790 {
+lab=VOUT_CP}
+N 1560 -1790 1600 -1790 {
+lab=#net5}
+N 1760 -1420 1790 -1420 {
+lab=VOUT_CP}
+N 1670 -1420 1700 -1420 {
+lab=VOUT_CP}
+N 1700 -1420 1760 -1420 {
+lab=VOUT_CP}
+N 1640 -1420 1670 -1420 {
+lab=VOUT_CP}
+N 1550 -1420 1580 -1420 {
+lab=VPWR}
 C {devices/code.sym} 1950 -1570 0 0 {name=TT_MM_MODELS
 only_toplevel=true
 format="tcleval( @value )"
@@ -253,11 +290,11 @@ simulator=ngspice
 only_toplevel=false 
 value="
 .options savecurrents 
-VA VA 0 pulse 1.8 0 0n 1p 1p 50n 100n
+VA VA 0 pulse 1.8 0 0n 1p 1p 8n 16n
 .control
   repeat 1
     save all
-    tran 100p 10u
+    tran 100p 8u
     remzerovec
     write tb_pll3.raw
     set appendwrite
@@ -308,7 +345,6 @@ C {sky130_stdcells/dfxbp_2.sym} 1950 -1320 0 0 {name=x7 VGND=VGND VNB=VNB VPB=VP
 C {devices/lab_pin.sym} 1860 -1330 0 0 {name=p20 sig_type=std_logic lab=B1
 }
 C {sky130_stdcells/dfxbp_2.sym} 1950 -1210 0 0 {name=x8 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {opamp2.sym} 1620 -1680 0 0 {name=x9}
 C {devices/lab_pin.sym} 1620 -1610 0 0 {name=p39 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 1480 -1650 2 1 {name=p41 sig_type=std_logic lab=VCP
 }
@@ -340,7 +376,6 @@ C {devices/lab_pin.sym} 1160 -1780 2 1 {name=p10 sig_type=std_logic lab=VDDCP
 C {devices/lab_pin.sym} 1620 -1740 2 1 {name=p2 sig_type=std_logic lab=VDDCP
 
 }
-C {devices/ammeter.sym} 1670 -1450 0 0 {name=viosc savecurrent=true}
 C {pll_inv1.sym} 1680 -1010 0 0 {name=x15 VSS=VSS VNB=VNB VPB=VPB VDD=VDD}
 C {sky130_fd_pr/res_xhigh_po_0p35.sym} 1700 -1070 2 0 {name=R1
 L=40
@@ -353,3 +388,24 @@ C {devices/lab_pin.sym} 1550 -1010 2 1 {name=p13 sig_type=std_logic lab=A1
 }
 C {devices/lab_pin.sym} 1700 -1010 0 1 {name=p21 sig_type=std_logic lab=B1
 }
+C {opamp3.sym} 1620 -1680 0 0 {name=x2}
+C {sky130_fd_pr/res_xhigh_po_0p35.sym} 1530 -1690 3 0 {name=R2
+L=4
+model=res_xhigh_po_0p35
+spiceprefix=X
+mult=1}
+C {sky130_fd_pr/res_xhigh_po_0p35.sym} 1630 -1790 3 0 {name=R3
+L=4
+model=res_xhigh_po_0p35
+spiceprefix=X
+mult=1}
+C {devices/lab_pin.sym} 1500 -1690 0 0 {name=p16 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 1550 -1420 2 1 {name=p22 sig_type=std_logic lab=VPWR
+
+}
+C {devices/res.sym} 1610 -1420 1 0 {name=R4
+value=100T
+footprint=1206
+device=resistor
+m=1}
+C {devices/ammeter.sym} 1670 -1450 0 0 {name=viosc savecurrent=true}

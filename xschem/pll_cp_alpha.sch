@@ -99,14 +99,15 @@ N 2090 -690 2090 -660 {
 lab=#net2}
 N 2090 -600 2090 -560 {
 lab=VOUT}
-N 2220 -690 2220 -560 {
-lab=#net2}
 N 2090 -690 2220 -690 {
 lab=#net2}
 N 1500 -910 1820 -910 {
 lab=VDD}
 N 2040 -350 2150 -350 {
 lab=VSS}
+N 2090 -560 2220 -560 {
+lab=VOUT}
+N 2220 -690 2220 -560 {}
 C {sky130_fd_pr/nfet_01v8_lvt.sym} 1670 -580 0 0 {name=M5
 W=5
 L=0.35
@@ -184,7 +185,7 @@ spiceprefix=X
 }
 C {devices/lab_pin.sym} 1690 -650 0 0 {name=p1 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 1690 -710 0 0 {name=p3 sig_type=std_logic lab=VSS}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 2090 -530 0 0 {name=C1 model=cap_mim_m3_1 W=30 L=30 MF=1 spiceprefix=X
+C {sky130_fd_pr/cap_mim_m3_1.sym} 2090 -530 0 0 {name=C1 model=cap_mim_m3_1 W=10 L=10 MF=1 spiceprefix=X
 }
 C {devices/lab_pin.sym} 2090 -500 0 0 {name=p4 sig_type=std_logic lab=VSS}
 C {sky130_fd_pr/nfet_01v8_lvt.sym} 1520 -390 0 1 {name=M11
@@ -237,7 +238,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8_lvt
 spiceprefix=X
 }
-C {devices/vsource.sym} 2040 -390 0 0 {name=V3 value=1.2 savecurrent=false}
+C {devices/vsource.sym} 2040 -390 0 0 {name=V3 value=0.5 savecurrent=false}
 C {devices/lab_pin.sym} 2040 -430 2 1 {name=p8 sig_type=std_logic lab=VBL
 }
 C {devices/lab_pin.sym} 1910 -730 2 1 {name=p9 sig_type=std_logic lab=VBH
@@ -251,14 +252,14 @@ C {devices/ammeter.sym} 1980 -820 0 0 {name=vchigh savecurrent=true
 }
 C {devices/lab_pin.sym} 1910 -630 2 1 {name=p14 sig_type=std_logic lab=VBL
 }
-C {devices/vsource.sym} 2120 -390 0 0 {name=V4 value=0.6 savecurrent=false}
+C {devices/vsource.sym} 2120 -390 0 0 {name=V4 value=1 savecurrent=false}
 C {devices/lab_pin.sym} 2120 -430 2 1 {name=p15 sig_type=std_logic lab=VBH
 }
 C {sky130_fd_pr/res_xhigh_po_0p35.sym} 2090 -630 0 0 {name=R1
-L=10
+L=100
 model=res_xhigh_po_0p35
 spiceprefix=X
-mult=1
+mult=10
 }
 C {sky130_fd_pr/cap_mim_m3_1.sym} 2220 -530 0 0 {name=C2 model=cap_mim_m3_1 W=0.1 L=0.1 MF=1 spiceprefix=X
 }
