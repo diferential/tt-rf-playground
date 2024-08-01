@@ -105,9 +105,8 @@ N 1500 -910 1820 -910 {
 lab=VDD}
 N 2040 -350 2150 -350 {
 lab=VSS}
-N 2090 -560 2220 -560 {
-lab=VOUT}
-N 2220 -690 2220 -560 {}
+N 2220 -690 2220 -560 {
+lab=#net2}
 C {sky130_fd_pr/nfet_01v8_lvt.sym} 1670 -580 0 0 {name=M5
 W=5
 L=0.35
@@ -259,7 +258,7 @@ C {sky130_fd_pr/res_xhigh_po_0p35.sym} 2090 -630 0 0 {name=R1
 L=100
 model=res_xhigh_po_0p35
 spiceprefix=X
-mult=10
+mult=1
 }
 C {sky130_fd_pr/cap_mim_m3_1.sym} 2220 -530 0 0 {name=C2 model=cap_mim_m3_1 W=0.1 L=0.1 MF=1 spiceprefix=X
 }

@@ -13,8 +13,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1e-07
+x1=2.0037e-08
+x2=1.20037e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -34,15 +34,15 @@ node="\\"UP 0.1 +\\"
 DN
 \\"PRE_CMD 1.8 / 0.5 +\\""}
 B 2 2460 -1190 3260 -790 {flags=graph
-y1=0.13
-y2=1.5
+y1=0.55229
+y2=0.834952
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1e-07
+x1=2.0037e-08
+x2=1.20037e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -69,8 +69,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1e-07
+x1=2.0037e-08
+x2=1.20037e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -97,8 +97,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1e-07
+x1=2.0037e-08
+x2=1.20037e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -210,12 +210,6 @@ VPRE_CMD PRE_CMD 0 pulse 1.8 0 2.5n 1p 1p 10n 10000n
     end
 .endc
 "}
-C {sky130_fd_pr/res_xhigh_po_0p35.sym} 2310 -670 0 0 {name=R2
-L=500
-model=res_xhigh_po_0p35
-spiceprefix=X
-mult=1
-}
 C {devices/lab_pin.sym} 2310 -570 0 0 {name=p19 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 2310 -750 0 1 {name=p22 sig_type=std_logic lab=VOUT2
 }
@@ -249,12 +243,6 @@ C {devices/lab_pin.sym} 1560 -1010 0 0 {name=p3 sig_type=std_logic lab=UP}
 C {devices/lab_pin.sym} 1560 -990 0 0 {name=p4 sig_type=std_logic lab=DN}
 C {devices/lab_pin.sym} 1860 -1030 0 1 {name=p5 sig_type=std_logic lab=VOUT1}
 C {devices/lab_pin.sym} 1860 -670 0 1 {name=p6 sig_type=std_logic lab=VOUT2}
-C {sky130_fd_pr/res_xhigh_po_0p35.sym} 2110 -670 0 0 {name=R1
-L=500
-model=res_xhigh_po_0p35
-spiceprefix=X
-mult=1
-}
 C {devices/lab_pin.sym} 2110 -570 0 0 {name=p7 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 2110 -750 0 1 {name=p8 sig_type=std_logic lab=VOUT1
 }
@@ -286,12 +274,6 @@ C {devices/lab_pin.sym} 1560 -840 0 0 {name=p18 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 1560 -860 0 0 {name=p20 sig_type=std_logic lab=UPB}
 C {devices/lab_pin.sym} 1560 -880 0 0 {name=p21 sig_type=std_logic lab=DNB}
 C {devices/lab_pin.sym} 1860 -900 0 1 {name=p26 sig_type=std_logic lab=VOUT1B}
-C {sky130_fd_pr/res_xhigh_po_0p35.sym} 2110 -270 0 0 {name=R3
-L=500
-model=res_xhigh_po_0p35
-spiceprefix=X
-mult=1
-}
 C {devices/lab_pin.sym} 2110 -170 0 0 {name=p27 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 2110 -350 0 1 {name=p28 sig_type=std_logic lab=VOUT1B
 }
@@ -319,12 +301,6 @@ C {devices/lab_pin.sym} 1560 -550 0 0 {name=p32 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 1560 -490 0 0 {name=p33 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 1560 -530 0 0 {name=p34 sig_type=std_logic lab=DNB}
 C {devices/lab_pin.sym} 1560 -510 0 0 {name=p35 sig_type=std_logic lab=UPB}
-C {sky130_fd_pr/res_xhigh_po_0p35.sym} 2320 -260 0 0 {name=R4
-L=500
-model=res_xhigh_po_0p35
-spiceprefix=X
-mult=1
-}
 C {devices/lab_pin.sym} 2320 -160 0 0 {name=p36 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 2320 -340 0 1 {name=p37 sig_type=std_logic lab=VOUT2B
 }
@@ -346,3 +322,23 @@ spiceprefix=X
 C {devices/lab_pin.sym} 2320 -490 1 0 {name=p38 sig_type=std_logic lab=VPRE}
 C {devices/lab_pin.sym} 2280 -430 0 0 {name=p39 sig_type=std_logic lab=PRE_CMD
 }
+C {devices/res.sym} 2110 -670 0 0 {name=R5
+value=100Meg
+footprint=1206
+device=resistor
+m=1}
+C {devices/res.sym} 2310 -680 0 0 {name=R1
+value=100Meg
+footprint=1206
+device=resistor
+m=1}
+C {devices/res.sym} 2110 -270 0 0 {name=R2
+value=100Meg
+footprint=1206
+device=resistor
+m=1}
+C {devices/res.sym} 2320 -260 0 0 {name=R3
+value=100Meg
+footprint=1206
+device=resistor
+m=1}

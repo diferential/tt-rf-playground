@@ -93,8 +93,6 @@ N 520 -560 810 -560 {
 lab=VDD}
 N 810 -500 810 -490 {
 lab=#net4}
-N 770 -530 770 -480 {
-lab=#net4}
 N 1040 -500 1040 -490 {
 lab=#net5}
 N 1040 -560 1330 -560 {
@@ -109,8 +107,6 @@ N 520 -530 560 -530 {
 lab=VDD}
 N 560 -560 560 -530 {
 lab=VDD}
-N 770 -480 810 -480 {
-lab=#net4}
 N 480 -530 480 -490 {
 lab=#net3}
 N 480 -490 520 -490 {
@@ -167,10 +163,14 @@ N 1010 -190 1010 -100 {
 lab=VSS}
 N 1040 -190 1040 -100 {
 lab=VSS}
+N 520 -490 770 -490 {
+lab=#net3}
+N 770 -530 770 -490 {
+lab=#net3}
 C {devices/lab_pin.sym} 1520 -100 0 0 {name=p29 sig_type=std_logic lab=VSS}
 C {sky130_fd_pr/res_high_po.sym} 1560 -510 0 0 {name=R1
 W=0.35
-L=20
+L=10
 model=res_high_po
 spiceprefix=X
 mult=1}
@@ -256,34 +256,6 @@ spiceprefix=X
 C {devices/ammeter.sym} 1330 -530 0 0 {name=vioutp savecurrent=true}
 C {devices/ammeter.sym} 1330 -160 0 0 {name=vioutn savecurrent=true}
 C {devices/lab_pin.sym} 1040 -360 0 0 {name=p6 sig_type=std_logic lab=VX}
-C {sky130_fd_pr/nfet_03v3_nvt.sym} 500 -260 0 0 {name=M5
-L=0.5
-W=4
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_03v3_nvt
-spiceprefix=X
-}
-C {sky130_fd_pr/nfet_03v3_nvt.sym} 830 -260 0 1 {name=M6
-L=0.5
-W=4
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_03v3_nvt
-spiceprefix=X
-}
 C {sky130_fd_pr/pfet_01v8_lvt.sym} 500 -530 0 0 {name=M12
 L=0.35
 W=4
@@ -346,3 +318,31 @@ C {devices/lab_pin.sym} 900 -260 0 1 {name=p3 sig_type=std_logic lab=IN_N
 C {devices/ipin.sym} 400 -430 0 1 { name=p1 lab=IN_N}
 C {devices/opin.sym} 400 -400 0 0 { name=p10 lab=VOUT }
 C {devices/ipin.sym} 400 -450 0 1 { name=p16 lab=IN_P }
+C {sky130_fd_pr/nfet_03v3_nvt.sym} 830 -260 0 1 {name=M3
+L=0.5
+W=4
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_03v3_nvt
+spiceprefix=X
+}
+C {sky130_fd_pr/nfet_03v3_nvt.sym} 500 -260 0 0 {name=M5
+L=0.5
+W=4
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_03v3_nvt
+spiceprefix=X
+}

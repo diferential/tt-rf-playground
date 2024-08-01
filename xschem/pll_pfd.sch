@@ -266,3 +266,4 @@ C {devices/lab_pin.sym} -50 -200 3 1 {name=p60 sig_type=std_logic lab=QAB
 }
 C {devices/lab_pin.sym} 200 -200 3 1 {name=p61 sig_type=std_logic lab=QBB
 }
+C {devices/opin.sym} -430 -70 0 0 {name=p62 lab=R}
