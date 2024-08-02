@@ -81,7 +81,7 @@ N 1690 -650 1690 -640 {
 lab=VOUT}
 N 1690 -640 1690 -630 {
 lab=VOUT}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 1830 -360 0 0 {name=C1 model=cap_mim_m3_1 W=30 L=30 MF=1 spiceprefix=X
+C {sky130_fd_pr/cap_mim_m3_1.sym} 1830 -360 0 0 {name=C1 model=cap_mim_m3_1 W=100 L=100 MF=1 spiceprefix=X
 }
 C {devices/lab_pin.sym} 1830 -330 0 0 {name=p4 sig_type=std_logic lab=VSS}
 C {/home/emilian/tt/local/share/xschem/xschem_library/devices/opin.sym} 1830 -410 0 0 {name=p17 lab=VOUT}
@@ -140,7 +140,7 @@ sa=0 sb=0 sd=0
 model=pfet_g5v0d10v5
 spiceprefix=X
 }
-C {devices/isource.sym} 1310 -560 0 0 {name=I0 value=200u}
+C {devices/isource.sym} 1310 -560 0 0 {name=I0 value=10u}
 C {sky130_fd_pr/nfet3_g5v0d10v5.sym} 1330 -390 0 1 {name=M11
 W=2
 L=1
