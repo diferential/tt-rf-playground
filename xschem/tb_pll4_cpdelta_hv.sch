@@ -13,8 +13,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=9.86436e-07
-x2=8.98643e-06
+x1=3e-13
+x2=4e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -37,15 +37,15 @@ DN
 \\"R -1 +\\"
 \\"VBOOT 0.5 +\\""}
 B 2 2330 -1670 3130 -1270 {flags=graph
-y1=-0.0081
+y1=-0.098
 y2=5.9
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=9.86436e-07
-x2=8.98643e-06
+x1=3e-13
+x2=4e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -77,8 +77,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=9.86436e-07
-x2=8.98643e-06
+x1=3e-13
+x2=4e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -102,15 +102,15 @@ node="A1
 VIN2
 B1"}
 B 2 2330 -870 3130 -470 {flags=graph
-y1=0.039
-y2=2.1
+y1=1.4
+y2=1.8
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=9.86436e-07
-x2=8.98643e-06
+x1=3e-13
+x2=4e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -137,8 +137,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=9.86436e-07
-x2=8.98643e-06
+x1=3e-13
+x2=4e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -155,8 +155,11 @@ logy=0
 
 
 
-color=18
-node=VBOOT}
+
+color="18 4 5"
+node="DN_LOW
+DN
+DNB"}
 B 2 3130 -1670 3930 -1270 {flags=graph
 y1=-0.52
 y2=3.4
@@ -165,8 +168,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=9.86436e-07
-x2=8.98643e-06
+x1=3e-13
+x2=4e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -188,15 +191,15 @@ node="UP_LOW
 UP
 UPB"}
 B 2 3130 -870 3930 -470 {flags=graph
-y1=1
-y2=1.2
+y1=0.0011
+y2=2.1
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=9.86436e-07
-x2=8.98643e-06
+x1=3e-13
+x2=4e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -220,6 +223,7 @@ T {VCO controlled by VPWR_OSC} 1520 -1280 0 0 0.3 0.3 {}
 T {Divide by 16} 1880 -1370 0 0 0.4 0.4 {}
 T {TODO fix feedback oscillation} 1240 -1360 0 0 0.3 0.3 {}
 T {TODO fix oscillation by limiting max up/down swing per cycle} 1240 -1330 0 0 0.3 0.3 {}
+T {TODO VPWR_OSC should never go past 1.8V} 1240 -1390 0 0 0.3 0.3 {}
 N 2130 -1740 2130 -1730 {
 lab=VPB}
 N 2130 -1670 2130 -1660 {
@@ -379,12 +383,12 @@ only_toplevel=false
 value="
 .options savecurrents 
 .OPTIONS RAMPTIME=1ns
-VA VA 0 pulse 1.8 0 100n 10p 10p 16n 32n
+VA VA 0 pulse 1.8 0 100n 10p 10p 8n 16n
 VBOOT VBOOT 0 pulse 3.3 0 0n 2n 2n 90n 200u
 .control
   repeat 1
     save all
-    tran 30p 8u uic
+    tran 30p 4u uic
     remzerovec
     write tb_pll4_cpdelta_hv.raw
     set appendwrite
@@ -479,7 +483,7 @@ C {devices/lab_pin.sym} 1560 -1440 2 0 {name=p1 sig_type=std_logic lab=VCP
 }
 C {devices/lab_pin.sym} 1520 -1520 2 1 {name=p27 sig_type=std_logic lab=VBOOT
 }
-C {devices/vsource.sym} 1390 -1510 0 0 {name=V3 value=2 savecurrent=false}
+C {devices/vsource.sym} 1390 -1510 0 0 {name=V3 value=2.8 savecurrent=false}
 C {devices/lab_pin.sym} 1390 -1460 0 0 {name=p22 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 1250 -1810 2 0 {name=p36 sig_type=std_logic lab=RB}
 C {devices/lab_pin.sym} 1160 -1760 0 0 {name=p37 sig_type=std_logic lab=UPB}

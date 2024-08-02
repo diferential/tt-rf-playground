@@ -13,8 +13,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.84957e-07
-x2=4.18495e-06
+x1=1.23305e-07
+x2=4.1233e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -35,15 +35,15 @@ DN
 \\"PRE_CMD 0.2 +\\"
 \\"CK 0.5 -\\""}
 B 2 2460 -1190 3260 -790 {flags=graph
-y1=0.82
-y2=1.4
+y1=2
+y2=3
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.84957e-07
-x2=4.18495e-06
+x1=1.23305e-07
+x2=4.1233e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -62,15 +62,15 @@ logy=0
 color=4
 node=VOUT1}
 B 2 2460 -790 3260 -390 {flags=graph
-y1=0.23
-y2=1.7
+y1=1.1
+y2=2.1
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.84957e-07
-x2=4.18495e-06
+x1=1.23305e-07
+x2=4.1233e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -86,19 +86,18 @@ logy=0
 
 
 
-color="6 4"
-node="VOUT1B
-VPRE"}
+color=6
+node=VOUT1B}
 B 2 1660 -390 2460 10 {flags=graph
-y1=0.230001
-y2=1.40002
+y1=1.1
+y2=3
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.84957e-07
-x2=4.18495e-06
+x1=1.23305e-07
+x2=4.1233e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -175,9 +174,9 @@ only_toplevel=false
 value="
 .options savecurrents
 .param VDD=3.3
-.param VMID=1.6
-VUP UP   0 pulse 0 VDD 130.000n 1p 1p 80p 10n
-VUPB UPB 0 pulse VDD 0 130.000n 1p 1p 80p 10n
+.param VMID=2
+VUP UP   0 pulse 0 VDD 130.000n 1p 1p 1800p 10n
+VUPB UPB 0 pulse VDD 0 130.000n 1p 1p 1800p 10n
 VDN DN   0 pulse 0 VDD 130.005n 1p 1p 20p 10n
 VDNB DNB 0 pulse VDD 0 130.005n 1p 1p 20p 10n
 VCK  CK  0 pulse 0 VDD 132.000n 1p 1p 100p 10n

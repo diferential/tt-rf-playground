@@ -9,12 +9,6 @@ N 1310 -360 1310 -330 {
 lab=VSS}
 N 1310 -440 1310 -420 {
 lab=#net1}
-N 1350 -390 1370 -390 {
-lab=#net1}
-N 1540 -880 1540 -840 {
-lab=#net2}
-N 1500 -840 1540 -840 {
-lab=#net2}
 N 1500 -850 1500 -840 {
 lab=#net2}
 N 1270 -330 1310 -330 {
@@ -39,38 +33,24 @@ N 1310 -330 1500 -330 {
 lab=VSS}
 N 1310 -530 1310 -500 {
 lab=#net4}
-N 1350 -420 1350 -390 {
-lab=#net1}
-N 1310 -420 1350 -420 {
-lab=#net1}
 N 1500 -440 1500 -420 {
 lab=#net5}
 N 1500 -360 1500 -330 {
 lab=VSS}
-N 1370 -390 1460 -390 {
-lab=#net1}
 N 1350 -470 1460 -470 {
 lab=#net4}
 N 1500 -660 1500 -500 {
 lab=#net6}
 N 1690 -440 1690 -420 {
 lab=#net7}
-N 1460 -390 1650 -390 {
-lab=#net1}
 N 1460 -470 1650 -470 {
 lab=#net4}
 N 1690 -360 1690 -330 {
 lab=VSS}
-N 1690 -510 1690 -500 {
-lab=#net8}
 N 1690 -850 1690 -840 {
-lab=#net9}
-N 1690 -780 1690 -770 {
-lab=#net10}
+lab=#net8}
 N 1540 -810 1650 -810 {
 lab=#net3}
-N 1540 -880 1650 -880 {
-lab=#net2}
 N 1830 -410 1830 -390 {
 lab=VOUT}
 N 1830 -640 1830 -410 {
@@ -81,7 +61,13 @@ N 1690 -650 1690 -640 {
 lab=VOUT}
 N 1690 -640 1690 -630 {
 lab=VOUT}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 1830 -360 0 0 {name=C1 model=cap_mim_m3_1 W=100 L=100 MF=1 spiceprefix=X
+N 1690 -570 1690 -500 {
+lab=#net9}
+N 1690 -780 1690 -710 {
+lab=#net10}
+N 1350 -390 1460 -390 {
+lab=VDD}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 1830 -360 0 0 {name=C1 model=cap_mim_m3_1 W=30 L=30 MF=1 spiceprefix=X
 }
 C {devices/lab_pin.sym} 1830 -330 0 0 {name=p4 sig_type=std_logic lab=VSS}
 C {/home/emilian/tt/local/share/xschem/xschem_library/devices/opin.sym} 1830 -410 0 0 {name=p17 lab=VOUT}
@@ -232,23 +218,6 @@ sa=0 sb=0 sd=0
 model=nfet_g5v0d10v5
 spiceprefix=X
 }
-C {sky130_fd_pr/nfet3_g5v0d10v5.sym} 1670 -540 0 0 {name=M20
-W=1
-L=0.5
-body=VSS
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_g5v0d10v5
-spiceprefix=X
-}
-C {devices/lab_pin.sym} 1650 -540 2 1 {name=p5 sig_type=std_logic lab=DN}
-C {devices/lab_pin.sym} 1650 -740 2 1 {name=p8 sig_type=std_logic lab=UPB}
 C {sky130_fd_pr/pfet3_g5v0d10v5.sym} 1670 -810 0 0 {name=M4
 W=3
 L=1
@@ -267,18 +236,7 @@ spiceprefix=X
 C {devices/ammeter.sym} 1690 -680 0 0 {name=viup savecurrent=true}
 C {devices/ammeter.sym} 1690 -600 0 0 {name=vidown savecurrent=true}
 C {devices/lab_pin.sym} 1830 -630 2 0 {name=p9 sig_type=std_logic lab=VOUT}
-C {sky130_fd_pr/pfet3_g5v0d10v5.sym} 1670 -740 0 0 {name=M1
-W=3
-L=1
-body=VDD
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_g5v0d10v5
-spiceprefix=X
-}
+C {devices/lab_pin.sym} 1540 -880 0 1 {name=p1 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 1650 -880 2 1 {name=p3 sig_type=std_logic lab=UPB}
+C {devices/lab_pin.sym} 1410 -390 3 1 {name=p6 sig_type=std_logic lab=VDD}
+C {devices/lab_pin.sym} 1650 -390 2 1 {name=p2 sig_type=std_logic lab=DN}
