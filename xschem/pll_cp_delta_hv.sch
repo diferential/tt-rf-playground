@@ -15,8 +15,6 @@ N 1270 -330 1310 -330 {
 lab=VSS}
 N 1500 -330 1830 -330 {
 lab=VSS}
-N 1500 -930 1820 -930 {
-lab=VDD}
 N 1490 -860 1500 -860 {
 lab=VDD}
 N 1500 -730 1540 -730 {
@@ -45,28 +43,24 @@ N 1690 -800 1690 -790 {
 lab=#net6}
 N 1540 -760 1650 -760 {
 lab=#net3}
-N 1970 -410 1970 -390 {
-lab=#net7}
 N 1690 -670 1690 -660 {
 lab=VCAP}
 N 1690 -660 1690 -650 {
 lab=VCAP}
 N 1350 -390 1460 -390 {
 lab=VDD}
-N 1970 -660 1970 -640 {
-lab=VOUT}
 N 1310 -510 1310 -440 {
 lab=#net1}
 N 1500 -510 1500 -440 {
 lab=#net5}
 N 1690 -510 1690 -490 {
-lab=#net8}
+lab=#net7}
 N 1830 -330 1970 -330 {
 lab=VSS}
 N 1830 -660 1970 -660 {
 lab=VOUT}
 N 1690 -590 1690 -570 {
-lab=#net9}
+lab=#net8}
 N 1500 -910 1500 -860 {
 lab=VDD}
 N 1500 -930 1500 -910 {
@@ -90,17 +84,16 @@ lab=VOUT}
 N 1880 -840 1880 -660 {
 lab=VOUT}
 N 1500 -610 1500 -570 {
-lab=#net10}
+lab=#net9}
 N 1970 -330 2080 -330 {
 lab=VSS}
-N 1970 -580 1970 -400 {
-lab=#net7}
 N 1970 -660 2080 -660 {
 lab=VOUT}
 N 2080 -660 2080 -390 {
 lab=VOUT}
-C {devices/lab_pin.sym} 1970 -330 0 0 {name=p4 sig_type=std_logic lab=VSS}
-C {/home/emilian/tt/local/share/xschem/xschem_library/devices/opin.sym} 1970 -660 0 0 {name=p17 lab=VOUT}
+N 1500 -930 1690 -930 {
+lab=VDD}
+C {/home/emilian/tt/local/share/xschem/xschem_library/devices/opin.sym} 2080 -660 0 0 {name=p17 lab=VOUT}
 C {devices/ipin.sym} 1270 -330 0 0 {name=p7 lab=VSS}
 C {devices/lab_pin.sym} 1500 -930 2 1 {name=p19 sig_type=std_logic lab=VDD}
 C {devices/ipin.sym} 1260 -860 0 0 {name=p21 lab=UP}
@@ -270,7 +263,7 @@ C {devices/lab_pin.sym} 1650 -830 2 1 {name=p3 sig_type=std_logic lab=UPB}
 C {devices/lab_pin.sym} 1410 -390 3 1 {name=p6 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 1650 -460 2 1 {name=p2 sig_type=std_logic lab=DN}
 C {devices/ipin.sym} 1850 -510 1 1 {name=p5 lab=CK}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 1800 -660 3 0 {name=C3 model=cap_mim_m3_1 W=1 L=2 MF=1 spiceprefix=X
+C {sky130_fd_pr/cap_mim_m3_1.sym} 1800 -660 3 0 {name=C3 model=cap_mim_m3_1 W=1 L=1 MF=1 spiceprefix=X
 }
 C {devices/lab_pin.sym} 1800 -880 1 0 {name=p8 sig_type=std_logic lab=CKB}
 C {devices/lab_pin.sym} 1690 -660 2 1 {name=p10 sig_type=std_logic lab=VCAP}
@@ -306,8 +299,3 @@ C {devices/lab_pin.sym} 1800 -840 3 0 {name=p12 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 1850 -550 1 0 {name=p13 sig_type=std_logic lab=VSS}
 C {sky130_fd_pr/cap_mim_m3_1.sym} 2080 -360 0 0 {name=C2 model=cap_mim_m3_1 W=50 L=50 MF=1 spiceprefix=X
 }
-C {sky130_fd_pr/res_xhigh_po_0p69.sym} 1970 -610 0 0 {name=R1
-L=1
-model=res_xhigh_po_0p69
-spiceprefix=X
-mult=1}
