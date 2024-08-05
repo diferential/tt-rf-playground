@@ -6,8 +6,8 @@ V {}
 S {}
 E {}
 B 2 160 -560 960 -160 {flags=graph
-y1=5.1e-05
-y2=6.3e-05
+y1=5.8e-05
+y2=6.4e-05
 ypos1=0
 ypos2=2
 divy=5
@@ -28,8 +28,8 @@ logx=0
 logy=0
 }
 B 2 160 -160 960 240 {flags=graph
-y1=4.9e-08
-y2=5e-08
+y1=0.33
+y2=0.95
 ypos1=0
 ypos2=2
 divy=5
@@ -157,7 +157,7 @@ value="
 
 "
 spice_ignore=false}
-C {devices/launcher.sym} 40 -380 0 0 {name=h17 
+C {devices/launcher.sym} -140 -500 0 0 {name=h17 
 descr="Load waves" 
 tclcommand="
 xschem raw_read $netlist_dir/[file tail [file rootname [xschem get current_name]]].raw tran
@@ -174,7 +174,7 @@ value="
     save all
     tran 10p 200n
     remzerovec
-    write vbias1.raw
+    write tb_vbias1.raw
     set appendwrite
     reset
     end
