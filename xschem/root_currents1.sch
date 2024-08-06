@@ -131,7 +131,7 @@ C {/home/emilian/tt/local/share/xschem/xschem_library/devices/lab_pin.sym} -2500
 C {/home/emilian/tt/local/share/xschem/xschem_library/devices/lab_pin.sym} -1850 -1360 0 0 {name=p13 sig_type=std_logic lab=VDD}
 C {sky130_fd_pr/pfet3_g5v0d10v5.sym} -1830 -1330 0 1 {name=M7
 L=0.5
-W=8
+W=4
 body=VDD
 nf=1
 mult=1
@@ -167,3 +167,5 @@ sa=0 sb=0 sd=0
 model=nfet_01v8_lvt
 spiceprefix=X
 }
+C {/home/emilian/tt/local/share/xschem/xschem_library/devices/lab_pin.sym} -2160 -1160 0 1 {name=p20 sig_type=std_logic lab=V1}
+C {/home/emilian/tt/local/share/xschem/xschem_library/devices/lab_pin.sym} -1970 -1160 0 0 {name=p21 sig_type=std_logic lab=V2}
