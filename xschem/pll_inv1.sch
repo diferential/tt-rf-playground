@@ -51,7 +51,7 @@ C {devices/lab_pin.sym} 40 -30 2 0 {name=p3 sig_type=std_logic lab=VPB
 }
 C {sky130_fd_pr/nfet_01v8_lvt.sym} -10 100 0 0 {name=M1
 L=0.25
-W=0.45
+W=0.5
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
