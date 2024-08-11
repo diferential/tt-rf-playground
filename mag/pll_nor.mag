@@ -1,26 +1,29 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1723345926
+timestamp 1723400899
+<< nwell >>
+rect -110 540 550 1120
+<< pwell >>
+rect -100 -60 550 470
 << metal1 >>
 rect -100 1020 500 1120
 rect 20 780 80 1020
 rect 300 800 440 840
 rect 0 680 140 720
-rect -100 540 -40 560
-rect 0 540 40 680
-rect -100 500 40 540
-rect 0 120 40 500
+rect -40 620 40 680
+rect 0 120 40 620
 rect 80 500 100 560
 rect 160 500 170 560
 rect 80 160 120 500
-rect 260 460 300 720
+rect 260 470 300 720
 rect 400 540 440 800
 rect 370 480 380 540
 rect 440 480 450 540
-rect 250 400 260 460
-rect 320 400 330 460
-rect 260 300 300 400
+rect 260 380 300 390
+rect 230 320 240 380
+rect 300 320 310 380
+rect 260 300 300 320
 rect 200 210 240 260
 rect 400 220 440 480
 rect 200 160 270 210
@@ -32,7 +35,7 @@ rect -100 -60 500 40
 << via1 >>
 rect 100 500 160 560
 rect 380 480 440 540
-rect 260 400 320 460
+rect 240 320 300 380
 << metal2 >>
 rect 100 560 160 570
 rect 380 540 440 550
@@ -40,10 +43,10 @@ rect 160 500 380 540
 rect 100 490 160 500
 rect 440 480 480 540
 rect 380 470 440 480
-rect 260 460 320 470
-rect -100 400 260 440
+rect -100 400 300 440
 rect -100 380 -40 400
-rect 260 390 320 400
+rect 240 380 300 400
+rect 240 310 300 320
 use sky130_fd_pr__nfet_01v8_lvt_ZDUAWA  sky130_fd_pr__nfet_01v8_lvt_ZDUAWA_0
 timestamp 1723344990
 transform 1 0 222 0 1 207
@@ -53,8 +56,6 @@ timestamp 1723344990
 transform 1 0 192 0 1 831
 box -295 -284 295 284
 << labels >>
-flabel metal1 -100 500 -40 560 0 FreeSans 800 0 0 0 A
-port 0 nsew
 flabel metal2 -100 380 -40 440 0 FreeSans 800 0 0 0 B
 port 1 nsew
 flabel metal2 420 480 480 540 0 FreeSans 800 0 0 0 Q
@@ -63,4 +64,6 @@ flabel metal1 -100 1020 0 1120 0 FreeSans 800 0 0 0 VDD
 port 3 nsew
 flabel metal1 -60 -60 40 40 0 FreeSans 800 0 0 0 VSS
 port 4 nsew
+flabel metal1 -40 620 20 680 0 FreeSans 800 0 0 0 A
+port 0 nsew
 << end >>
