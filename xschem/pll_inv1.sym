@@ -2,9 +2,9 @@ v {xschem version=3.4.4 file_version=1.2
 }
 G {}
 K {type=subcircuit
-format="@name @pinlist @VSS @VPB @VDD @symname"
-template="name=x1 VSS=VSS VPB=VPB VDD=VDD"
-extra="VSS VNB VDD VPB"}
+format="@name @pinlist @VSS @VDD @symname"
+template="name=x1 VSS=VSS VDD=VDD"
+extra="VSS VDD"}
 V {}
 S {}
 E {}
