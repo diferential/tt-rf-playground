@@ -1,0 +1,102 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1723403560
+<< metal1 >>
+rect -1080 2120 -120 2400
+rect -1080 80 -1000 2120
+rect -920 1600 -680 2040
+rect -580 1600 -340 2040
+rect -930 520 -920 580
+rect -840 520 -830 580
+rect -760 160 -520 600
+rect -430 440 -420 500
+rect -340 440 -330 500
+rect -260 140 -120 2120
+rect -20 1100 940 1260
+rect 0 1080 220 1100
+rect 90 640 100 700
+rect 160 640 170 700
+rect 550 640 560 700
+rect 620 640 630 700
+rect 270 440 280 500
+rect 340 440 350 500
+rect 730 440 740 500
+rect 800 440 810 500
+rect -260 80 40 140
+rect -1080 0 240 80
+rect 920 0 1120 440
+<< via1 >>
+rect -920 520 -840 580
+rect -420 440 -340 500
+rect 100 640 160 700
+rect 560 640 620 700
+rect 280 440 340 500
+rect 740 440 800 500
+<< metal2 >>
+rect 100 700 160 710
+rect 380 700 500 720
+rect 560 700 620 710
+rect -920 640 100 700
+rect 160 640 400 700
+rect -920 580 -840 640
+rect 100 630 160 640
+rect 380 620 400 640
+rect 480 640 560 700
+rect 620 640 640 700
+rect 480 620 500 640
+rect 560 630 620 640
+rect 380 600 500 620
+rect -920 510 -840 520
+rect -420 500 -340 510
+rect 280 500 340 510
+rect 740 500 800 510
+rect -340 440 280 500
+rect 340 440 740 500
+rect 800 440 820 500
+rect -420 430 -340 440
+rect 280 430 340 440
+rect 740 430 800 440
+<< via2 >>
+rect 400 620 480 700
+<< metal3 >>
+rect 1040 1060 1120 1460
+rect 1020 960 1120 1060
+rect 380 700 500 720
+rect 380 620 400 700
+rect 480 620 500 700
+rect 380 600 500 620
+<< via3 >>
+rect 400 620 480 700
+<< metal4 >>
+rect 400 701 460 1520
+rect 399 700 481 701
+rect 399 620 400 700
+rect 480 620 481 700
+rect 399 619 481 620
+use pll_inv1  pll_inv1_0
+timestamp 1723400719
+transform 1 0 570 0 1 60
+box -110 -60 390 1120
+use pll_inv1  pll_inv1_1
+timestamp 1723400719
+transform 1 0 110 0 1 60
+box -110 -60 390 1120
+use sky130_fd_pr__cap_mim_m3_1_GZXQ59  sky130_fd_pr__cap_mim_m3_1_GZXQ59_0
+timestamp 1723403560
+transform 1 0 446 0 1 1800
+box -686 -540 686 540
+use sky130_fd_pr__res_xhigh_po_0p35_ZQ7B63  sky130_fd_pr__res_xhigh_po_0p35_ZQ7B63_0
+timestamp 1723403560
+transform 1 0 -630 0 1 1098
+box -450 -1098 450 1098
+<< labels >>
+flabel via1 740 440 800 500 0 FreeSans 800 0 0 0 Q
+port 1 nsew
+flabel metal1 0 1080 100 1180 0 FreeSans 800 0 0 0 VDD
+port 2 nsew
+flabel metal1 -160 0 -60 100 0 FreeSans 800 0 0 0 VSS
+port 3 nsew
+flabel metal3 1020 960 1120 1060 0 FreeSans 800 0 0 0 D
+port 0 nsew
+<< end >>
