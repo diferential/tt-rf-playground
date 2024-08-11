@@ -83,9 +83,6 @@ spiceprefix=X
 }
 C {devices/lab_pin.sym} 10 150 2 1 {name=p5 sig_type=std_logic lab=VSS
 }
-C {devices/lab_pin.sym} 50 100 2 0 {name=p8 sig_type=std_logic lab=VNB
-
-}
 C {devices/lab_pin.sym} 120 50 0 0 {name=p13 sig_type=std_logic lab=Q
 }
 C {sky130_fd_pr/pfet_01v8_lvt.sym} 240 -30 0 0 {name=M2
@@ -122,11 +119,16 @@ spiceprefix=X
 }
 C {devices/lab_pin.sym} 260 150 2 1 {name=p9 sig_type=std_logic lab=VSS
 }
-C {devices/lab_pin.sym} 300 100 2 0 {name=p10 sig_type=std_logic lab=VNB
-
-}
 C {devices/lab_pin.sym} 320 50 2 0 {name=p11 sig_type=std_logic lab=QB
 }
 C {devices/lab_pin.sym} 260 -130 2 0 {name=p12 sig_type=std_logic lab=VPB
 
 }
+C {devices/opin.sym} -160 -40 0 0 {name=p1 lab=Q}
+C {devices/ipin.sym} -140 -60 0 0 {name=p6 lab=D}
+C {devices/iopin.sym} -140 -100 0 1 {name=p14 lab=VDD}
+C {devices/iopin.sym} -140 -120 0 1 {name=p8 lab=VPB
+}
+C {devices/iopin.sym} -140 -80 0 1 {name=p16 lab=VSS
+}
+C {devices/opin.sym} -160 -10 0 0 {name=p15 lab=QB}
