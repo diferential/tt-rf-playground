@@ -8,21 +8,17 @@ E {}
 N 10 -70 10 -60 {
 lab=VDD}
 N 190 110 220 110 {
-lab=VPB}
+lab=#net1}
 N 10 370 10 390 {
 lab=VSS}
 N 10 290 10 310 {
-lab=#net1}
+lab=#net2}
 N 10 110 30 110 {
-lab=VPB}
+lab=#net1}
 N -160 180 -140 180 {
 lab=VSS}
 N -160 160 -140 160 {
 lab=VDD}
-N -160 140 -140 140 {
-lab=VNB}
-N -160 120 -140 120 {
-lab=VPB}
 N -160 70 -150 70 {
 lab=A}
 N -160 90 -150 90 {
@@ -32,9 +28,9 @@ lab=B}
 N -40 110 -30 110 {
 lab=A}
 N 10 0 10 80 {
-lab=#net2}
+lab=#net1}
 N 10 80 190 80 {
-lab=#net2}
+lab=#net1}
 N 10 140 10 230 {
 lab=Q}
 N 190 140 190 180 {
@@ -44,7 +40,16 @@ lab=Q}
 N 10 340 70 340 {
 lab=VNB}
 N 10 260 70 260 {
-lab=VNB}
+lab=#net3}
+N 190 80 220 80 {
+lab=#net1}
+N 220 80 220 110 {
+lab=#net1}
+N 30 80 30 110 {
+lab=#net1}
+N 10 370 70 370 {}
+N 70 340 70 370 {}
+N 70 260 70 340 {}
 C {sky130_fd_pr/pfet_01v8_lvt.sym} 170 110 0 0 {name=M3
 W=1
 L=0.35
@@ -112,10 +117,6 @@ C {devices/opin.sym} 190 180 0 0 {name=p11 lab=Q}
 C {devices/ipin.sym} -160 70 0 0 {name=p12 lab=A}
 C {devices/ipin.sym} -160 90 0 0 {name=p13 lab=B}
 C {devices/ipin.sym} -160 160 0 0 {name=p14 lab=VDD}
-C {devices/ipin.sym} -160 120 0 0 {name=p2 lab=VPB
-}
-C {devices/ipin.sym} -160 140 0 0 {name=p15 lab=VNB
-}
 C {devices/lab_pin.sym} -150 90 2 0 {name=p3 sig_type=std_logic lab=B
 }
 C {devices/lab_pin.sym} -150 70 2 0 {name=p9 sig_type=std_logic lab=A
@@ -126,19 +127,7 @@ C {devices/ipin.sym} -160 180 0 0 {name=p16 lab=VSS
 }
 C {devices/lab_pin.sym} -140 160 2 0 {name=p17 sig_type=std_logic lab=VDD
 }
-C {devices/lab_pin.sym} -140 140 2 0 {name=p18 sig_type=std_logic lab=VNB
-}
-C {devices/lab_pin.sym} -140 120 2 0 {name=p19 sig_type=std_logic lab=VPB
-}
-C {devices/lab_pin.sym} 220 110 2 0 {name=p20 sig_type=std_logic lab=VPB
-}
-C {devices/lab_pin.sym} 30 110 2 0 {name=p8 sig_type=std_logic lab=VPB
-}
 C {devices/lab_pin.sym} 10 -70 2 0 {name=p21 sig_type=std_logic lab=VDD
-}
-C {devices/lab_pin.sym} 70 340 2 0 {name=p6 sig_type=std_logic lab=VNB
-}
-C {devices/lab_pin.sym} 70 260 2 0 {name=p22 sig_type=std_logic lab=VNB
 }
 C {devices/lab_pin.sym} -40 110 2 1 {name=p23 sig_type=std_logic lab=A
 }

@@ -5,20 +5,6 @@ K {}
 V {}
 S {}
 E {}
-N -450 -170 -430 -170 {
-lab=VSS}
-N -450 -190 -430 -190 {
-lab=VDD}
-N -450 -210 -430 -210 {
-lab=VNB}
-N -450 -230 -430 -230 {
-lab=VPB}
-N -450 -280 -440 -280 {
-lab=A}
-N -450 -260 -440 -260 {
-lab=B}
-N -450 -140 -430 -140 {
-lab=QA}
 N -160 -200 -160 -180 {
 lab=QAB}
 N -160 -200 10 -200 {
@@ -47,12 +33,6 @@ N 140 -390 330 -390 {
 lab=QB}
 N 330 -390 330 -360 {
 lab=QB}
-N 140 -130 140 -20 {
-lab=QB}
-N 120 -130 120 -20 {
-lab=QA}
-N 30 -130 120 -130 {
-lab=QA}
 N -190 370 -190 390 {
 lab=RA}
 N -190 370 -20 370 {
@@ -81,8 +61,6 @@ N 150 180 340 180 {
 lab=#net2}
 N 340 180 340 210 {
 lab=#net2}
-N 90 120 90 200 {
-lab=#net3}
 N -220 410 -190 410 {
 lab=R}
 N -220 340 -220 410 {
@@ -95,16 +73,10 @@ N 380 340 380 410 {
 lab=R}
 N 120 340 380 340 {
 lab=R}
-N 90 200 90 240 {
-lab=#net3}
-N 90 310 90 340 {
-lab=R}
 N 90 340 120 340 {
 lab=R}
 N 40 340 90 340 {
 lab=R}
-N -450 -110 -430 -110 {
-lab=QB}
 N -170 -340 -160 -340 {
 lab=A}
 N 330 -340 340 -340 {
@@ -139,32 +111,33 @@ N 330 -200 460 -200 {
 lab=QBB}
 N 340 230 460 230 {
 lab=QBB}
+N 110 330 110 340 {
+lab=R}
+N 50 260 90 260 {
+lab=#net3}
+N 50 330 50 340 {
+lab=R}
+N 90 260 110 260 {
+lab=#net3}
+N 80 330 80 340 {
+lab=R}
+N 110 -130 110 10 {
+lab=QB}
+N 110 -130 140 -130 {
+lab=QB}
+N 70 -130 70 10 {
+lab=QA}
+N 30 -130 70 -130 {
+lab=QA}
 C {devices/ipin.sym} -450 -280 0 0 {name=p12 lab=A}
 C {devices/ipin.sym} -450 -260 0 0 {name=p13 lab=B}
-C {devices/ipin.sym} -450 -190 0 0 {name=p14 lab=VDD}
 C {devices/ipin.sym} -450 -230 0 0 {name=p2 lab=VPB
 }
-C {devices/ipin.sym} -450 -210 0 0 {name=p15 lab=VNB
-}
-C {devices/lab_pin.sym} -440 -260 2 0 {name=p3 sig_type=std_logic lab=B
-}
-C {devices/lab_pin.sym} -440 -280 2 0 {name=p9 sig_type=std_logic lab=A
-}
-C {devices/lab_pin.sym} -430 -170 2 0 {name=p10 sig_type=std_logic lab=VSS
-}
-C {devices/ipin.sym} -450 -170 0 0 {name=p16 lab=VSS
-}
-C {devices/lab_pin.sym} -430 -190 2 0 {name=p17 sig_type=std_logic lab=VDD
-}
-C {devices/lab_pin.sym} -430 -210 2 0 {name=p18 sig_type=std_logic lab=VNB
-}
-C {devices/lab_pin.sym} -430 -230 2 0 {name=p19 sig_type=std_logic lab=VPB
+C {devices/ipin.sym} -450 -210 0 0 {name=p16 lab=VSS
 }
 C {pll_nor.sym} -140 -310 0 0 {name=x1}
 C {pll_nor.sym} -140 -130 0 0 {name=x2}
-C {devices/opin.sym} -430 -140 0 0 {name=p1 lab=QA}
-C {devices/lab_pin.sym} -450 -140 2 1 {name=p4 sig_type=std_logic lab=QA
-}
+C {devices/opin.sym} -410 -280 0 0 {name=p1 lab=QA}
 C {devices/lab_pin.sym} -160 -260 2 1 {name=p5 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} -160 -280 2 1 {name=p6 sig_type=std_logic lab=VDD
@@ -181,7 +154,6 @@ C {devices/lab_pin.sym} -160 -120 2 1 {name=p21 sig_type=std_logic lab=VNB
 }
 C {devices/lab_pin.sym} -160 -140 2 1 {name=p22 sig_type=std_logic lab=VPB
 }
-C {pll_nand.sym} 90 40 1 0 {name=x5}
 C {pll_nor.sym} 310 -310 0 1 {name=x3}
 C {pll_nor.sym} 310 -130 0 1 {name=x4}
 C {devices/lab_pin.sym} 330 -260 2 0 {name=p23 sig_type=std_logic lab=VSS
@@ -199,14 +171,6 @@ C {devices/lab_pin.sym} 330 -100 2 0 {name=p28 sig_type=std_logic lab=VDD
 C {devices/lab_pin.sym} 330 -120 2 0 {name=p29 sig_type=std_logic lab=VNB
 }
 C {devices/lab_pin.sym} 330 -140 2 0 {name=p30 sig_type=std_logic lab=VPB
-}
-C {devices/lab_pin.sym} 40 -20 3 1 {name=p31 sig_type=std_logic lab=VSS
-}
-C {devices/lab_pin.sym} 60 -20 3 1 {name=p32 sig_type=std_logic lab=VDD
-}
-C {devices/lab_pin.sym} 80 -20 3 1 {name=p33 sig_type=std_logic lab=VNB
-}
-C {devices/lab_pin.sym} 100 -20 3 1 {name=p34 sig_type=std_logic lab=VPB
 }
 C {pll_nor.sym} -170 260 0 0 {name=x6}
 C {pll_nor.sym} -170 440 0 0 {name=x7}
@@ -248,10 +212,8 @@ C {devices/lab_pin.sym} 140 -170 2 0 {name=p51 sig_type=std_logic lab=QB
 }
 C {devices/lab_pin.sym} 30 -170 2 1 {name=p52 sig_type=std_logic lab=QA
 }
-C {pll_inv1.sym} 90 290 1 0 {name=x10 VSS=VSS VNB=VNB VPB=VPB VDD=VDD}
-C {devices/opin.sym} -430 -110 0 0 {name=p53 lab=QB}
-C {devices/lab_pin.sym} -450 -110 2 1 {name=p54 sig_type=std_logic lab=QB
-}
+C {pll_inv1.sym} 90 240 1 0 {name=x10 VSS=VSS VPB=VPB VDD=VDD}
+C {devices/opin.sym} -410 -250 0 0 {name=p53 lab=QB}
 C {devices/lab_pin.sym} -170 -340 2 1 {name=p55 sig_type=std_logic lab=A
 }
 C {devices/lab_pin.sym} 340 -340 2 0 {name=p56 sig_type=std_logic lab=B
@@ -260,10 +222,15 @@ C {devices/lab_pin.sym} -220 -160 2 1 {name=p57 sig_type=std_logic lab=RA
 }
 C {devices/lab_pin.sym} 410 -160 2 0 {name=p58 sig_type=std_logic lab=RB
 }
-C {devices/lab_pin.sym} 50 340 3 1 {name=p59 sig_type=std_logic lab=R
+C {devices/lab_pin.sym} 130 340 3 1 {name=p59 sig_type=std_logic lab=R
 }
 C {devices/lab_pin.sym} -50 -200 3 1 {name=p60 sig_type=std_logic lab=QAB
 }
 C {devices/lab_pin.sym} 200 -200 3 1 {name=p61 sig_type=std_logic lab=QBB
 }
-C {devices/opin.sym} -430 -70 0 0 {name=p62 lab=R}
+C {devices/opin.sym} -410 -220 0 0 {name=p62 lab=R}
+C {pll_inv1.sym} 90 170 1 0 {name=x11 VSS=VSS VPB=VPB VDD=VDD}
+C {pll_inv1.sym} 110 310 1 0 {name=x12 VSS=VSS VPB=VPB VDD=VDD}
+C {pll_inv1.sym} 50 310 1 0 {name=x13 VSS=VSS VPB=VPB VDD=VDD}
+C {pll_inv1.sym} 80 310 1 0 {name=x14 VSS=VSS VPB=VPB VDD=VDD}
+C {pll_nand.sym} 90 70 1 0 {name=x15 VSS=VSS VDD=VDD}

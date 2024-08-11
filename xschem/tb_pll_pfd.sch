@@ -6,15 +6,15 @@ V {}
 S {}
 E {}
 B 2 2460 -390 3260 10 {flags=graph
-y1=-0.31
+y1=-0.063
 y2=1.9
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.01609e-08
-x2=1.66034e-08
+x1=9.6609e-09
+x2=1.2293e-08
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -40,8 +40,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.01609e-08
-x2=1.66034e-08
+x1=9.6609e-09
+x2=1.2293e-08
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -69,8 +69,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.01609e-08
-x2=1.66034e-08
+x1=9.6609e-09
+x2=1.2293e-08
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -86,9 +86,10 @@ logy=0
 
 
 
-color="4 5"
+color="4 5 18"
 node="QA
-QB"}
+QB
+R"}
 N 920 -1170 920 -1160 {
 lab=VSS}
 N 1030 -1170 1030 -1160 {
@@ -221,8 +222,8 @@ simulator=ngspice
 only_toplevel=false 
 value="
 .options savecurrents
-VA A   0 pulse 0 1.8 2.0n 1p 1p 4n 8n
-VB B   0 pulse 0 1.8 2.1n 1p 1p 4n 8n
+VA A   0 pulse 0 1.8 2.00n 1p 1p 4n 8n
+VB B   0 pulse 0 1.8 2.05n 1p 1p 4n 8n
 .control
   repeat 1
     save all
@@ -272,4 +273,6 @@ C {sky130_stdcells/clkinv_1.sym} 1880 -330 3 1 {name=x11 VGND=VGND VNB=VNB VPB=V
 C {devices/lab_pin.sym} 1820 -560 0 1 {name=p4 sig_type=std_logic lab=QQA
 }
 C {devices/lab_pin.sym} 1960 -550 0 0 {name=p7 sig_type=std_logic lab=QQB
+}
+C {devices/lab_pin.sym} 1970 -870 0 1 {name=p10 sig_type=std_logic lab=R
 }
