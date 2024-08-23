@@ -96,10 +96,6 @@ use sky130_fd_pr__nfet_01v8_FETKPT  sky130_fd_pr__nfet_01v8_FETKPT_0
 timestamp 1723339032
 transform 1 0 266 0 1 279
 box -246 -279 246 279
-use sky130_fd_pr__nfet_01v8_PL5MMV  sky130_fd_pr__nfet_01v8_PL5MMV_0
-timestamp 1723338882
-transform 1 0 246 0 1 279
-box 0 0 1 1
 use sky130_fd_pr__nfet_g5v0d10v5_8MENFK  sky130_fd_pr__nfet_g5v0d10v5_8MENFK_0
 timestamp 1723341670
 transform 1 0 2295 0 1 327

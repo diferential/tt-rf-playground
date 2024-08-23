@@ -6,15 +6,15 @@ V {}
 S {}
 E {}
 B 2 1920 -1450 2720 -1050 {flags=graph
-y1=-2.5
+y1=-4
 y2=7.4
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=4.91056e-06
-x2=4.97974e-06
+x1=4.92707e-06
+x2=5.0705e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -38,15 +38,15 @@ DN
 \\"VBOOT 0.5 +\\"
 \\"VLOCKSTOP 4 -\\""}
 B 2 1920 -1850 2720 -1450 {flags=graph
-y1=-0.27
+y1=-0.065
 y2=7.9
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=4.91056e-06
-x2=4.97974e-06
+x1=4.92707e-06
+x2=5.0705e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -79,8 +79,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=4.91056e-06
-x2=4.97974e-06
+x1=4.92707e-06
+x2=5.0705e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -104,15 +104,15 @@ node="AB1
 A1C
 B1"}
 B 2 1920 -1050 2720 -650 {flags=graph
-y1=1.6
-y2=1.7
+y1=0.79
+y2=0.83
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=4.91056e-06
-x2=4.97974e-06
+x1=4.92707e-06
+x2=5.0705e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -140,8 +140,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=4.91056e-06
-x2=4.97974e-06
+x1=4.92707e-06
+x2=5.0705e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -172,8 +172,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=4.91056e-06
-x2=4.97974e-06
+x1=4.92707e-06
+x2=5.0705e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -195,15 +195,15 @@ node="\\"UP 8 +\\"
 \\"DN 4 +\\"
 \\"R 0 +\\""}
 B 2 2720 -1050 3520 -650 {flags=graph
-y1=1.6
-y2=1.7
+y1=1.47461
+y2=1.48148
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=4.91056e-06
-x2=4.97974e-06
+x1=4.92707e-06
+x2=5.0705e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -230,8 +230,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=4.91056e-06
-x2=4.97974e-06
+x1=4.92707e-06
+x2=5.0705e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -255,37 +255,6 @@ node="B1
 \\"D2 4 +\\"
 \\"D3 6 +\\"
 \\"C1 8 +\\""}
-B 2 320 -1050 1120 -650 {flags=graph
-y1=-0.00084
-y2=1.3
-ypos1=0
-ypos2=2
-divy=5
-subdivy=1
-unity=1
-x1=4.91056e-06
-x2=4.97974e-06
-divx=5
-subdivx=1
-xlabmag=1.0
-ylabmag=1.0
-
-
-dataset=-1
-unitx=1
-logx=0
-logy=0
-
-
-
-
-
-
-
-
-color="4 7"
-node="X1
-X2"}
 T {Voltage restorer} 1120 -2140 0 0 0.4 0.4 {}
 T {VCO controlled by VPWR_OSC} 640 -2310 0 0 0.3 0.3 {}
 T {Divide by 16} 1530 -2150 0 0 0.4 0.4 {}
@@ -430,7 +399,7 @@ only_toplevel=true
 format="tcleval( @value )"
 value="
 ** opencircuitdesign pdks install
-.lib $::SKYWATER_MODELS/sky130.lib.spice tt_mm
+.lib $::SKYWATER_MODELS/sky130.lib.spice tt
 .include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice                                                              
                         
 "
@@ -451,11 +420,11 @@ value="
 VA VA 0 pulse 1.8 0 100n 10p 10p 8n 16n
 VAF VAF 0 pulse 1.8 0 100n 50p 50p 0.5n 1n
 VBOOT VBOOT 0 pulse 1.8 0 0n 2n 2n 90n 200u
-VLOCKSTOP VLOCKSTOP 0 pulse 1.8 0 1.097u 2n 2n 300n 320n
+VLOCKSTOP VLOCKSTOP 0 pulse 1.8 0 0.645u 2n 2n 16n 32n
 .control
   repeat 1
     save all
-    tran 90p 6u uic
+    tran 130p 6u uic
     remzerovec
     write tb_pll4_cpdelta_hv.raw
     set appendwrite
@@ -549,7 +518,7 @@ C {devices/lab_pin.sym} 1560 -1440 2 0 {name=p1 sig_type=std_logic lab=VCP
 }
 C {devices/lab_pin.sym} 1520 -1520 2 1 {name=p27 sig_type=std_logic lab=VBOOT
 }
-C {devices/vsource.sym} 1390 -1510 0 0 {name=V3 value=1.65 savecurrent=false}
+C {devices/vsource.sym} 1390 -1510 0 0 {name=V3 value=1.49 savecurrent=false}
 C {devices/lab_pin.sym} 1390 -1460 0 0 {name=p22 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 1250 -1810 2 0 {name=p36 sig_type=std_logic lab=RB}
 C {devices/lab_pin.sym} 1160 -1760 0 0 {name=p37 sig_type=std_logic lab=UPB}
@@ -593,11 +562,11 @@ C {sky130_fd_pr/cap_mim_m3_1.sym} 1690 -1450 0 0 {name=C1 model=cap_mim_m3_1 W=1
 }
 C {devices/lab_pin.sym} 1690 -1420 0 0 {name=p30 sig_type=std_logic lab=VSS}
 C {sky130_fd_pr/pfet3_01v8_lvt.sym} 1540 -1520 0 0 {name=M3
-W=8
+W=60
 L=0.5
 body=VPWR
 nf=1
-mult=1
+mult=5
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -621,17 +590,5 @@ C {devices/lab_pin.sym} 830 -2260 2 0 {name=p63 sig_type=std_logic lab=VDD
 }
 C {devices/lab_pin.sym} 730 -2120 0 0 {name=p64 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 910 -2160 0 1 {name=p65 sig_type=std_logic lab=AB[4..0]}
-C {devices/lab_pin.sym} 1220 -2280 0 0 {name=p70 sig_type=std_logic lab=A2}
-C {devices/lab_pin.sym} 1220 -2240 0 0 {name=p71 sig_type=std_logic lab=A4}
-C {pll_inv1.sym} 1380 -2260 0 0 {name=x17 VSS=VSS VNB=VNB VPB=VPB VDD=VDD}
-C {devices/lab_pin.sym} 1400 -2260 0 1 {name=p72 sig_type=std_logic lab=X1
-}
-C {devices/lab_pin.sym} 1580 -2230 0 0 {name=p78 sig_type=std_logic lab=AB4}
-C {pll_inv1.sym} 1740 -2250 0 0 {name=x19 VSS=VSS VNB=VNB VPB=VPB VDD=VDD}
-C {devices/lab_pin.sym} 1760 -2250 0 1 {name=p79 sig_type=std_logic lab=X2
-}
-C {devices/lab_pin.sym} 1580 -2270 0 0 {name=p77 sig_type=std_logic lab=AB2}
 C {pll_inv1.sym} 1260 -1970 0 0 {name=x20 VSS=VSS VDD=VDD}
 C {pll_nand.sym} 790 -1910 0 0 {name=x21 VSS=VSS VDD=VDD}
-C {pll_nand.sym} 1280 -2260 0 0 {name=x4 VSS=VSS VDD=VDD}
-C {pll_nand.sym} 1640 -2250 0 0 {name=x16 VSS=VSS VDD=VDD}

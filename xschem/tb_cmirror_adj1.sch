@@ -7,7 +7,7 @@ S {}
 E {}
 B 2 1000 -170 1800 230 {flags=graph
 y1=1.7
-y2=12
+y2=14
 ypos1=0
 ypos2=2
 divy=5
@@ -25,36 +25,16 @@ dataset=0
 unitx=1
 logx=0
 logy=0
-color="4 12 5 17 8"
-node="\\"VCMD1 4 +\\"
+color="4 12 5 17 8 4"
+node="\\"VCMD0 12 +\\"
+\\"VCMD1 4 +\\"
 \\"VCMD2 6 +\\"
 \\"VCMD3 8 +\\"
 \\"VCMD4 10 +\\"
 VDD"}
-B 2 1000 -970 1800 -570 {flags=graph
-y1=1.27652
-y2=4.04132
-ypos1=0
-ypos2=2
-divy=5
-subdivy=1
-unity=1
-x1=2.46609e-08
-x2=1.62466e-06
-divx=5
-subdivx=1
-xlabmag=1.0
-ylabmag=1.0
-node=VDD
-color=4
-dataset=0
-unitx=1
-logx=0
-logy=0
-}
-B 2 200 -970 1000 -570 {flags=graph
-y1=1.8e-05
-y2=0.0005
+B 2 1000 -990 1800 -590 {flags=graph
+y1=1e-05
+y2=0.00043
 ypos1=0
 ypos2=2
 divy=5
@@ -77,8 +57,8 @@ color="4 15"
 node="i(viout1)
 i(viout1b)"}
 B 2 1000 -570 1800 -170 {flags=graph
-y1=8.5e-06
-y2=0.0002
+y1=4.5e-06
+y2=0.00017
 ypos1=0
 ypos2=2
 divy=5

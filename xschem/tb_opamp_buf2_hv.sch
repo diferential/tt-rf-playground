@@ -6,15 +6,15 @@ V {}
 S {}
 E {}
 B 2 2760 -1640 3560 -1240 {flags=graph
-y1=1.4
+y1=1.5
 y2=1.7
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=6.43176e-06
-x2=1.62578e-05
+x1=-8.53522e-07
+x2=5.58902e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -33,15 +33,15 @@ color="4 8"
 node="VOUT3
 VOUT"}
 B 2 2760 -1230 3560 -830 {flags=graph
-y1=-1
-y2=3
+y1=1.58093
+y2=2.11781
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=6.43176e-06
-x2=1.62578e-05
+x1=-8.53522e-07
+x2=5.58902e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -67,8 +67,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=6.43176e-06
-x2=1.62578e-05
+x1=-8.53522e-07
+x2=5.58902e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -93,8 +93,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=6.43176e-06
-x2=1.62578e-05
+x1=-8.53522e-07
+x2=5.58902e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -246,8 +246,9 @@ C {devices/iopin.sym} 1630 -720 0 1 { name=p8 lab=VDD }
 C {devices/lab_pin.sym} 1490 -620 0 0 {name=p10 sig_type=std_logic lab=VRF}
 C {opamp3hv.sym} 1630 -650 0 0 {name=x2}
 C {devices/res.sym} 1800 -730 0 0 {name=R2
-value=1Meg
+value=200k
 footprint=1206
 device=resistor
 m=1}
-C {devices/lab_pin.sym} 1800 -700 0 0 {name=p1 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 1800 -640 0 0 {name=p1 sig_type=std_logic lab=VSS}
+C {devices/ammeter.sym} 1800 -670 0 0 {name=Vmeas savecurrent=true}

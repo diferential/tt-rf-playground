@@ -22,12 +22,6 @@ N -2160 -1100 -2160 -1070 {
 lab=VMID}
 N -2120 -1040 -1930 -1040 {
 lab=VMID}
-N -1850 -1260 -1790 -1260 {
-lab=VBIASP}
-N -1790 -1330 -1790 -1260 {
-lab=VBIASP}
-N -1850 -1300 -1850 -1210 {
-lab=VBIASP}
 N -1850 -1150 -1850 -1070 {
 lab=#net1}
 N -2250 -1010 -2160 -1010 {
@@ -38,17 +32,18 @@ N -1970 -1250 -1970 -1220 {
 lab=#net3}
 N -1930 -1040 -1890 -1040 {
 lab=VMID}
-N -1810 -1330 -1790 -1330 {
-lab=VBIASP}
 N -1970 -1010 -1850 -1010 {
 lab=VSS}
 N -2120 -1090 -2120 -1040 {
 lab=VMID}
-C {sky130_fd_pr/res_high_po_0p35.sym} -2160 -1190 0 0 {name=R1
-L=20
-model=res_high_po_0p35
-spiceprefix=X
-mult=1}
+N -1850 -1320 -1850 -1260 {
+lab=VBIASP}
+N -1850 -1260 -1550 -1260 {
+lab=VBIASP}
+N -1550 -1320 -1550 -1260 {
+lab=VBIASP}
+N -1850 -1260 -1850 -1210 {
+lab=VBIASP}
 C {sky130_fd_pr/res_high_po_0p69.sym} -1970 -1190 0 0 {name=R2
 L=8
 model=res_high_po_0p69
@@ -128,22 +123,6 @@ C {/home/emilian/tt/local/share/xschem/xschem_library/devices/lab_pin.sym} -1970
 C {/home/emilian/tt/local/share/xschem/xschem_library/devices/ipin.sym} -2410 -1280 0 0 {name=p7 lab=EN_RESL}
 C {/home/emilian/tt/local/share/xschem/xschem_library/devices/lab_pin.sym} -2010 -1130 0 0 {name=p11 sig_type=std_logic lab=EN_RESL}
 C {/home/emilian/tt/local/share/xschem/xschem_library/devices/lab_pin.sym} -2500 -1060 0 0 {name=p12 sig_type=std_logic lab=EN_RESH}
-C {/home/emilian/tt/local/share/xschem/xschem_library/devices/lab_pin.sym} -1850 -1360 0 0 {name=p13 sig_type=std_logic lab=VDD}
-C {sky130_fd_pr/pfet3_g5v0d10v5.sym} -1830 -1330 0 1 {name=M7
-L=0.5
-W=4
-body=VDD
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_g5v0d10v5
-spiceprefix=X
-}
 C {/home/emilian/tt/local/share/xschem/xschem_library/devices/lab_pin.sym} -2380 -1070 0 1 {name=p14 sig_type=std_logic lab=EN_RESH_VDD}
 C {/home/emilian/tt/local/share/xschem/xschem_library/devices/lab_pin.sym} -2200 -1130 0 0 {name=p15 sig_type=std_logic lab=EN_RESH_VDD}
 C {/home/emilian/tt/local/share/xschem/xschem_library/devices/lab_pin.sym} -2470 -1020 0 0 {name=p16 sig_type=std_logic lab=VSS}
@@ -169,3 +148,10 @@ spiceprefix=X
 }
 C {/home/emilian/tt/local/share/xschem/xschem_library/devices/lab_pin.sym} -2160 -1160 0 1 {name=p20 sig_type=std_logic lab=V1}
 C {/home/emilian/tt/local/share/xschem/xschem_library/devices/lab_pin.sym} -1970 -1160 0 0 {name=p21 sig_type=std_logic lab=V2}
+C {root_currents1outp.sym} -1700 -1320 0 0 {name=x2}
+C {/home/emilian/tt/local/share/xschem/xschem_library/devices/lab_pin.sym} -1700 -1380 0 0 {name=p22 sig_type=std_logic lab=VDD}
+C {sky130_fd_pr/res_xhigh_po_0p69.sym} -2160 -1190 0 0 {name=R3
+L=12
+model=res_xhigh_po_0p69
+spiceprefix=X
+mult=1}

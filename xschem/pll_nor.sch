@@ -7,8 +7,6 @@ S {}
 E {}
 N 10 -70 10 -60 {
 lab=VDD}
-N 10 30 40 30 {
-lab=VPB}
 N 10 250 10 270 {
 lab=VSS}
 N 10 60 10 80 {
@@ -17,32 +15,34 @@ N 10 140 10 190 {
 lab=Q}
 N 160 250 160 270 {
 lab=VSS}
-N 160 220 200 220 {
-lab=VNB}
 N 10 170 160 170 {
 lab=Q}
 N 160 170 160 190 {
 lab=Q}
 N 10 220 20 220 {
-lab=VNB}
+lab=VSS}
 N 10 110 30 110 {
 lab=VPB}
-N -160 180 -140 180 {
-lab=VSS}
-N -160 160 -140 160 {
-lab=VDD}
-N -160 140 -140 140 {
-lab=VNB}
-N -160 120 -140 120 {
-lab=VPB}
-N -160 60 -150 60 {
-lab=A}
-N -160 90 -150 90 {
-lab=B}
 N -40 30 -30 30 {
 lab=A}
 N -40 110 -30 110 {
 lab=B}
+N 30 -0 30 110 {
+lab=VPB}
+N 10 0 30 -0 {
+lab=VPB}
+N 160 260 180 260 {
+lab=VSS}
+N 180 220 180 260 {
+lab=VSS}
+N 160 220 180 220 {
+lab=VSS}
+N 10 260 30 260 {
+lab=VSS}
+N 30 220 30 260 {
+lab=VSS}
+N 20 220 30 220 {
+lab=VSS}
 C {sky130_fd_pr/pfet_01v8_lvt.sym} -10 30 0 0 {name=M3
 W=1
 L=0.35
@@ -111,34 +111,10 @@ C {devices/lab_pin.sym} 120 220 2 1 {name=p7 sig_type=std_logic lab=B
 C {devices/opin.sym} 160 170 0 0 {name=p11 lab=Q}
 C {devices/ipin.sym} -160 60 0 0 {name=p12 lab=A}
 C {devices/ipin.sym} -160 90 0 0 {name=p13 lab=B}
-C {devices/ipin.sym} -160 160 0 0 {name=p14 lab=VDD}
-C {devices/ipin.sym} -160 120 0 0 {name=p2 lab=VPB
-}
-C {devices/ipin.sym} -160 140 0 0 {name=p15 lab=VNB
-}
-C {devices/lab_pin.sym} -150 90 2 0 {name=p3 sig_type=std_logic lab=B
-}
-C {devices/lab_pin.sym} -150 60 2 0 {name=p9 sig_type=std_logic lab=A
-}
-C {devices/lab_pin.sym} -140 180 2 0 {name=p10 sig_type=std_logic lab=VSS
-}
-C {devices/ipin.sym} -160 180 0 0 {name=p16 lab=VSS
-}
-C {devices/lab_pin.sym} -140 160 2 0 {name=p17 sig_type=std_logic lab=VDD
-}
-C {devices/lab_pin.sym} -140 140 2 0 {name=p18 sig_type=std_logic lab=VNB
-}
-C {devices/lab_pin.sym} -140 120 2 0 {name=p19 sig_type=std_logic lab=VPB
-}
-C {devices/lab_pin.sym} 40 30 2 0 {name=p20 sig_type=std_logic lab=VPB
-}
-C {devices/lab_pin.sym} 30 110 2 0 {name=p8 sig_type=std_logic lab=VPB
+C {devices/ipin.sym} -160 120 0 0 {name=p14 lab=VDD}
+C {devices/ipin.sym} -160 140 0 0 {name=p16 lab=VSS
 }
 C {devices/lab_pin.sym} 10 -70 2 0 {name=p21 sig_type=std_logic lab=VDD
-}
-C {devices/lab_pin.sym} 20 220 2 0 {name=p6 sig_type=std_logic lab=VNB
-}
-C {devices/lab_pin.sym} 200 220 2 0 {name=p22 sig_type=std_logic lab=VNB
 }
 C {devices/lab_pin.sym} -40 30 2 1 {name=p23 sig_type=std_logic lab=A
 }
