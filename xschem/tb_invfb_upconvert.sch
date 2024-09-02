@@ -13,8 +13,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=4.99844e-08
-x2=5.16645e-08
+x1=1.66037e-08
+x2=1.87146e-08
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -35,15 +35,15 @@ node="VSLOW
 VINS
 VOUTS"}
 B 2 1720 -1140 2520 -740 {flags=graph
-y1=3e-05
-y2=1.7
+y1=-0.0089
+y2=1.9
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=4.99844e-08
-x2=5.16645e-08
+x1=1.66037e-08
+x2=1.87146e-08
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -59,10 +59,13 @@ logy=0
 
 
 
-color="4 8 5"
+color="4 8 5 10 6 17"
 node="VFAST
 VINF
-VOUTF"}
+VOUTF
+VOUTFB
+VOUTF2INV
+VOUTF2INVB"}
 B 2 1720 -740 2520 -340 {flags=graph
 y1=-0.00047
 y2=1.9
@@ -71,8 +74,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=4.99844e-08
-x2=5.16645e-08
+x1=1.66037e-08
+x2=1.87146e-08
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -102,8 +105,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=4.99844e-08
-x2=5.16645e-08
+x1=1.66037e-08
+x2=1.87146e-08
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -131,8 +134,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=4.99844e-08
-x2=5.16645e-08
+x1=1.66037e-08
+x2=1.87146e-08
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -160,8 +163,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=4.99844e-08
-x2=5.16645e-08
+x1=1.66037e-08
+x2=1.87146e-08
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -190,8 +193,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=4.99844e-08
-x2=5.16645e-08
+x1=1.66037e-08
+x2=1.87146e-08
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -212,15 +215,15 @@ node="VSLOW
 VOUTS2_MID
 VOUTS2"}
 B 2 2520 -340 3320 60 {flags=graph
-y1=-0.013
+y1=-0.012
 y2=2
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=4.99844e-08
-x2=5.16645e-08
+x1=1.66037e-08
+x2=1.87146e-08
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -333,7 +336,7 @@ lab=VOUTF2}
 N 1670 -430 1670 -420 {
 lab=GND}
 N 1110 -810 1110 -780 {
-lab=VOUTF}
+lab=VOUTF2INV}
 N 1040 -870 1110 -870 {
 lab=VINF}
 N 1040 -870 1040 -780 {
@@ -421,9 +424,9 @@ lab=VINF2}
 N 1430 -440 1430 -420 {
 lab=VINF2}
 N 1110 -750 1110 -720 {
-lab=VOUTF}
+lab=VOUTF2INV}
 N 1110 -780 1110 -750 {
-lab=VOUTF}
+lab=VOUTF2INV}
 N 1040 -750 1040 -720 {
 lab=VINF}
 N 1040 -780 1040 -750 {
@@ -457,9 +460,9 @@ VSLOW VSLOW 0 pulse 0.4 0 0n 0.1n 0.1n 5n 10n
 VFAST VFAST 0 sin 0.2 0.2 1G
 * VFAST VFAST 0 pulse 0.4 0 0n 10p 10p 0.5n 1n
 .control
-  repeat 5
+  repeat 1
     save all
-    tran 10p 200n
+    tran 10p 50n
     remzerovec
     write tb_invfb_upconvert.raw
     set appendwrite
@@ -516,7 +519,7 @@ spiceprefix=X
 mult=1}
 C {devices/lab_pin.sym} 1430 -1000 0 0 {name=p12 sig_type=std_logic lab=VFAST}
 C {sky130_fd_pr/cap_mim_m3_1.sym} 1430 -1030 0 0 {name=C3 model=cap_mim_m3_1 W=5 L=5 MF=1 spiceprefix=X}
-C {devices/lab_pin.sym} 1580 -1000 0 1 {name=p13 sig_type=std_logic lab=VOUTF}
+C {devices/lab_pin.sym} 1580 -1000 1 1 {name=p13 sig_type=std_logic lab=VOUTF}
 C {devices/lab_pin.sym} 1510 -1000 0 0 {name=p14 sig_type=std_logic lab=VINF}
 C {pll_inv1.sym} 1480 -590 0 0 {name=x6 VSS=VSS VNB=VNB VPB=VPB VDD=VDD}
 C {devices/lab_pin.sym} 1350 -590 0 0 {name=p15 sig_type=std_logic lab=VSLOW}
@@ -572,7 +575,7 @@ spiceprefix=X
 mult=1}
 C {devices/lab_pin.sym} 940 -530 0 0 {name=p24 sig_type=std_logic lab=VFAST}
 C {sky130_fd_pr/cap_mim_m3_1.sym} 960 -810 0 0 {name=C6 model=cap_mim_m3_1 W=5 L=5 MF=1 spiceprefix=X}
-C {devices/lab_pin.sym} 1110 -780 0 1 {name=p25 sig_type=std_logic lab=VOUTF}
+C {devices/lab_pin.sym} 1110 -780 0 1 {name=p25 sig_type=std_logic lab=VOUTF2INV}
 C {devices/lab_pin.sym} 1040 -780 0 0 {name=p26 sig_type=std_logic lab=VINF}
 C {devices/lab_pin.sym} 1250 -640 0 1 {name=p29 sig_type=std_logic lab=VOUTF3B}
 C {sky130_fd_pr/cap_mim_m3_1.sym} 940 -560 0 0 {name=C7 model=cap_mim_m3_1 W=5 L=5 MF=1 spiceprefix=X}
@@ -645,3 +648,7 @@ C {pll_inv1.sym} 1070 -530 0 0 {name=x9 VSS=VSS VNB=VNB VPB=VPB VDD=VDD}
 C {pll_inv1.sym} 1480 -570 0 0 {name=x13 VSS=VSS VNB=VNB VPB=VPB VDD=VDD}
 C {pll_inv1.sym} 1480 -420 0 0 {name=x15 VSS=VSS VNB=VNB VPB=VPB VDD=VDD}
 C {pll_inv1.sym} 1090 -750 0 0 {name=x17 VSS=VSS VNB=VNB VPB=VPB VDD=VDD}
+C {pll_inv1.sym} 1160 -800 0 0 {name=x14 VSS=VSS VNB=VNB VPB=VPB VDD=VDD}
+C {devices/lab_pin.sym} 1180 -800 0 1 {name=p34 sig_type=std_logic lab=VOUTF2INVB}
+C {pll_inv1.sym} 1630 -1000 0 0 {name=x16 VSS=VSS VNB=VNB VPB=VPB VDD=VDD}
+C {devices/lab_pin.sym} 1650 -1000 1 1 {name=p35 sig_type=std_logic lab=VOUTFB}

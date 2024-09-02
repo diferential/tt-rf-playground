@@ -249,3 +249,5 @@ sa=0 sb=0 sd=0
 model=nfet_03v3_nvt
 spiceprefix=X
 }
+C {devices/lab_pin.sym} 460 -150 0 0 {name=p12 sig_type=std_logic lab=IREF
+}

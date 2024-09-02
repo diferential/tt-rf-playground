@@ -5,7 +5,8 @@
 ** TODO macro divisor and control circuit
 ** TODO layout main PLL
 ** TODO layout charge pump
-** TODO layout phase detector
+** DONE layout phase detector
+CLOSED: [2024-09-01 Sun 20:06]
 ** TODO layout opamp3hv
 ** DONE layout current sources
 CLOSED: [2024-08-23 Fri 09:14]

@@ -36,23 +36,23 @@ lab=RA}
 N -20 260 -20 370 {
 lab=RA}
 N -20 440 0 440 {
-lab=#net1}
+lab=RAB}
 N 0 180 0 440 {
-lab=#net1}
+lab=RAB}
 N -190 180 0 180 {
-lab=#net1}
+lab=RAB}
 N -190 180 -190 210 {
-lab=#net1}
+lab=RAB}
 N 170 370 340 370 {
 lab=RB}
 N 170 260 170 370 {
 lab=RB}
 N 150 440 170 440 {
-lab=#net2}
+lab=RBB}
 N 150 180 150 440 {
-lab=#net2}
+lab=RBB}
 N 150 180 340 180 {
-lab=#net2}
+lab=RBB}
 N -220 340 -220 410 {
 lab=R}
 N -220 340 40 340 {
@@ -88,11 +88,11 @@ lab=QBB}
 N 110 330 110 340 {
 lab=R}
 N 50 260 90 260 {
-lab=#net3}
+lab=#net1}
 N 50 330 50 340 {
 lab=R}
 N 90 260 110 260 {
-lab=#net3}
+lab=#net1}
 N 80 330 80 340 {
 lab=R}
 N 110 -130 110 10 {
@@ -140,21 +140,21 @@ lab=QB}
 N 280 -290 340 -290 {
 lab=B}
 N -190 210 -190 240 {
-lab=#net1}
+lab=RAB}
 N -190 240 -140 240 {
-lab=#net1}
+lab=RAB}
 N -250 230 -250 280 {
 lab=QAB}
 N -250 280 -140 280 {
 lab=QAB}
 N 170 440 200 440 {
-lab=#net2}
+lab=RBB}
 N 170 260 200 260 {
 lab=RB}
 N -50 260 -20 260 {
 lab=RA}
 N -50 440 -20 440 {
-lab=#net1}
+lab=RAB}
 N -220 410 -220 460 {
 lab=R}
 N -220 460 -140 460 {
@@ -176,9 +176,9 @@ lab=QBB}
 N 460 230 460 280 {
 lab=QBB}
 N 340 180 340 240 {
-lab=#net2}
+lab=RBB}
 N 290 240 340 240 {
-lab=#net2}
+lab=RBB}
 C {devices/ipin.sym} -450 -280 0 0 {name=p12 lab=A}
 C {devices/ipin.sym} -450 -260 0 0 {name=p13 lab=B}
 C {devices/ipin.sym} -450 -230 0 0 {name=p2 lab=VPB
@@ -220,3 +220,7 @@ C {pll_inv1.sym} 110 310 1 0 {name=x12 VSS=VSS VDD=VDD}
 C {pll_inv1.sym} 50 310 1 0 {name=x13 VSS=VSS VDD=VDD}
 C {pll_inv1.sym} 80 310 1 0 {name=x14 VSS=VSS VDD=VDD}
 C {pll_nand.sym} 90 70 1 0 {name=x15 VSS=VSS VDD=VDD}
+C {devices/lab_pin.sym} 0 420 2 1 {name=p3 sig_type=std_logic lab=RAB
+}
+C {devices/lab_pin.sym} 150 410 2 0 {name=p4 sig_type=std_logic lab=RBB
+}
