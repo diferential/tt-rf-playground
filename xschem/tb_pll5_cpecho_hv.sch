@@ -14,7 +14,7 @@ divy=5
 subdivy=1
 unity=1
 x1=2e-12
-x2=1.00955e-06
+x2=1.33852e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -45,7 +45,7 @@ divy=5
 subdivy=1
 unity=1
 x1=2e-12
-x2=1.00955e-06
+x2=1.33852e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -79,7 +79,7 @@ divy=5
 subdivy=1
 unity=1
 x1=2e-12
-x2=1.00955e-06
+x2=1.33852e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -103,7 +103,7 @@ node="AB1
 A1C
 B1"}
 B 2 1920 -1050 2720 -650 {flags=graph
-y1=-0.0014
+y1=1.7
 y2=1.9
 ypos1=0
 ypos2=2
@@ -111,7 +111,7 @@ divy=5
 subdivy=1
 unity=1
 x1=2e-12
-x2=1.00955e-06
+x2=1.33852e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -140,7 +140,7 @@ divy=5
 subdivy=1
 unity=1
 x1=2e-12
-x2=1.00955e-06
+x2=1.33852e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -172,7 +172,7 @@ divy=5
 subdivy=1
 unity=1
 x1=2e-12
-x2=1.00955e-06
+x2=1.33852e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -194,15 +194,15 @@ node="\\"UP 8 +\\"
 \\"DN 4 +\\"
 \\"R 0 +\\""}
 B 2 2720 -1050 3520 -650 {flags=graph
-y1=-0.0014
-y2=1.6
+y1=0.0043
+y2=1.7
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
 x1=2e-12
-x2=1.00955e-06
+x2=1.33852e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -230,7 +230,7 @@ divy=5
 subdivy=1
 unity=1
 x1=2e-12
-x2=1.00955e-06
+x2=1.33852e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -257,7 +257,7 @@ node="B1
 T {Voltage restorer} 1120 -2140 0 0 0.4 0.4 {}
 T {VCO controlled by VPWR_OSC} 690 -2140 0 0 0.3 0.3 {}
 T {Divide by 16} 1530 -2150 0 0 0.4 0.4 {}
-T {TODO VPWR_OSC should never go past 1.8V} 1560 -1590 0 0 0.3 0.3 {}
+T {Clamp VPWR_OSC at 1.8V} 1190 -1670 0 0 0.3 0.3 {}
 T {Current source reference} 750 -1590 0 0 0.4 0.4 {}
 N 2200 -2020 2200 -2010 {
 lab=VPB}
@@ -395,6 +395,26 @@ N 820 -1850 950 -1880 {
 lab=UP_LOW}
 N 820 -1800 950 -1750 {
 lab=DN_LOW}
+N 730 -990 730 -960 {
+lab=VDDCP}
+N 730 -990 870 -990 {
+lab=VDDCP}
+N 770 -930 910 -930 {
+lab=#net5}
+N 770 -760 820 -760 {
+lab=VBIASN_G5W2L1}
+N 730 -730 730 -700 {
+lab=VSS}
+N 730 -840 730 -790 {
+lab=VBIASN_G5W2L1}
+N 730 -810 780 -810 {
+lab=VBIASN_G5W2L1}
+N 780 -810 780 -760 {
+lab=VBIASN_G5W2L1}
+N 1250 -1530 1250 -1500 {
+lab=VSS}
+N 1360 -1630 1360 -1600 {
+lab=VCP}
 C {devices/code.sym} 2490 -2030 0 0 {name=TT_MM_MODELS
 only_toplevel=true
 format="tcleval( @value )"
@@ -412,7 +432,7 @@ xschem raw_read $netlist_dir/[file tail [file rootname [xschem get current_name]
 
 "
 }
-C {devices/simulator_commands_shown.sym} 1140 -1510 0 0 {name=COMMANDS2
+C {devices/simulator_commands_shown.sym} 1130 -1350 0 0 {name=COMMANDS2
 simulator=ngspice
 only_toplevel=false 
 value="
@@ -587,7 +607,6 @@ C {/home/emilian/tt/local/share/xschem/xschem_library/devices/lab_pin.sym} 860 -
 C {devices/lab_pin.sym} 710 -1150 0 0 {name=p52 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 710 -1130 0 0 {name=p53 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 710 -1110 0 0 {name=p56 sig_type=std_logic lab=VSS}
-C {devices/lab_pin.sym} 710 -1090 0 0 {name=p57 sig_type=std_logic lab=VSS}
 C {/home/emilian/tt/local/share/xschem/xschem_library/devices/lab_pin.sym} 860 -1180 0 0 {name=p62 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 800 -1430 0 0 {name=p69 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 1160 -1760 2 1 {name=p70 sig_type=std_logic lab=UPB}
@@ -643,3 +662,64 @@ model=pfet_g5v0d10v5
 spiceprefix=X
 }
 C {devices/lab_pin.sym} 870 -840 2 0 {name=p68 sig_type=std_logic lab=IREF_CP}
+C {devices/ammeter.sym} 730 -870 0 0 {name=virefopamp savecurrent=true}
+C {sky130_fd_pr/pfet3_g5v0d10v5.sym} 750 -930 0 1 {name=M2
+W=4
+L=1
+body=VDDCP
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_g5v0d10v5
+spiceprefix=X
+}
+C {devices/lab_pin.sym} 810 -760 2 0 {name=p50 sig_type=std_logic lab=VBIASN_G5W2L1}
+C {sky130_fd_pr/nfet_g5v0d10v5.sym} 750 -760 0 1 {name=M7
+W=2
+L=1
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_g5v0d10v5
+spiceprefix=X
+}
+C {/home/emilian/tt/local/share/xschem/xschem_library/devices/lab_pin.sym} 730 -700 0 1 {name=p73 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 1640 -1710 3 0 {name=p74 sig_type=std_logic lab=VBIASN_G5W2L1}
+C {devices/lab_pin.sym} 710 -1090 0 0 {name=p51 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 1250 -1500 0 0 {name=p57 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 1190 -1540 2 1 {name=p75 sig_type=std_logic lab=VCP
+}
+C {devices/lab_pin.sym} 1250 -1610 0 1 {name=p77 sig_type=std_logic lab=VDDCP
+
+}
+C {opamp3hv.sym} 1250 -1570 0 0 {name=x17}
+C {devices/lab_pin.sym} 1280 -1530 3 0 {name=p78 sig_type=std_logic lab=VBIASN_G5W2L1}
+C {devices/lab_pin.sym} 1190 -1580 0 0 {name=p79 sig_type=std_logic lab=VDD
+}
+C {sky130_fd_pr/nfet_g5v0d10v5.sym} 1340 -1570 0 0 {name=M3
+W=2
+L=1
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_g5v0d10v5
+spiceprefix=X
+}
+C {devices/lab_pin.sym} 1360 -1540 0 0 {name=p76 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 1360 -1630 2 1 {name=p80 sig_type=std_logic lab=VCP
+}

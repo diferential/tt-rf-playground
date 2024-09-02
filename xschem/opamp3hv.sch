@@ -6,17 +6,14 @@ V {}
 S {}
 E {}
 L 4 430 -560 450 -560 {}
-L 4 590 10 610 10 {}
 L 4 380 -430 400 -430 {}
 L 4 380 -400 400 -400 {}
 L 4 380 -450 400 -450 {}
 B 5 427.5 -562.5 432.5 -557.5 {name=VDD dir=inout}
-B 5 587.5 7.5 592.5 12.5 {name=VSS dir=inout}
 B 5 397.5 -432.5 402.5 -427.5 {name=IN_N dir=in}
 B 5 397.5 -402.5 402.5 -397.5 {name=VOUT dir=out}
 B 5 397.5 -452.5 402.5 -447.5 {name=IN_P dir=in}
 T {VDD} 455 -564 0 0 0.2 0.2 {}
-T {VSS} 615 6 0 0 0.2 0.2 {}
 T {IN_N} 375 -434 0 1 0.2 0.2 {}
 T {VOUT} 375 -404 0 1 0.2 0.2 {}
 T {IN_P} 375 -454 0 1 0.2 0.2 {}
@@ -59,7 +56,7 @@ lab=vcom}
 N 670 -100 670 -80 {
 lab=#net1}
 N 610 -50 630 -50 {
-lab=vbias}
+lab=VBIASN_G5W2L1}
 N 520 -500 520 -490 {
 lab=#net2}
 N 520 -430 520 -410 {
@@ -72,8 +69,6 @@ N 360 -260 480 -260 {
 lab=IN_N}
 N 520 -180 580 -180 {
 lab=vcom}
-N 590 -50 610 -50 {
-lab=vbias}
 N 430 -560 520 -560 {
 lab=VDD}
 N 520 -560 810 -560 {
@@ -88,10 +83,6 @@ N 840 -560 1040 -560 {
 lab=VDD}
 N 520 -490 770 -490 {
 lab=#net2}
-N 460 -50 600 -50 {
-lab=vbias}
-N 460 10 600 10 {
-lab=VSS}
 N 560 -530 560 -490 {
 lab=#net2}
 N 520 -560 520 -530 {
@@ -114,8 +105,6 @@ N 1030 -390 1030 -330 {
 lab=voutstage1}
 N 770 -530 770 -490 {
 lab=#net2}
-N 1020 -60 1050 -60 {
-lab=vbias}
 N 1090 -60 1110 -60 {
 lab=VSS}
 N 1110 -60 1110 -20 {
@@ -128,10 +117,14 @@ N 1110 -480 1110 -430 {
 lab=VDD}
 N 1090 -480 1110 -480 {
 lab=VDD}
+N 430 10 500 10 {
+lab=VSS}
+N 500 10 590 10 {
+lab=VSS}
 C {devices/lab_pin.sym} 900 -260 0 1 {name=p2 sig_type=std_logic lab=IN_P
 }
 C {devices/iopin.sym} 430 -560 0 1 { name=p11 lab=VDD }
-C {devices/iopin.sym} 590 10 0 1 { name=p14 lab=VSS }
+C {devices/iopin.sym} 430 10 0 1 { name=p14 lab=VSS }
 C {devices/ammeter.sym} 520 -460 0 0 {name=vimeasn savecurrent=true}
 C {devices/ammeter.sym} 810 -450 0 0 {name=vimeasp savecurrent=true}
 C {devices/ammeter.sym} 670 -130 0 0 {name=vicom savecurrent=true}
@@ -142,7 +135,6 @@ C {devices/lab_pin.sym} 360 -260 0 0 {name=p3 sig_type=std_logic lab=IN_N
 C {devices/ipin.sym} 400 -430 0 1 { name=p1 lab=IN_N}
 C {devices/opin.sym} 400 -400 0 0 { name=p10 lab=VOUT }
 C {devices/ipin.sym} 400 -450 0 1 { name=p16 lab=IN_P }
-C {devices/vsource.sym} 460 -20 0 0 {name=V3 value=1.5}
 C {devices/lab_pin.sym} 1090 0 0 0 {name=p5 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 1090 -290 0 1 {name=p6 sig_type=std_logic lab=VOUT}
 C {sky130_fd_pr/cap_mim_m3_1.sym} 1060 -330 1 0 {name=C1 model=cap_mim_m3_1 W=1 L=1 MF=1 spiceprefix=X}
@@ -192,7 +184,7 @@ C {sky130_fd_pr/pfet_g5v0d10v5.sym} 1070 -430 0 0 {name=M1
 W=16
 L=0.5
 nf=1
-mult=5
+mult=2
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -206,7 +198,7 @@ C {sky130_fd_pr/nfet_g5v0d10v5.sym} 1070 -60 0 0 {name=M4
 W=8
 L=0.5
 nf=1
-mult=5
+mult=2
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -216,8 +208,6 @@ sa=0 sb=0 sd=0
 model=nfet_g5v0d10v5
 spiceprefix=X
 }
-C {devices/lab_pin.sym} 530 -50 3 1 {name=p7 sig_type=std_logic lab=vbias}
-C {devices/lab_pin.sym} 1020 -60 3 1 {name=p8 sig_type=std_logic lab=vbias}
 C {devices/lab_pin.sym} 890 -390 3 1 {name=p9 sig_type=std_logic lab=voutstage1}
 C {sky130_fd_pr/nfet3_03v3_nvt.sym} 500 -260 0 0 {name=M3
 W=4
@@ -249,5 +239,6 @@ sa=0 sb=0 sd=0
 model=nfet_03v3_nvt
 spiceprefix=X
 }
-C {devices/lab_pin.sym} 460 -150 0 0 {name=p12 sig_type=std_logic lab=IREF
-}
+C {devices/iopin.sym} 410 -370 0 1 { name=p13 lab=VBIASN_G5W2L1 }
+C {devices/lab_pin.sym} 610 -50 0 0 {name=p74 sig_type=std_logic lab=VBIASN_G5W2L1}
+C {devices/lab_pin.sym} 1050 -60 0 0 {name=p8 sig_type=std_logic lab=VBIASN_G5W2L1}
