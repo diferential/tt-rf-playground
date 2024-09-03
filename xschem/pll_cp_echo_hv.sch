@@ -49,7 +49,7 @@ N 1310 -510 1310 -440 {
 lab=#net1}
 N 1500 -510 1500 -440 {
 lab=#net4}
-N 1690 -510 1690 -490 {
+N 1690 -510 1690 -420 {
 lab=#net6}
 N 1690 -590 1690 -570 {
 lab=#net7}
@@ -57,8 +57,6 @@ N 1500 -910 1500 -860 {
 lab=VDD}
 N 1500 -930 1500 -910 {
 lab=VDD}
-N 1690 -430 1690 -330 {
-lab=VSS}
 N 1690 -930 1690 -860 {
 lab=VDD}
 N 1500 -610 1500 -570 {
@@ -66,6 +64,8 @@ lab=#net8}
 N 1500 -930 1690 -930 {
 lab=VDD}
 N 1500 -330 1690 -330 {
+lab=VSS}
+N 1690 -360 1690 -330 {
 lab=VSS}
 C {/home/emilian/tt/local/share/xschem/xschem_library/devices/opin.sym} 1690 -660 0 0 {name=p17 lab=VOUT}
 C {devices/ipin.sym} 1270 -330 0 0 {name=p7 lab=VSS}
@@ -180,7 +180,7 @@ model=nfet_g5v0d10v5
 spiceprefix=X
 }
 C {devices/lab_pin.sym} 1310 -600 1 0 {name=p11 sig_type=std_logic lab=IREF}
-C {sky130_fd_pr/nfet3_g5v0d10v5.sym} 1670 -460 0 0 {name=M6
+C {sky130_fd_pr/nfet3_g5v0d10v5.sym} 1670 -390 0 0 {name=M6
 W=2
 L=1
 body=VSS
@@ -230,5 +230,5 @@ C {devices/ammeter.sym} 1690 -620 0 0 {name=vidown savecurrent=true}
 C {devices/lab_pin.sym} 1540 -830 0 1 {name=p1 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 1650 -830 2 1 {name=p3 sig_type=std_logic lab=UPB}
 C {devices/lab_pin.sym} 1410 -390 3 1 {name=p6 sig_type=std_logic lab=VDD}
-C {devices/lab_pin.sym} 1650 -460 2 1 {name=p2 sig_type=std_logic lab=DN}
+C {devices/lab_pin.sym} 1650 -390 2 1 {name=p2 sig_type=std_logic lab=DN}
 C {devices/ipin.sym} 1350 -790 0 0 {name=p4 lab=IREF}

@@ -13,8 +13,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2e-12
-x2=1.33852e-06
+x1=1.12605e-05
+x2=1.12722e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -44,8 +44,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2e-12
-x2=1.33852e-06
+x1=1.12605e-05
+x2=1.12722e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -78,8 +78,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2e-12
-x2=1.33852e-06
+x1=1.12605e-05
+x2=1.12722e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -103,15 +103,15 @@ node="AB1
 A1C
 B1"}
 B 2 1920 -1050 2720 -650 {flags=graph
-y1=1.7
-y2=1.9
+y1=1.4
+y2=1.5
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2e-12
-x2=1.33852e-06
+x1=1.12605e-05
+x2=1.12722e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -139,8 +139,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2e-12
-x2=1.33852e-06
+x1=1.12605e-05
+x2=1.12722e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -171,8 +171,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2e-12
-x2=1.33852e-06
+x1=1.12605e-05
+x2=1.12722e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -194,15 +194,15 @@ node="\\"UP 8 +\\"
 \\"DN 4 +\\"
 \\"R 0 +\\""}
 B 2 2720 -1050 3520 -650 {flags=graph
-y1=0.0043
-y2=1.7
+y1=1.4
+y2=1.5
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2e-12
-x2=1.33852e-06
+x1=1.12605e-05
+x2=1.12722e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -229,8 +229,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2e-12
-x2=1.33852e-06
+x1=1.12605e-05
+x2=1.12722e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -553,7 +553,7 @@ C {devices/lab_pin.sym} 1030 -1710 2 0 {name=p60 sig_type=std_logic lab=VDD
 }
 C {devices/lab_pin.sym} 1030 -1840 2 0 {name=p61 sig_type=std_logic lab=VDD
 }
-C {sky130_fd_pr/cap_mim_m3_1.sym} 1780 -1720 0 0 {name=C1 model=cap_mim_m3_1 W=2 L=2 MF=1 spiceprefix=X
+C {sky130_fd_pr/cap_mim_m3_1.sym} 1780 -1720 0 0 {name=C1 model=cap_mim_m3_1 W=5 L=5 MF=1 spiceprefix=X
 }
 C {devices/lab_pin.sym} 1780 -1690 0 0 {name=p30 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 1490 -1920 3 0 {name=p11 sig_type=std_logic lab=D1

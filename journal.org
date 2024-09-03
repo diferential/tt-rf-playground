@@ -3,11 +3,17 @@
 ** TODO LVS checks - run on top level PLL block
 ** TODO macro jtag 8 bits serial
 ** TODO macro divisor and control circuit
+** TODO layout CP filter caps bank
 ** TODO layout main PLL
-** TODO layout charge pump
+** DONE layout charge pump
+CLOSED: [2024-09-03 Tue 10:13]
 ** DONE layout phase detector
 CLOSED: [2024-09-01 Sun 20:06]
-** TODO layout opamp3hv
+** DONE layout opamp3hv
+CLOSED: [2024-09-02 Mon 23:40]
+:LOGBOOK:
+CLOCK: [2024-09-02 Mon 19:40]--[2024-09-02 Mon 23:36] =>  3:56
+:END:
 ** DONE layout current sources
 CLOSED: [2024-08-23 Fri 09:14]
 - [X] root currents
