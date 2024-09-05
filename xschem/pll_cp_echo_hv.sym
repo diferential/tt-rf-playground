@@ -18,12 +18,12 @@ L 4 130 -30 150 -30 {}
 L 4 0 40 0 60 {}
 L 4 -150 -10 -130 -10 {}
 L 4 -90 -60 -90 -40 {}
-B 5 -2.5 -62.5 2.5 -57.5 {name=VDD dir=in}
-B 5 -152.5 7.5 -147.5 12.5 {name=DN dir=in}
-B 5 147.5 -32.5 152.5 -27.5 {name=VOUT dir=out}
-B 5 -2.5 57.5 2.5 62.5 {name=VSS dir=in}
-B 5 -152.5 -12.5 -147.5 -7.5 {name=UPB dir=in}
-B 5 -92.5 -62.5 -87.5 -57.5 {name=IREF dir=in}
+B 5 -152.5 -12.5 -147.5 -7.5 {name=UPB dir=in sim_pinnumber=0}
+B 5 -152.5 7.5 -147.5 12.5 {name=DN dir=in sim_pinnumber=1}
+B 5 147.5 -32.5 152.5 -27.5 {name=VOUT dir=out sim_pinnumber=2}
+B 5 -92.5 -62.5 -87.5 -57.5 {name=IREF dir=in sim_pinnumber=3}
+B 5 -2.5 -62.5 2.5 -57.5 {name=VDD dir=in sim_pinnumber=4}
+B 5 -2.5 57.5 2.5 62.5 {name=VSS dir=in sim_pinnumber=5}
 T {@symname} -72 -6 0 0 0.3 0.3 {}
 T {@name} 135 -52 0 0 0.2 0.2 {}
 T {VDD} 15 -26 2 0 0.2 0.2 {}

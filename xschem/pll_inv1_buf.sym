@@ -18,12 +18,12 @@ L 4 130 30 150 30 {}
 L 7 70 -70 70 -50 {}
 L 7 -90 -70 -90 -50 {}
 L 7 -30 50 -30 70 {}
-B 5 67.5 -72.5 72.5 -67.5 {name=VPB dir=inout}
-B 5 -92.5 -72.5 -87.5 -67.5 {name=VDD dir=inout}
-B 5 -32.5 67.5 -27.5 72.5 {name=VSS dir=inout}
-B 5 -152.5 -2.5 -147.5 2.5 {name=D dir=in}
-B 5 147.5 -2.5 152.5 2.5 {name=Q dir=out}
-B 5 147.5 27.5 152.5 32.5 {name=QB dir=out}
+B 5 -152.5 -2.5 -147.5 2.5 {name=D dir=in sim_pinnumber=0}
+B 5 147.5 -2.5 152.5 2.5 {name=Q dir=out sim_pinnumber=1}
+B 5 147.5 27.5 152.5 32.5 {name=QB dir=out sim_pinnumber=2}
+B 5 67.5 -72.5 72.5 -67.5 {name=VPB dir=inout sim_pinnumber=3}
+B 5 -92.5 -72.5 -87.5 -67.5 {name=VDD dir=inout sim_pinnumber=4}
+B 5 -32.5 67.5 -27.5 72.5 {name=VSS dir=inout sim_pinnumber=5}
 T {@symname} -72 -6 0 0 0.3 0.3 {}
 T {@name} 135 -62 0 0 0.2 0.2 {}
 T {VPB} 66 -45 3 1 0.2 0.2 {}

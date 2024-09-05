@@ -17,12 +17,12 @@ L 4 -40 50 50 0 {}
 L 4 -0 -40 -0 -22.5 {}
 L 4 -0 27.5 0 40 {}
 L 4 30 10 30 40 {}
-B 5 -2.5 -42.5 2.5 -37.5 {name=VDD dir=inout}
-B 5 -62.5 27.5 -57.5 32.5 {name=IN_P dir=in}
-B 5 -62.5 -12.5 -57.5 -7.5 {name=IN_N dir=in}
-B 5 67.5 -2.5 72.5 2.5 {name=VOUT dir=out}
-B 5 -2.5 37.5 2.5 42.5 {name=VSS dir=inout}
-B 5 27.5 37.5 32.5 42.5 {name=VBIASN_G5W2L1 dir=inout}
+B 5 -62.5 -12.5 -57.5 -7.5 {name=IN_N dir=in sim_pinnumber=0}
+B 5 -62.5 27.5 -57.5 32.5 {name=IN_P dir=in sim_pinnumber=1}
+B 5 67.5 -2.5 72.5 2.5 {name=VOUT dir=out sim_pinnumber=2}
+B 5 27.5 37.5 32.5 42.5 {name=VBIASN_G5W2L1 dir=inout sim_pinnumber=3}
+B 5 -2.5 -42.5 2.5 -37.5 {name=VDD dir=inout sim_pinnumber=4}
+B 5 -2.5 37.5 2.5 42.5 {name=VSS dir=inout sim_pinnumber=5}
 T {@symname} -25 -16 0 0 0.3 0.3 {}
 T {@name} 15 -32 0 0 0.2 0.2 {}
 T {+} -35 16 0 0 0.4 0.4 {}

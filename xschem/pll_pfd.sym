@@ -2,9 +2,9 @@ v {xschem version=3.4.4 file_version=1.2
 }
 G {}
 K {type=subcircuit
-format="@name @pinlist @VSS @VNB @VPB @VDD @symname"
-template="name=x1 VSS=VSS VNB=VNB VPB=VPB VDD=VDD"
-extra="VSS VNB VDD VPB"}
+format="@name @pinlist @VDD @VSS @symname"
+template="name=x1 VDD=VDDVSS=VSS"
+extra="VDD VSS"}
 V {}
 S {}
 E {}
@@ -17,11 +17,11 @@ L 4 -60 30 60 30 {}
 L 4 -60 -60 -60 30 {}
 L 4 60 -60 60 30 {}
 L 4 60 20 80 20 {}
-B 5 -82.5 -52.5 -77.5 -47.5 {name=A dir=in}
-B 5 -82.5 -12.5 -77.5 -7.5 {name=B dir=in}
-B 5 77.5 -52.5 82.5 -47.5 {name=QA dir=out}
-B 5 77.5 -2.5 82.5 2.5 {name=QB dir=out}
-B 5 77.5 17.5 82.5 22.5 {name=R dir=out}
+B 5 -82.5 -52.5 -77.5 -47.5 {name=A dir=in sim_pinnumber=0}
+B 5 -82.5 -12.5 -77.5 -7.5 {name=B dir=in sim_pinnumber=1}
+B 5 77.5 -52.5 82.5 -47.5 {name=QA dir=out sim_pinnumber=2}
+B 5 77.5 -2.5 82.5 2.5 {name=QB dir=out sim_pinnumber=3}
+B 5 77.5 17.5 82.5 22.5 {name=R dir=out sim_pinnumber=4}
 P 4 8 -30 -40 -20 -50 -10 -40 -0 -50 10 -40 20 -50 30 -40 -30 -40 {}
 T {@symname} -49.5 -36 0 0 0.3 0.3 {}
 T {@name} 25 -72 0 0 0.2 0.2 {}

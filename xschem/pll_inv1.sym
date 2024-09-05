@@ -2,16 +2,16 @@ v {xschem version=3.4.4 file_version=1.2
 }
 G {}
 K {type=subcircuit
-format="@name @pinlist @VSS @VDD @symname"
-template="name=x1 VSS=VSS VDD=VDD"
-extra="VSS VDD"}
+format="@name @pinlist @VDD @VSS @symname"
+template="name=x1  VDD=VDD VSS=VSS"
+extra="VDD VSS"}
 V {}
 S {}
 E {}
 L 4 -50 0 -30 0 {}
 L 4 0 0 20 0 {}
-B 5 -52.5 -2.5 -47.5 2.5 {name=D dir=in}
-B 5 17.5 -2.5 22.5 2.5 {name=Q dir=out}
+B 5 -52.5 -2.5 -47.5 2.5 {name=D dir=in sim_pinnumber=0}
+B 5 17.5 -2.5 22.5 2.5 {name=Q dir=out sim_pinnumber=1}
 A 4 2.083333333333333 0.416666666666667 2.946278254943948 81.86989764584403 360 {}
 P 4 4 -30 -10 -30 10 -0 0 -30 -10 {}
 T {@name} -25 -22 0 0 0.2 0.2 {}

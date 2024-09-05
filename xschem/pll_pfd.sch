@@ -181,8 +181,7 @@ N 290 240 340 240 {
 lab=RBB}
 C {devices/ipin.sym} -450 -280 0 0 {name=p12 lab=A}
 C {devices/ipin.sym} -450 -260 0 0 {name=p13 lab=B}
-C {devices/ipin.sym} -450 -230 0 0 {name=p2 lab=VPB
-}
+C {devices/iopin.sym} -450 -230 2 0 {name=p2 lab=VDD}
 C {devices/ipin.sym} -450 -210 0 0 {name=p16 lab=VSS
 }
 C {pll_nor.sym} -140 -310 0 0 {name=x1 VSS=VSS VDD=VDD}
