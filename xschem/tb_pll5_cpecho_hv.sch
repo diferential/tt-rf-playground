@@ -6,15 +6,15 @@ V {}
 S {}
 E {}
 B 2 1920 -1450 2720 -1050 {flags=graph
-y1=-0.43
-y2=3.4
+y1=-0.41
+y2=7.4
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.12605e-05
-x2=1.12722e-05
+x1=2.64026e-06
+x2=2.80529e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -44,8 +44,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.12605e-05
-x2=1.12722e-05
+x1=2.64026e-06
+x2=2.80529e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -78,8 +78,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.12605e-05
-x2=1.12722e-05
+x1=2.64026e-06
+x2=2.80529e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -103,15 +103,15 @@ node="AB1
 A1C
 B1"}
 B 2 1920 -1050 2720 -650 {flags=graph
-y1=1.4
-y2=1.5
+y1=1.2
+y2=1.7
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.12605e-05
-x2=1.12722e-05
+x1=2.64026e-06
+x2=2.80529e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -139,8 +139,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.12605e-05
-x2=1.12722e-05
+x1=2.64026e-06
+x2=2.80529e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -171,8 +171,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.12605e-05
-x2=1.12722e-05
+x1=2.64026e-06
+x2=2.80529e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -194,15 +194,15 @@ node="\\"UP 8 +\\"
 \\"DN 4 +\\"
 \\"R 0 +\\""}
 B 2 2720 -1050 3520 -650 {flags=graph
-y1=1.4
-y2=1.5
+y1=0.011
+y2=1.8
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.12605e-05
-x2=1.12722e-05
+x1=2.64026e-06
+x2=2.80529e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -229,8 +229,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.12605e-05
-x2=1.12722e-05
+x1=2.64026e-06
+x2=2.80529e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -525,7 +525,7 @@ L=20
 model=res_xhigh_po_0p35
 spiceprefix=X
 mult=1}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 1130 -2030 0 0 {name=C2 model=cap_mim_m3_1 W=5 L=5 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 1130 -2030 0 0 {name=C2 model=cap_mim_m3_1 W=20 L=20 MF=1 spiceprefix=X}
 C {devices/lab_pin.sym} 1210 -2000 0 0 {name=p32 sig_type=std_logic lab=A1C}
 C {devices/lab_pin.sym} 1130 -2000 2 1 {name=p13 sig_type=std_logic lab=AB1
 }
@@ -573,14 +573,14 @@ C {devices/lab_pin.sym} 960 -1990 0 1 {name=p65 sig_type=std_logic lab=AB[4..0]}
 C {pll_inv1.sym} 1260 -1970 0 0 {name=x20 VSS=VSS VDD=VDD}
 C {pll_cp_echo_hv.sym} 1310 -1750 0 0 {name=x4}
 C {devices/lab_pin.sym} 1220 -1810 1 0 {name=p16 sig_type=std_logic lab=IREF_CP}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 1650 -1290 0 0 {name=C3 model=cap_mim_m3_1 W=200 L=50 MF=1 spiceprefix=X
+C {sky130_fd_pr/cap_mim_m3_1.sym} 1650 -1290 0 0 {name=C3 model=cap_mim_m3_1 W=100 L=50 MF=1 spiceprefix=X
 }
 C {devices/res.sym} 1650 -1360 0 0 {name=R2
-value=500
+value=3000
 footprint=1206
 device=resistor
 m=1}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 1740 -1190 0 0 {name=C4 model=cap_mim_m3_1 W=50 L=1 MF=1 spiceprefix=X
+C {sky130_fd_pr/cap_mim_m3_1.sym} 1740 -1190 0 0 {name=C4 model=cap_mim_m3_1 W=20 L=1 MF=1 spiceprefix=X
 }
 C {devices/lab_pin.sym} 1630 -1430 2 1 {name=p24 sig_type=std_logic lab=VCP
 }

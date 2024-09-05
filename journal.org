@@ -3,6 +3,7 @@
 ** TODO LVS checks - run on top level PLL block
 ** TODO macro jtag 8 bits serial
 ** TODO macro divisor and control circuit
+** TODO layout feedback divisor
 ** TODO layout CP filter caps bank
 ** TODO layout main PLL
 ** DONE layout charge pump
