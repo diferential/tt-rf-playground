@@ -13,8 +13,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2.7472e-06
-x2=2.762e-06
+x1=8.72168e-06
+x2=8.77945e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -44,8 +44,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2.7472e-06
-x2=2.762e-06
+x1=8.72168e-06
+x2=8.77945e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -71,15 +71,15 @@ node="\\"VREF 6 +\\"
 \\"VREFF 2 +\\"
 PLL_OUT"}
 B 2 1120 -1050 1920 -650 {flags=graph
-y1=-0.11
-y2=1.8
+y1=-0.047
+y2=2
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2.7472e-06
-x2=2.762e-06
+x1=8.72168e-06
+x2=8.77945e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -100,8 +100,8 @@ logy=0
 
 color="4 8 5"
 node="x1.AB1
-x1.A1C
-x1.B1"}
+x1.x25.A1C
+FB_PREDIV"}
 B 2 1920 -1050 2720 -650 {flags=graph
 y1=1.2
 y2=1.7
@@ -110,8 +110,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2.7472e-06
-x2=2.762e-06
+x1=8.72168e-06
+x2=8.77945e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -139,8 +139,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2.7472e-06
-x2=2.762e-06
+x1=8.72168e-06
+x2=8.77945e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -171,8 +171,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2.7472e-06
-x2=2.762e-06
+x1=8.72168e-06
+x2=8.77945e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -194,15 +194,15 @@ node="\\"x1.UP 8 +\\"
 \\"x1.DN 4 +\\"
 \\"x1.R 0 +\\""}
 B 2 2720 -1050 3520 -650 {flags=graph
-y1=0.013
+y1=0.014
 y2=1.8
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2.7472e-06
-x2=2.762e-06
+x1=8.72168e-06
+x2=8.77945e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -229,8 +229,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2.7472e-06
-x2=2.762e-06
+x1=8.72168e-06
+x2=8.77945e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -346,7 +346,7 @@ only_toplevel=false
 value="
 .options savecurrents 
 .OPTIONS RAMPTIME=1ns
-VREF VREF 0 pulse 1.8 0 100n 10p 10p 8n 16n
+VREF VREF 0 pulse 1.8 0 100n 10p 10p 32n 64n
 VREFF VREFF 0 pulse 1.8 0 100n 50p 50p 0.5n 1n
 VBOOT VBOOT 0 pulse 1.8 0 0n 2n 2n 200n 200u
 .control

@@ -1,0 +1,85 @@
+magic
+tech sky130A
+timestamp 1725582450
+<< metal1 >>
+rect 1385 350 1390 410
+rect 1450 350 1455 410
+rect -375 250 -370 330
+rect -290 250 1350 330
+rect -370 240 -290 250
+rect -270 35 -190 50
+rect -270 -25 120 35
+rect -270 -30 -190 -25
+rect -370 -230 -290 -220
+rect 1390 -230 1450 350
+rect -375 -310 -370 -230
+rect -290 -310 900 -230
+rect 1385 -310 1390 -230
+rect 1450 -310 1455 -230
+<< via1 >>
+rect 1390 350 1450 410
+rect -370 250 -290 330
+rect -370 -310 -290 -230
+rect 1390 -310 1450 -230
+<< metal2 >>
+rect 1390 410 1450 415
+rect -140 350 1390 410
+rect -370 330 -290 335
+rect -370 -230 -290 250
+rect -140 -230 -70 350
+rect 0 250 40 350
+rect 360 250 400 350
+rect 810 250 850 350
+rect 1260 250 1300 350
+rect 1390 345 1450 350
+rect 0 -135 20 155
+rect 85 135 145 155
+rect 535 135 595 155
+rect 985 -115 1005 135
+rect 305 -135 365 -115
+rect 755 -135 815 -115
+rect 890 -135 1005 -115
+rect 1380 -230 1460 -220
+rect -140 -310 1390 -230
+rect 1450 -310 1460 -230
+rect -370 -315 -290 -310
+rect 1380 -320 1460 -310
+<< metal3 >>
+rect 250 350 310 410
+rect 710 350 770 410
+rect 1150 350 1210 410
+rect 270 250 300 350
+rect 720 250 750 350
+rect 1170 250 1200 350
+rect 150 -330 180 -230
+rect 600 -330 630 -230
+rect 130 -390 190 -330
+rect 580 -390 640 -330
+use pll_inv1_buf  pll_inv1_0
+array 0 1 -450 0 0 -290
+timestamp 1720664591
+transform -1 0 400 0 -1 -25
+box -50 -45 400 245
+use pll_inv1_buf  pll_inv1_1
+array 0 2 450 0 0 290
+timestamp 1720664591
+transform 1 0 50 0 1 45
+box -50 -45 400 245
+<< labels >>
+flabel metal3 580 -390 640 -330 0 FreeSans 480 0 0 0 OUT1
+port 0 nsew
+flabel metal3 130 -390 190 -330 0 FreeSans 480 0 0 0 OUT2
+port 1 nsew
+flabel metal3 250 350 310 410 0 FreeSans 480 0 0 0 OUT3
+port 2 nsew
+flabel metal3 710 350 770 410 0 FreeSans 480 0 0 0 OUT4
+port 3 nsew
+flabel metal3 1150 350 1210 410 0 FreeSans 480 0 0 0 OUT5
+port 4 nsew
+flabel metal2 -140 350 -70 410 0 FreeSans 640 0 0 0 VPB
+port 5 nsew
+flabel metal2 -370 250 -290 330 0 FreeSans 640 0 0 0 VDD
+port 6 nsew
+flabel metal1 -270 -30 -190 50 0 FreeSans 640 0 0 0 VSS
+port 7 nsew
+<< end >>

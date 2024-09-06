@@ -13,9 +13,6 @@
 *.iopin FB_POST_DIV
 x3 PLL_REF FB_POST_DIV UP_LOW DN_LOW R_LOW VDPWR VSS pll_pfd
 x7 FB_PRE_DIV D1 VGND VGND VDPWR VDPWR net5 D1 sky130_fd_sc_hd__dfxbp_2
-x15 A1C FB_PRE_DIV VDPWR VSS pll_inv1
-XR1 A1C FB_PRE_DIV net6 sky130_fd_pr__res_xhigh_po_0p35 L=20 mult=1 m=1
-XC2 A1C AB1 sky130_fd_pr__cap_mim_m3_1 W=20 L=20 MF=1 m=1
 viosc VPWR_OSC VOUT_CP 0
 .save i(viosc)
 x6 VOUT_CP VCP VOUT_CP VBIASN_G5W2L1 VAPWR VSS opamp3hv
@@ -27,7 +24,6 @@ x13 A2 A3 AB3 VDPWR VPWR_OSC VSS pll_inv1_buf
 x12 A1 A2 AB2 VDPWR VPWR_OSC VSS pll_inv1_buf
 x11 A0 A1 AB1 VDPWR VPWR_OSC VSS pll_inv1_buf
 x10 A4 A0 AB0 VDPWR VPWR_OSC VSS pll_inv1_buf
-x20 A1C FB_PRE_DIV VDPWR VSS pll_inv1
 x4 UPB DN VCP IREF_CP VAPWR VSS pll_cp_echo_hv
 XC3 net2 VSS sky130_fd_pr__cap_mim_m3_1 W=100 L=50 MF=1 m=1
 R2 VCP net2 3000 m=1
@@ -35,12 +31,12 @@ XC4 VCP VSS sky130_fd_pr__cap_mim_m3_1 W=20 L=1 MF=1 m=1
 XM16 VCP BOOTB VDPWR VDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=8 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
 + as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
 + nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-x17 VDPWR VCP net7 VBIASN_G5W2L1 VAPWR VSS opamp3hv
-XM3 VCP net7 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=1 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
+x17 VDPWR VCP net6 VBIASN_G5W2L1 VAPWR VSS opamp3hv
+XM3 VCP net6 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=1 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
 + sa=0 sb=0 sd=0 mult=1 m=1
-x1 D1 D2 VGND VGND VDPWR VDPWR net8 D2 sky130_fd_sc_hd__dfxbp_2
-x5 D2 D3 VGND VGND VDPWR VDPWR net9 D3 sky130_fd_sc_hd__dfxbp_2
+x1 D1 D2 VGND VGND VDPWR VDPWR net7 D2 sky130_fd_sc_hd__dfxbp_2
+x5 D2 D3 VGND VGND VDPWR VDPWR net8 D3 sky130_fd_sc_hd__dfxbp_2
 x8 D3 net1 VGND VGND VDPWR VDPWR FB_POST_DIV net1 sky130_fd_sc_hd__dfxbp_2
 x18 FB_PRE_DIV net4 VDPWR VSS pll_inv1
 x2 net4 net3 VDPWR VSS pll_inv1
@@ -51,6 +47,7 @@ x21 net3 PLL_OUT VDPWR VSS pll_inv1
 x22 net3 PLL_OUT VDPWR VSS pll_inv1
 Vmeas VGND VSS 0
 .save i(vmeas)
+x25 AB1 FB_PRE_DIV VDPWR VSS pll_invresfb
 **.ends
 
 * expanding   symbol:  pll_pfd.sym # of pins=5
@@ -78,25 +75,6 @@ x12 net1 R VDD VSS pll_inv1
 x13 net1 R VDD VSS pll_inv1
 x14 net1 R VDD VSS pll_inv1
 x15 QB QA net3 VDD VSS pll_nand
-.ends
-
-
-* expanding   symbol:  pll_inv1.sym # of pins=2
-** sym_path: /home/emilian/work/tt-rf-playground/xschem/pll_inv1.sym
-** sch_path: /home/emilian/work/tt-rf-playground/xschem/pll_inv1.sch
-.subckt pll_inv1 D Q VDD VSS
-*.opin Q
-*.ipin D
-*.ipin VDD
-*.ipin VSS
-XM3 Q D net1 net1 sky130_fd_pr__pfet_01v8_lvt L=0.5 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1
-vpwr VDD net1 0
-.save i(vpwr)
-XM1 Q D VSS VSS sky130_fd_pr__nfet_01v8_lvt L=0.25 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1
 .ends
 
 
@@ -250,6 +228,40 @@ viup net9 VOUT 0
 .save i(viup)
 vidown VOUT net7 0
 .save i(vidown)
+.ends
+
+
+* expanding   symbol:  pll_inv1.sym # of pins=2
+** sym_path: /home/emilian/work/tt-rf-playground/xschem/pll_inv1.sym
+** sch_path: /home/emilian/work/tt-rf-playground/xschem/pll_inv1.sch
+.subckt pll_inv1 D Q VDD VSS
+*.opin Q
+*.ipin D
+*.ipin VDD
+*.ipin VSS
+XM3 Q D net1 net1 sky130_fd_pr__pfet_01v8_lvt L=0.5 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+vpwr VDD net1 0
+.save i(vpwr)
+XM1 Q D VSS VSS sky130_fd_pr__nfet_01v8_lvt L=0.25 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  pll_invresfb.sym # of pins=4
+** sym_path: /home/emilian/work/tt-rf-playground/xschem/pll_invresfb.sym
+** sch_path: /home/emilian/work/tt-rf-playground/xschem/pll_invresfb.sch
+.subckt pll_invresfb D Q VDPWR VSS
+*.opin Q
+*.ipin D
+*.iopin VDPWR
+*.iopin VSS
+x15 A1C Q VDPWR VSS pll_inv1
+XR1 A1C Q net1 sky130_fd_pr__res_xhigh_po_0p35 L=20 mult=1 m=1
+XC2 A1C D sky130_fd_pr__cap_mim_m3_1 W=4 L=4 MF=1 m=1
+x20 A1C Q VDPWR VSS pll_inv1
 .ends
 
 
