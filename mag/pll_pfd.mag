@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1725240473
+timestamp 1725637192
 << metal1 >>
 rect 0 2600 4160 2620
 rect 0 2480 840 2600
@@ -30,7 +30,7 @@ rect 3760 1800 3770 1860
 rect -200 1340 3400 1460
 rect 3520 1340 3820 1460
 rect -200 1320 3820 1340
-rect -200 100 -60 1320
+rect -200 60 -60 1320
 rect 3980 1240 4160 2440
 rect 0 1220 4160 1240
 rect 0 1100 860 1220
@@ -51,10 +51,13 @@ rect 3320 540 3610 600
 rect 3740 420 3750 500
 rect 3830 420 3840 500
 rect 3370 100 3380 140
-rect -200 20 3380 100
+rect 3350 60 3380 100
+rect -200 20 3380 60
 rect 3500 100 3510 140
-rect 3500 20 3980 100
-rect -200 0 3980 20
+rect 3500 70 3520 100
+rect 3940 70 4000 80
+rect 3500 20 4000 70
+rect -200 -80 4000 20
 << via1 >>
 rect 840 2480 960 2600
 rect 80 2040 140 2100
@@ -226,80 +229,80 @@ rect 1680 400 1760 415
 rect 440 395 530 400
 rect 440 380 520 395
 use pll_inv1  pll_inv1_0
-timestamp 1723400719
+timestamp 1725637192
 transform 1 0 3110 0 1 60
 box -110 -60 390 1120
 use pll_inv1  pll_inv1_1
-timestamp 1723400719
+timestamp 1725637192
 transform 1 0 3050 0 1 1420
 box -110 -60 390 1120
 use pll_inv1  pll_inv1_2
-timestamp 1723400719
+timestamp 1725637192
 transform 1 0 3590 0 1 60
 box -110 -60 390 1120
 use pll_inv1  pll_inv1_3
-timestamp 1723400719
+timestamp 1725637192
 transform 1 0 2570 0 1 1420
 box -110 -60 390 1120
 use pll_inv1  pll_inv1_4
-timestamp 1723400719
+timestamp 1725637192
 transform 1 0 3530 0 1 1420
 box -110 -60 390 1120
 use pll_nand  pll_nand_0
-timestamp 1723401136
+timestamp 1725637192
 transform 1 0 2510 0 1 60
 box -110 -60 550 1120
 use pll_nor  pll_nor_0
-timestamp 1723400899
+timestamp 1725637192
 transform 1 0 710 0 1 1420
 box -110 -60 550 1120
 use pll_nor  pll_nor_1
-timestamp 1723400899
+timestamp 1725637192
 transform 1 0 110 0 1 1420
 box -110 -60 550 1120
 use pll_nor  pll_nor_2
-timestamp 1723400899
+timestamp 1725637192
 transform 1 0 1910 0 1 1420
 box -110 -60 550 1120
 use pll_nor  pll_nor_3
-timestamp 1723400899
+timestamp 1725637192
 transform 1 0 1310 0 1 1420
 box -110 -60 550 1120
 use pll_nor  pll_nor_4
-timestamp 1723400899
+timestamp 1725637192
 transform 1 0 1310 0 1 60
 box -110 -60 550 1120
 use pll_nor  pll_nor_5
-timestamp 1723400899
+timestamp 1725637192
 transform 1 0 1910 0 1 60
 box -110 -60 550 1120
 use pll_nor  pll_nor_6
-timestamp 1723400899
+timestamp 1725637192
 transform 1 0 710 0 1 60
 box -110 -60 550 1120
 use pll_nor  pll_nor_7
-timestamp 1723400899
+timestamp 1725637192
 transform 1 0 110 0 1 60
 box -110 -60 550 1120
 << labels >>
-flabel metal2 20 440 80 500 0 FreeSans 960 0 0 0 A
+flabel metal2 20 440 80 500 0 FreeSans 1280 0 0 0 A
 port 0 nsew
-flabel metal2 1210 440 1270 500 0 FreeSans 960 0 0 0 B
+flabel metal2 1210 440 1270 500 0 FreeSans 1280 0 0 0 B
 port 1 nsew
-flabel metal2 2400 160 2460 220 0 FreeSans 640 0 0 0 QA
+flabel metal2 2400 160 2460 220 0 FreeSans 1280 0 0 0 QA
 port 2 nsew
-flabel metal2 2300 680 2360 740 0 FreeSans 640 0 0 0 QB
+flabel metal2 2300 680 2360 740 0 FreeSans 1280 0 0 0 QB
 port 3 nsew
-flabel metal2 2920 1780 3000 1860 0 FreeSans 640 0 0 0 R
+flabel metal2 2920 1780 3000 1860 0 FreeSans 1280 0 0 0 R
 port 4 nsew
 flabel metal2 620 540 680 600 0 FreeSans 640 0 0 0 QAB
 flabel metal2 1820 540 1880 600 0 FreeSans 640 0 0 0 QBB
 flabel metal2 1090 1900 1150 1920 0 FreeSans 640 0 0 0 RAB
 flabel metal2 2290 1900 2350 1920 0 FreeSans 640 0 0 0 RBB
-flabel metal1 0 0 100 100 0 FreeSans 1280 0 0 0 VSS
-port 5 nsew
 flabel metal1 0 2440 100 2540 0 FreeSans 1280 0 0 0 VDD
 port 6 nsew
 flabel metal2 2150 380 2210 440 0 FreeSans 640 0 0 0 RB
 flabel metal2 950 380 1010 440 0 FreeSans 640 0 0 0 RA
+flabel metal1 0 0 100 60 0 FreeSans 1280 0 0 0 VSS
+port 5 nsew
 << end >>

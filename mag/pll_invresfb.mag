@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1723403560
+timestamp 1725637192
 << metal1 >>
 rect -1080 2120 -120 2400
 rect -1080 80 -1000 2120
@@ -75,11 +75,11 @@ rect 399 620 400 700
 rect 480 620 481 700
 rect 399 619 481 620
 use pll_inv1  pll_inv1_0
-timestamp 1723400719
+timestamp 1725637192
 transform 1 0 570 0 1 60
 box -110 -60 390 1120
 use pll_inv1  pll_inv1_1
-timestamp 1723400719
+timestamp 1725637192
 transform 1 0 110 0 1 60
 box -110 -60 390 1120
 use sky130_fd_pr__cap_mim_m3_1_GZXQ59  sky130_fd_pr__cap_mim_m3_1_GZXQ59_0

@@ -13,8 +13,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=8.72168e-06
-x2=8.77945e-06
+x1=2e-12
+x2=1.2e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -44,8 +44,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=8.72168e-06
-x2=8.77945e-06
+x1=2e-12
+x2=1.2e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -78,8 +78,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=8.72168e-06
-x2=8.77945e-06
+x1=2e-12
+x2=1.2e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -103,15 +103,15 @@ node="x1.AB1
 x1.x25.A1C
 FB_PREDIV"}
 B 2 1920 -1050 2720 -650 {flags=graph
-y1=1.2
-y2=1.7
+y1=0.014
+y2=1.8
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=8.72168e-06
-x2=8.77945e-06
+x1=2e-12
+x2=1.2e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -129,8 +129,8 @@ logy=0
 
 
 color="18 7"
-node="VPWR_OSC
-VCP"}
+node="x1.VOUT_CP
+x1.VCP"}
 B 2 2720 -1450 3520 -1050 {flags=graph
 y1=-0.056
 y2=2
@@ -139,8 +139,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=8.72168e-06
-x2=8.77945e-06
+x1=2e-12
+x2=1.2e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -171,8 +171,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=8.72168e-06
-x2=8.77945e-06
+x1=2e-12
+x2=1.2e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -201,8 +201,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=8.72168e-06
-x2=8.77945e-06
+x1=2e-12
+x2=1.2e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -229,8 +229,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=8.72168e-06
-x2=8.77945e-06
+x1=2e-12
+x2=1.2e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -346,7 +346,7 @@ only_toplevel=false
 value="
 .options savecurrents 
 .OPTIONS RAMPTIME=1ns
-VREF VREF 0 pulse 1.8 0 100n 10p 10p 32n 64n
+VREF VREF 0 pulse 1.8 0 100n 10p 10p 8n 16n
 VREFF VREFF 0 pulse 1.8 0 100n 50p 50p 0.5n 1n
 VBOOT VBOOT 0 pulse 1.8 0 0n 2n 2n 200n 200u
 .control

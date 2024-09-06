@@ -1,11 +1,13 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1723400719
+timestamp 1725637192
 << nwell >>
 rect -110 540 380 1120
 << pwell >>
-rect -100 -60 390 470
+rect -100 40 390 470
+rect 280 0 390 40
+rect -100 -60 390 0
 << metal1 >>
 rect -100 1020 380 1120
 rect -100 780 100 1020
@@ -22,19 +24,20 @@ rect 80 160 120 360
 rect 200 160 360 260
 rect 0 80 200 120
 rect 280 40 360 160
-rect -100 -60 380 40
+rect 280 0 380 40
+rect -100 -60 380 0
 use sky130_fd_pr__nfet_01v8_lvt_CEX9U3  sky130_fd_pr__nfet_01v8_lvt_CEX9U3_0
-timestamp 1723384765
+timestamp 1725637093
 transform 1 0 168 0 1 176
 box -221 -229 221 229
 use sky130_fd_pr__pfet_01v8_lvt_6U8WF4  sky130_fd_pr__pfet_01v8_lvt_6U8WF4_0
-timestamp 1723384765
+timestamp 1725637093
 transform 1 0 128 0 1 831
 box -231 -284 231 284
 << labels >>
 flabel metal1 -100 1020 0 1120 0 FreeSans 800 0 0 0 VDD
 port 3 nsew
-flabel metal1 -60 -60 40 40 0 FreeSans 800 0 0 0 VSS
+flabel metal1 -60 -60 40 0 0 FreeSans 800 0 0 0 VSS
 port 4 nsew
 flabel metal1 160 360 240 440 0 FreeSans 800 0 0 0 Q
 port 5 nsew

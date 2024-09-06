@@ -170,7 +170,7 @@ value=3000
 footprint=1206
 device=resistor
 m=1}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 1750 -1400 0 0 {name=C4 model=cap_mim_m3_1 W=20 L=1 MF=1 spiceprefix=X
+C {sky130_fd_pr/cap_mim_m3_1.sym} 1750 -1400 0 0 {name=C4 model=cap_mim_m3_1 W=5 L=5 MF=1 spiceprefix=X
 }
 C {devices/lab_pin.sym} 1640 -1640 2 1 {name=p24 sig_type=std_logic lab=VCP
 }
