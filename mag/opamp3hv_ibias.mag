@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1731259974
+timestamp 1731260270
 << pwell >>
 rect -240 250 50 620
 << locali >>
@@ -123,17 +123,19 @@ rect 3420 1080 3460 1100
 rect 570 900 580 980
 rect 660 900 670 980
 rect -740 630 -650 780
-rect -490 640 -450 676
+rect -320 680 -280 686
+rect -470 676 -280 680
 rect -740 260 -520 630
-rect -490 420 -460 640
-rect -430 450 -420 610
-rect -360 450 -350 610
-rect -740 70 -650 260
-rect -490 190 -450 420
-rect -320 190 -280 686
+rect -490 610 -280 676
 rect -40 620 50 780
 rect 130 740 140 820
 rect 220 740 230 820
+rect -490 450 -420 610
+rect -360 450 -280 610
+rect -490 420 -280 450
+rect -740 70 -650 260
+rect -490 190 -450 420
+rect -320 190 -280 420
 rect -240 400 50 620
 rect -240 250 160 400
 rect -520 130 -510 190
@@ -258,8 +260,8 @@ rect 2580 1340 2640 1420
 rect 2310 1180 2370 1260
 rect 2860 1180 2920 1260
 rect 580 900 660 980
-rect -420 450 -360 610
 rect 140 740 220 820
+rect -420 450 -360 610
 rect -510 130 -410 190
 rect -350 130 -250 190
 rect 290 430 350 590
@@ -531,9 +533,7 @@ flabel metal1 100 2600 380 2840 0 FreeSans 960 0 0 0 VDD
 port 4 nsew
 flabel metal1 80 -240 360 0 0 FreeSans 960 0 0 0 VSS
 port 5 nsew
-flabel metal2 -40 110 40 190 0 FreeSans 960 0 0 0 VBIASN_G5W2L1
-port 6 nsew
 flabel metal2 -430 940 -350 1010 0 FreeSans 1600 0 0 0 IBIAS_SINK
-port 7 nsew
+port 6 nsew
 flabel metal1 860 1600 940 1680 0 FreeSans 640 0 0 0 VOUTSTAGE1
 << end >>
