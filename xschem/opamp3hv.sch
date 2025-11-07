@@ -91,12 +91,8 @@ N 810 -560 810 -530 {
 lab=VDD}
 N 1040 -560 1090 -560 {
 lab=VDD}
-N 1090 -400 1090 -90 {
-lab=VOUT}
 N 1090 -30 1090 0 {
 lab=VSS}
-N 1090 -560 1090 -460 {
-lab=VDD}
 N 810 -390 1050 -390 {
 lab=voutstage1}
 N 1050 -430 1050 -390 {
@@ -115,11 +111,31 @@ N 1090 -430 1110 -430 {
 lab=VDD}
 N 1110 -480 1110 -430 {
 lab=VDD}
-N 1090 -480 1110 -480 {
-lab=VDD}
 N 430 10 500 10 {
 lab=VSS}
 N 500 10 590 10 {
+lab=VSS}
+N 1090 -500 1090 -480 {
+lab=#net4}
+N 1090 -480 1090 -460 {
+lab=#net4}
+N 1110 -560 1110 -480 {
+lab=VDD}
+N 1090 -560 1110 -560 {
+lab=VDD}
+N 1090 -400 1090 -330 {
+lab=VOUT}
+N 1090 -110 1090 -90 {
+lab=#net5}
+N 1090 -290 1090 -170 {
+lab=VOUT}
+N 1090 -330 1090 -290 {
+lab=VOUT}
+N 1090 -30 1090 0 {
+lab=VSS}
+N 1110 -60 1110 -20 {
+lab=VSS}
+N 1090 -20 1110 -20 {
 lab=VSS}
 C {devices/lab_pin.sym} 900 -260 0 1 {name=p2 sig_type=std_logic lab=IN_P
 }
@@ -244,3 +260,5 @@ C {devices/lab_pin.sym} 610 -50 0 0 {name=p74 sig_type=std_logic lab=VBIASN_G5W2
 C {devices/lab_pin.sym} 1050 -60 0 0 {name=p8 sig_type=std_logic lab=VBIASN_G5W2L1}
 C {sky130_fd_pr/cap_mim_m3_1.sym} 950 -530 0 0 {name=C2 model=cap_mim_m3_1 W=4 L=4 MF=1 spiceprefix=X}
 C {devices/lab_pin.sym} 950 -500 3 0 {name=p7 sig_type=std_logic lab=VSS}
+C {devices/ammeter.sym} 1090 -530 0 0 {name=vimeasp1 savecurrent=true}
+C {devices/ammeter.sym} 1090 -140 0 0 {name=vimeasn1 savecurrent=true}

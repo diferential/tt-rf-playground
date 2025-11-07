@@ -13,8 +13,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=-8.53522e-07
-x2=5.58902e-06
+x1=0
+x2=6e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -33,15 +33,15 @@ color="4 8"
 node="VOUT3
 VOUT"}
 B 2 2760 -1230 3560 -830 {flags=graph
-y1=1.58093
-y2=2.11781
+y1=-1
+y2=3
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=-8.53522e-07
-x2=5.58902e-06
+x1=0
+x2=6e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -60,15 +60,15 @@ color="4 8"
 node="VOUT3B
 VRF"}
 B 2 1960 -1640 2760 -1240 {flags=graph
-y1=-168.23
-y2=374.594
+y1=-35.7619
+y2=81.2588
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=-8.53522e-07
-x2=5.58902e-06
+x1=0
+x2=6e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -84,17 +84,17 @@ logy=0
 
 
 color=4
-node=ph(vout3)}
+node=\\"ph(vout3)\\"}
 B 2 1960 -1240 2760 -840 {flags=graph
-y1=-8.9
-y2=68
+y1=-30.402
+y2=24.8056
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=-8.53522e-07
-x2=5.58902e-06
+x1=0
+x2=6e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -111,6 +111,32 @@ logy=0
 
 color=4
 node="\\"VOUT3 db20()\\""}
+B 2 2760 -830 3560 -430 {flags=graph
+y1=-1.5e-07
+y2=1.2e-08
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=0
+x2=6e-05
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+
+
+dataset=-1
+unitx=1
+logx=0
+logy=0
+
+
+
+
+color=4
+node=I(vmeas)}
 N 1630 -1530 1630 -1520 {
 lab=VSS}
 N 1740 -1530 1740 -1520 {
@@ -155,6 +181,16 @@ N 1530 -760 1700 -760 {
 lab=VOUT3B}
 N 1530 -760 1530 -660 {
 lab=VOUT3B}
+N 1860 -420 1880 -420 {
+lab=#net2}
+N 1500 -400 1560 -400 {
+lab=GND}
+N 1500 -450 1560 -450 {
+lab=VDDL}
+N 2180 -420 2210 -420 {
+lab=VBIAS_SINK}
+N 1660 -720 1660 -690 {
+lab=VBIAS_SINK}
 C {devices/code.sym} 1770 -1370 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
@@ -177,7 +213,7 @@ only_toplevel=false
 value="
 .options savecurrents
 * VRF VRF 0 1 sin 0.9 0.9 10MEG
-VRFS VRFS 0 dc 0.5 ac 1 sin 0.9 0.001 10MEG
+VRFS VRFS 0 dc 0.5 ac 1 sin 0.9 0.002 10MEG
 VRF VRF 0 dc 0.5 ac 1 sin 1 2 0.1Meg
 .control
   repeat 1
@@ -244,11 +280,28 @@ C {devices/lab_pin.sym} 1840 -760 0 1 {name=p6 sig_type=std_logic lab=VOUT3B}
 C {devices/lab_pin.sym} 1630 -580 0 0 {name=p7 sig_type=std_logic lab=VSS}
 C {devices/iopin.sym} 1630 -720 0 1 { name=p8 lab=VDD }
 C {devices/lab_pin.sym} 1490 -620 0 0 {name=p10 sig_type=std_logic lab=VRF}
-C {opamp3hv.sym} 1630 -650 0 0 {name=x2}
+C {opamp3hvs.sym} 1630 -650 0 0 {name=x2}
 C {devices/res.sym} 1800 -730 0 0 {name=R2
-value=200k
+value=10k
 footprint=1206
 device=resistor
 m=1}
 C {devices/lab_pin.sym} 1800 -640 0 0 {name=p1 sig_type=std_logic lab=VSS}
 C {devices/ammeter.sym} 1800 -670 0 0 {name=Vmeas savecurrent=true}
+C {root_currents1.sym} 1710 -420 0 0 {name=x1}
+C {/home/emilian/tt/local/share/xschem/xschem_library/devices/lab_pin.sym} 1750 -480 0 0 {name=p14 sig_type=std_logic lab=VDD}
+C {/home/emilian/tt/local/share/xschem/xschem_library/devices/gnd.sym} 1650 -360 0 0 {name=l5 lab=GND}
+C {/home/emilian/tt/local/share/xschem/xschem_library/devices/lab_pin.sym} 1650 -480 0 0 {name=p18 sig_type=std_logic lab=VDDL}
+C {root_currents1outp.sym} 2030 -420 0 0 {name=x4}
+C {/home/emilian/tt/local/share/xschem/xschem_library/devices/lab_pin.sym} 1850 -1510 0 0 {name=p20 sig_type=std_logic lab=VDDL}
+C {/home/emilian/tt/local/share/xschem/xschem_library/devices/vsource.sym} 1850 -1480 0 0 {name=V5 value=1.8 savecurrent=false}
+C {/home/emilian/tt/local/share/xschem/xschem_library/devices/gnd.sym} 1850 -1450 0 0 {name=l7 lab=GND}
+C {/home/emilian/tt/local/share/xschem/xschem_library/devices/lab_pin.sym} 2030 -480 0 0 {name=p21 sig_type=std_logic lab=VDD}
+C {/home/emilian/tt/local/share/xschem/xschem_library/devices/gnd.sym} 1500 -400 0 0 {name=l4 lab=GND}
+C {/home/emilian/tt/local/share/xschem/xschem_library/devices/lab_pin.sym} 1500 -450 0 0 {name=p16 sig_type=std_logic lab=VDDL}
+C {devices/lab_pin.sym} 2210 -420 0 1 {name=p3 sig_type=std_logic lab=VBIAS_SINK
+}
+C {devices/lab_pin.sym} 1660 -720 3 1 {name=p5 sig_type=std_logic lab=VBIAS_SINK
+}
+C {devices/lab_pin.sym} 1670 -860 0 1 {name=p4 sig_type=std_logic lab=VBIAS_SINK
+}
