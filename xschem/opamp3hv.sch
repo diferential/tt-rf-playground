@@ -153,10 +153,10 @@ C {devices/opin.sym} 400 -400 0 0 { name=p10 lab=VOUT }
 C {devices/ipin.sym} 400 -450 0 1 { name=p16 lab=IN_P }
 C {devices/lab_pin.sym} 1090 0 0 0 {name=p5 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 1090 -290 0 1 {name=p6 sig_type=std_logic lab=VOUT}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 1060 -330 1 0 {name=C1 model=cap_mim_m3_1 W=2 L=2 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 1060 -330 3 0 {name=C1 model=cap_mim_m3_1 W=2 L=2 MF=1 spiceprefix=X}
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 650 -50 0 0 {name=M6
-W=2
-L=1
+W=4
+L=0.5
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -170,7 +170,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 790 -530 0 0 {name=M8
 W=2
-L=1
+L=0.5
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -184,7 +184,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 540 -530 0 1 {name=M2
 W=2
-L=1
+L=0.5
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -258,7 +258,7 @@ spiceprefix=X
 C {devices/iopin.sym} 410 -370 0 1 { name=p13 lab=VBIASN_G5W2L1 }
 C {devices/lab_pin.sym} 610 -50 0 0 {name=p74 sig_type=std_logic lab=VBIASN_G5W2L1}
 C {devices/lab_pin.sym} 1050 -60 0 0 {name=p8 sig_type=std_logic lab=VBIASN_G5W2L1}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 950 -530 0 0 {name=C2 model=cap_mim_m3_1 W=4 L=4 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 950 -530 2 0 {name=C2 model=cap_mim_m3_1 W=4 L=4 MF=1 spiceprefix=X}
 C {devices/lab_pin.sym} 950 -500 3 0 {name=p7 sig_type=std_logic lab=VSS}
 C {devices/ammeter.sym} 1090 -530 0 0 {name=vimeasp1 savecurrent=true}
 C {devices/ammeter.sym} 1090 -140 0 0 {name=vimeasn1 savecurrent=true}
