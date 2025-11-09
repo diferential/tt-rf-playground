@@ -35,15 +35,14 @@ N 690 -360 910 -360 {
 lab=#net1}
 N 730 -400 740 -400 {
 lab=VOUT}
-C {devices/lab_pin.sym} 600 -370 2 1 {name=p2 sig_type=std_logic lab=IN_P
-}
+C {devices/ipin.sym} 400 -430 0 1 { name=p1 lab=IN_N}
+C {devices/ipin.sym} 400 -450 0 1 { name=p16 lab=IN_P }
+C {devices/opin.sym} 740 -400 0 0 { name=p10 lab=VOUT }
 C {devices/iopin.sym} 660 -460 0 1 { name=p11 lab=VDD }
 C {devices/iopin.sym} 660 -330 0 1 { name=p14 lab=VSS }
-C {devices/lab_pin.sym} 600 -410 0 0 {name=p3 sig_type=std_logic lab=IN_N
+C {devices/iopin.sym} 950 -490 0 1 { name=p18 lab=VBIAS_SINK}
+C {devices/lab_pin.sym} 600 -370 2 1 {name=p2 sig_type=std_logic lab=IN_P
 }
-C {devices/ipin.sym} 400 -430 0 1 { name=p1 lab=IN_N}
-C {devices/opin.sym} 740 -400 0 0 { name=p10 lab=VOUT }
-C {devices/ipin.sym} 400 -450 0 1 { name=p16 lab=IN_P }
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 930 -310 0 0 {name=M1
 W=4
 L=0.5
@@ -59,6 +58,7 @@ model=nfet_g5v0d10v5
 spiceprefix=X
 }
 C {devices/lab_pin.sym} 950 -250 0 0 {name=p15 sig_type=std_logic lab=VSS}
-C {devices/iopin.sym} 950 -490 0 1 { name=p18 lab=VBIAS_SINK}
+C {devices/lab_pin.sym} 600 -410 0 0 {name=p3 sig_type=std_logic lab=IN_N
+}
 C {devices/ammeter.sym} 950 -440 0 0 {name=vimeasn2 savecurrent=true}
 C {opamp3hv.sym} 660 -400 0 0 {name=x1}

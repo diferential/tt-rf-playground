@@ -491,9 +491,9 @@ flabel metal1 860 1600 940 1680 0 FreeSans 640 0 0 0 VOUTSTAGE1
 flabel metal2 3420 1420 3660 1690 0 FreeSans 640 0 0 0 VOUT
 port 2 nsew
 flabel metal1 100 2600 380 2840 0 FreeSans 960 0 0 0 VDD
-port 4 nsew
+port 3 nsew
 flabel metal1 80 -240 360 0 0 FreeSans 960 0 0 0 VSS
-port 5 nsew
+port 4 nsew
 flabel metal2 -40 110 40 190 0 FreeSans 960 0 0 0 VBIASN_G5W2L1
-port 6 nsew
+port 5 nsew
 << end >>
