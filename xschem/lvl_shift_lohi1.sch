@@ -41,20 +41,20 @@ N 360 130 360 150 {
 lab=VSS}
 N 180 -100 360 -100 {
 lab=VDDH}
-C {devices/lab_pin.sym} -40 -130 2 1 {name=p2 sig_type=std_logic lab=VDDL
-}
-C {devices/ammeter.sym} -40 -90 0 0 {name=vpwr savecurrent=true}
-C {devices/lab_pin.sym} -40 150 2 1 {name=p5 sig_type=std_logic lab=VSS
-}
-C {devices/opin.sym} 360 40 0 0 {name=p11 lab=Q}
 C {devices/ipin.sym} -300 -10 0 0 {name=p12 lab=D}
+C {devices/opin.sym} 360 40 0 0 {name=p11 lab=Q}
+C {devices/opin.sym} 180 40 0 1 {name=p1 lab=QB}
 C {devices/iopin.sym} -300 -70 0 1 {name=p6 lab=VDDH
 }
 C {devices/iopin.sym} -300 -50 0 1 {name=p15 lab=VDDL
 }
 C {devices/iopin.sym} -300 -30 0 1 {name=p16 lab=VSS
 }
-C {devices/opin.sym} 180 40 0 1 {name=p1 lab=QB}
+C {devices/lab_pin.sym} -40 -130 2 1 {name=p2 sig_type=std_logic lab=VDDL
+}
+C {devices/ammeter.sym} -40 -90 0 0 {name=vpwr savecurrent=true}
+C {devices/lab_pin.sym} -40 150 2 1 {name=p5 sig_type=std_logic lab=VSS
+}
 C {sky130_fd_pr/pfet3_g5v0d10v5.sym} 200 -30 0 1 {name=M1
 W=2
 L=0.5
