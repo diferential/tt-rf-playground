@@ -31,7 +31,7 @@ XM2 net7 net3 VAPWR VDDCP sky130_fd_pr__pfet_g5v0d10v5 L=1 W=4 nf=1 ad='int((nf+
 XM7 VBIASN_G5W2L1 VBIASN_G5W2L1 VSS net8 sky130_fd_pr__nfet_g5v0d10v5 L=1 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
 + as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
 + nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-x1 VREF VBOOT PLL_OUT FB_PREDIV FB_POSTDIV VBIASN_G5W2L1 IREF_CP VAPWR VDPWR VSS tt08_pll
+x1 VREF VBOOT PLL_OUT FB_PREDIV FB_POSTDIV VBIASN_G5W2L1 IREF_CP VAPWR VDPWR VSS net9 tt08_pll
 **** begin user architecture code
 
 ** opencircuitdesign pdks install
@@ -200,10 +200,11 @@ vidsink DSINK net2 0
 .ends
 
 
-* expanding   symbol:  tt08_pll.sym # of pins=10
+* expanding   symbol:  tt08_pll.sym # of pins=11
 ** sym_path: /home/emilian/work/tt-rf-playground/xschem/tt08_pll.sym
 ** sch_path: /home/emilian/work/tt-rf-playground/xschem/tt08_pll.sch
 .subckt tt08_pll PLL_REF BOOTB PLL_OUT FB_PRE_DIV FB_POST_DIV VBIASN_G5W2L1 IREF_CP VAPWR VDPWR VGND
++ VCP
 *.iopin IREF_CP
 *.iopin VDPWR
 *.iopin VGND
@@ -214,6 +215,7 @@ vidsink DSINK net2 0
 *.iopin VBIASN_G5W2L1
 *.iopin FB_PRE_DIV
 *.iopin FB_POST_DIV
+*.iopin VCP
 x3 PLL_REF FB_POST_DIV UP_LOW DN_LOW R_LOW VDPWR VSS pll_pfd
 x7 FB_PRE_DIV D1 VGND VGND VDPWR VDPWR net5 D1 sky130_fd_sc_hd__dfxbp_2
 viosc VPWR_OSC VOUT_CP 0
@@ -230,7 +232,7 @@ x10 A4 A0 AB0 VDPWR VPWR_OSC VSS pll_inv1_buf
 x4 UPB DN VCP IREF_CP VAPWR VSS pll_cp_echo_hv
 XC3 net2 VSS sky130_fd_pr__cap_mim_m3_1 W=100 L=50 MF=1 m=1
 R2 VCP net2 3000 m=1
-XC4 VCP VSS sky130_fd_pr__cap_mim_m3_1 W=20 L=1 MF=1 m=1
+XC4 VCP VSS sky130_fd_pr__cap_mim_m3_1 W=5 L=5 MF=1 m=1
 XM16 VCP BOOTB VDPWR VDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=8 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
 + as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
 + nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1

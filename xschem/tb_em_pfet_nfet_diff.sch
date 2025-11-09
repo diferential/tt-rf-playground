@@ -6,15 +6,15 @@ V {}
 S {}
 E {}
 B 2 730 -870 1530 -470 {flags=graph
-y1=-0.014
-y2=0.071
+y1=-0.012
+y2=0.3
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.000312672
-x2=0.000793599
+x1=0
+x2=0.0008
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -31,15 +31,15 @@ logy=0
 color=4
 node="\\"VGX VG -\\""}
 B 2 2330 -1270 3130 -870 {flags=graph
-y1=-0.2
-y2=0.14
+y1=-0.18
+y2=0.56
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.000312672
-x2=0.000793599
+x1=0
+x2=0.0008
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -58,15 +58,15 @@ logy=0
 color=12
 node="\\"VD VDX -\\""}
 B 2 1530 -870 2330 -470 {flags=graph
-y1=-0.00041
-y2=0.00044
+y1=-0.00084
+y2=0.00087
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.000312672
-x2=0.000793599
+x1=0
+x2=0.0008
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -88,15 +88,15 @@ node="i(vid)
 i(vig)"
 hilight_wave=-1}
 B 2 2330 -870 3130 -470 {flags=graph
-y1=-0.16421
-y2=1.28899
+y1=0.086
+y2=1.6
 ypos1=0
 ypos2=2
-divy=5
+divy=10
 subdivy=1
 unity=1
-x1=0.000312672
-x2=0.000793599
+x1=0
+x2=0.0008
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -126,8 +126,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.000312672
-x2=0.000793599
+x1=0
+x2=0.0008
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -147,15 +147,15 @@ color="12 14"
 node="\\"VD 0.1 +\\"
 VDX"}
 B 2 1530 -1270 2330 -870 {flags=graph
-y1=0.15
-y2=2
+y1=0.0412691
+y2=2.17247
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0.000312672
-x2=0.000793599
+x1=0
+x2=0.0008
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -251,7 +251,7 @@ only_toplevel=true
 format="tcleval( @value )"
 value="
 ** opencircuitdesign pdks install
-.lib $::SKYWATER_MODELS/sky130.lib.spice tt_mm
+.lib $::SKYWATER_MODELS/sky130.lib.spice tt
 *.lib $::SKYWATER_STDCELLS/sky130_fd_sc_hd_blablabla.spice
                                                                                       
 .subckt sky130_fd_sc_hd__inv_1 A VGND VNB VPB VPWR Y                                                                
@@ -274,9 +274,9 @@ only_toplevel=false
 value="
 .options savecurrents 
 VCMD2X VCMD2X 0 pulse 1.2 1.2 0u 1n 1n 70u 140u
-VCMD2 VCMD2   0 sine 0.7 0.5 1k 0 0
+VCMD2 VCMD2   0 sine 1 0.8 1k 0 0
 VCMD1N VCMD1N 0 pulse 0   1.8 6u 1n 1n 10n 20u
-VCMD0 VCMD0   0 sine 1.70 0.1 100meg 0 0
+VCMD0 VCMD0   0 sine 1.80 0.1 100meg 0 0
 VCMD1 VCMD1   0 pulse 1.8   0 7u 1n 1n 5u 10m
 * VCMD0 VCMD0   0 pulse 1.20 1.10 0n 1n 1n 50n  100n
 * VCMD1X VCMD1X   0 pulse 1.8 1.7 0.5m 1p 1p 5u  10u
@@ -342,8 +342,6 @@ C {devices/lab_pin.sym} 810 -1070 2 1 {name=p14 sig_type=std_logic lab=VSS
 C {devices/lab_pin.sym} 1070 -990 2 0 {name=p15 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} 1010 -990 0 0 {name=p16 sig_type=std_logic lab=VCMD1N
-}
-C {devices/lab_pin.sym} 850 -900 0 1 {name=p17 sig_type=std_logic lab=VCMD2X
 }
 C {devices/lab_pin.sym} 870 -1140 0 0 {name=p18 sig_type=std_logic lab=VDX
 }
@@ -432,11 +430,11 @@ C {devices/lab_pin.sym} 1430 -1550 2 1 {name=p9 sig_type=std_logic lab=VDD
 }
 C {devices/lab_pin.sym} 1050 -910 0 0 {name=p21 sig_type=std_logic lab=VCMD2
 }
-C {devices/capa.sym} 1360 -1140 1 0 {name=C1
+C {devices/capa.sym} 1360 -1160 1 0 {name=C1
 m=1
 value=0.01p
 footprint=1206
 device="ceramic capacitor"
 }
-C {devices/lab_pin.sym} 1330 -1140 2 1 {name=p22 sig_type=std_logic lab=VSS
+C {devices/lab_pin.sym} 1330 -1160 2 1 {name=p22 sig_type=std_logic lab=VSS
 }

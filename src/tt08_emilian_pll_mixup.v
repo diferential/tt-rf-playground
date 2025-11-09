@@ -28,9 +28,21 @@ module tt08_emilian_pll_mixup (
    opamp3hv op(
         .VDD(VDPWR),
         .VSS(VGND),
-      .IN_N(ua[7]),
-      .IN_P(ua[6]),
-      .VOUT(ua[5]),
+      	.IN_N(ua[7]),
+      	.IN_P(ua[6]),
+      	.VOUT(ua[5]));
+
+   tt08_pll(
+	.FB_POSTDIV(ui_in[0]),
+	.PLL_REF(ui_in[1]),
+	.PLL_OUT(uo_out[0]),
+	.FB_PREDIV(uo_out[1]),
+        .VBIASN_G5W2L1(VAPWR),
+        .IREF_CP(VAPWR),
+        .VAPWR(VAPWR),
+        .VDPWR(VDPWR),
+        .VGND(VGND),
+   );
      
     // ties for the output enables
     // assign uo_out[0] = VGND;

@@ -14,14 +14,14 @@ divy=5
 subdivy=1
 unity=1
 x1=0
-x2=5e-09
+x2=8e-09
 divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
 
 
-dataset=-1
+dataset=13
 unitx=1
 logx=0
 logy=0
@@ -31,25 +31,26 @@ logy=0
 
 
 hilight_wave=0
-color=4
-node="\\"VIN2 1.8 -\\""}
+color="4 15"
+node="\\"VIN2 1.8 -\\"
+\\"VIN1 1.8 -\\""}
 B 2 1930 -1630 2730 -1230 {flags=graph
-y1=-0.068
-y2=2.1
+y1=-0.39
+y2=0.25
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
 x1=0
-x2=5e-09
+x2=8e-09
 divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
 
 
-dataset=-1
+dataset=13
 unitx=1
 logx=0
 logy=0
@@ -63,9 +64,8 @@ logy=0
 
 rainbow=0
 
-color="5 4"
-node="VSENSE1
-VSENSE2"}
+color=5
+node="\\"VSENSE1 VSENSE2 -\\""}
 B 2 1930 -830 2730 -430 {flags=graph
 y1=0
 y2=6
@@ -75,14 +75,14 @@ divy=5
 subdivy=1
 unity=1
 x1=0
-x2=5e-09
+x2=8e-09
 divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
 
 
-dataset=-1
+dataset=13
 unitx=1
 logx=0
 logy=0
@@ -283,7 +283,7 @@ only_toplevel=true
 format="tcleval( @value )"
 value="
 ** opencircuitdesign pdks install
-.lib $::SKYWATER_MODELS/sky130.lib.spice tt
+.lib $::SKYWATER_MODELS/sky130.lib.spice tt_mm
 *.lib $::SKYWATER_STDCELLS/sky130_fd_sc_hd_blablabla.spice
                                                                                       
 .subckt sky130_fd_sc_hd__inv_1 A VGND VNB VPB VPWR Y                                                                
@@ -320,7 +320,7 @@ VCK CK 0 pulse 0 1.8 1n 1p 1p 1n 2n
 
       reset
       save all
-      tran 0.001n 5n
+      tran 0.001n 8n
       remzerovec
       write tb_strongarm_latch1.raw
       set appendwrite

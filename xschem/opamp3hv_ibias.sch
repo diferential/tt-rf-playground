@@ -56,13 +56,13 @@ lab=vcom}
 N 670 -100 670 -80 {
 lab=#net1}
 N 610 -50 630 -50 {
-lab=VBIASN_G5W2L1}
-N 520 -500 520 -490 {
 lab=#net2}
+N 520 -500 520 -490 {
+lab=#net3}
 N 520 -430 520 -410 {
 lab=VN}
 N 810 -490 810 -480 {
-lab=#net3}
+lab=#net4}
 N 810 -420 810 -370 {
 lab=voutstage1}
 N 360 -260 480 -260 {
@@ -74,7 +74,7 @@ lab=VDD}
 N 520 -560 810 -560 {
 lab=VDD}
 N 810 -500 810 -490 {
-lab=#net3}
+lab=#net4}
 N 810 -560 840 -560 {
 lab=VDD}
 N 850 -260 900 -260 {
@@ -82,9 +82,9 @@ lab=IN_P}
 N 840 -560 1040 -560 {
 lab=VDD}
 N 520 -490 770 -490 {
-lab=#net2}
+lab=#net3}
 N 560 -530 560 -490 {
-lab=#net2}
+lab=#net3}
 N 520 -560 520 -530 {
 lab=VDD}
 N 810 -560 810 -530 {
@@ -104,7 +104,7 @@ lab=voutstage1}
 N 1030 -390 1030 -330 {
 lab=voutstage1}
 N 770 -530 770 -490 {
-lab=#net2}
+lab=#net3}
 N 1090 -60 1110 -60 {
 lab=VSS}
 N 1110 -60 1110 -20 {
@@ -122,13 +122,18 @@ lab=VSS}
 N 500 10 590 10 {
 lab=VSS}
 N 770 -50 770 -20 {
-lab=VBIASN_G5W2L1}
+lab=IBIAS_SINK}
 N 770 -50 810 -50 {
-lab=VBIASN_G5W2L1}
+lab=IBIAS_SINK}
 N 710 10 810 10 {
 lab=VSS}
 N 810 -110 810 -50 {
-lab=VBIASN_G5W2L1}
+lab=IBIAS_SINK}
+N 810 -20 810 -0 {
+lab=#net5}
+N 610 -120 610 -50 {}
+N 610 -120 810 -120 {}
+N 810 -120 810 -100 {}
 C {devices/lab_pin.sym} 900 -260 0 1 {name=p2 sig_type=std_logic lab=IN_P
 }
 C {devices/iopin.sym} 430 -560 0 1 { name=p11 lab=VDD }
@@ -247,8 +252,6 @@ sa=0 sb=0 sd=0
 model=nfet_03v3_nvt
 spiceprefix=X
 }
-C {devices/iopin.sym} 410 -370 0 1 { name=p13 lab=VBIASN_G5W2L1 }
-C {devices/lab_pin.sym} 610 -50 0 0 {name=p74 sig_type=std_logic lab=VBIASN_G5W2L1}
 C {devices/lab_pin.sym} 1050 -60 0 0 {name=p8 sig_type=std_logic lab=VBIASN_G5W2L1}
 C {sky130_fd_pr/cap_mim_m3_1.sym} 950 -530 0 0 {name=C2 model=cap_mim_m3_1 W=4 L=4 MF=1 spiceprefix=X}
 C {devices/lab_pin.sym} 950 -500 3 0 {name=p7 sig_type=std_logic lab=VSS}

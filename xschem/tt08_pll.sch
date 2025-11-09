@@ -266,3 +266,4 @@ C {pll_invresfb.sym} 1240 -2050 0 0 {name=x25}
 C {devices/lab_pin.sym} 1240 -2000 0 0 {name=p12 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 1240 -2100 0 0 {name=p14 sig_type=std_logic lab=VDPWR
 }
+C {devices/iopin.sym} 1940 -1800 0 0 {name=p19 lab=VCP}

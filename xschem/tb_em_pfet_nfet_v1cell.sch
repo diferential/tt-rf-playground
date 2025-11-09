@@ -13,8 +13,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2.0609e-05
-x2=6.82741e-05
+x1=0
+x2=7.5e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -39,8 +39,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2.0609e-05
-x2=6.82741e-05
+x1=0
+x2=7.5e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -65,8 +65,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2.0609e-05
-x2=6.82741e-05
+x1=0
+x2=7.5e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -87,15 +87,15 @@ color=18
 node=VCMD2
 hilight_wave=-1}
 B 2 2330 -870 3130 -470 {flags=graph
-y1=-5.3e-08
-y2=0.00011
+y1=-5.6e-08
+y2=8.7e-05
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2.0609e-05
-x2=6.82741e-05
+x1=0
+x2=7.5e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -124,8 +124,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2.0609e-05
-x2=6.82741e-05
+x1=0
+x2=7.5e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -154,8 +154,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2.0609e-05
-x2=6.82741e-05
+x1=0
+x2=7.5e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -302,7 +302,7 @@ VCMD0 VCMD0   0 sine  0.9 0.9  100meg 0 0
     save all
     tran 0.1n 75u
     remzerovec
-    write tb_em_pfet_nfet.raw
+    write tb_em_pfet_nfet_v1cell.raw
     set appendwrite
     reset
     end

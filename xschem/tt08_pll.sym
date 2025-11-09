@@ -22,6 +22,7 @@ L 7 0 80 0 100 {}
 L 7 130 30 150 30 {}
 L 7 130 50 150 50 {}
 L 7 -150 60 -130 60 {}
+L 7 130 0 150 0 {}
 B 5 -152.5 -72.5 -147.5 -67.5 {name=PLL_REF dir=in sim_pinnumber=0}
 B 5 -152.5 -52.5 -147.5 -47.5 {name=BOOTB dir=in sim_pinnumber=1}
 B 5 147.5 -72.5 152.5 -67.5 {name=PLL_OUT dir=out sim_pinnumber=2}
@@ -32,6 +33,7 @@ B 5 -152.5 57.5 -147.5 62.5 {name=IREF_CP dir=inout sim_pinnumber=6}
 B 5 -12.5 -102.5 -7.5 -97.5 {name=VAPWR dir=inout sim_pinnumber=7}
 B 5 7.5 -102.5 12.5 -97.5 {name=VDPWR dir=inout sim_pinnumber=8}
 B 5 -2.5 97.5 2.5 102.5 {name=VGND dir=inout sim_pinnumber=9}
+B 5 147.5 -2.5 152.5 2.5 {name=VCP dir=inout sim_pinnumber=20}
 T {@symname} -54 -6 0 0 0.3 0.3 {}
 T {@name} 135 -92 0 0 0.2 0.2 {}
 T {PLL_OUT} 125 -74 0 1 0.2 0.2 {}
@@ -44,3 +46,4 @@ T {VGND} 4 75 1 1 0.2 0.2 {}
 T {FB_PRE_DIV} 125 26 0 1 0.2 0.2 {}
 T {FB_POST_DIV} 125 46 0 1 0.2 0.2 {}
 T {IREF_CP} -125 64 2 1 0.2 0.2 {}
+T {VCP} 125 -4 0 1 0.2 0.2 {}
