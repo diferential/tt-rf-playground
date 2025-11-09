@@ -253,21 +253,21 @@ timestamp 1724410421
 transform 0 -1 1198 1 0 2952
 box -352 -1198 352 1198
 << labels >>
-flabel metal2 3840 1780 3900 1840 0 FreeSans 800 0 0 0 EN_RESL
-port 0 nsew
-flabel metal2 4380 3160 4480 3260 0 FreeSans 800 0 0 0 VOUT1
-port 1 nsew
-flabel metal2 4380 2240 4480 2340 0 FreeSans 800 0 0 0 VOUT2
-port 2 nsew
-flabel metal2 4380 1380 4480 1480 0 FreeSans 800 0 0 0 VOUT3
-port 3 nsew
-flabel metal1 2440 3420 2640 3620 0 FreeSans 800 0 0 0 VDDH
-port 4 nsew
-flabel metal1 0 1340 200 1540 0 FreeSans 800 0 0 0 VDDL
-port 5 nsew
 flabel metal1 0 560 80 640 0 FreeSans 800 0 0 0 EN_RESH
+port 0 nsew
+flabel metal2 3840 1780 3900 1840 0 FreeSans 800 0 0 0 EN_RESL
+port 1 nsew
+flabel metal2 4380 3160 4480 3260 0 FreeSans 800 0 0 0 VOUT1
+port 2 nsew
+flabel metal2 4380 2240 4480 2340 0 FreeSans 800 0 0 0 VOUT2
+port 3 nsew
+flabel metal2 4380 1380 4480 1480 0 FreeSans 800 0 0 0 VOUT3
+port 4 nsew
+flabel metal1 2440 3420 2640 3620 0 FreeSans 800 0 0 0 VDDH
+port 5 nsew
+flabel metal1 0 1340 200 1540 0 FreeSans 800 0 0 0 VDDL
 port 6 nsew
-flabel metal2 2960 1960 3040 2040 0 FreeSans 800 0 0 0 VMID
 flabel metal1 2720 -40 2880 120 0 FreeSans 800 0 0 0 VSS
 port 7 nsew
+flabel metal2 2960 1960 3040 2040 0 FreeSans 800 0 0 0 VMID
 << end >>
