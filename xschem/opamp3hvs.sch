@@ -44,11 +44,11 @@ C {devices/lab_pin.sym} 600 -410 0 0 {name=p3 sig_type=std_logic lab=IN_N
 C {devices/ipin.sym} 400 -430 0 1 { name=p1 lab=IN_N}
 C {devices/opin.sym} 740 -400 0 0 { name=p10 lab=VOUT }
 C {devices/ipin.sym} 400 -450 0 1 { name=p16 lab=IN_P }
-C {sky130_fd_pr/nfet_g5v0d10v5.sym} 930 -310 0 0 {name=M7
-W=8
+C {sky130_fd_pr/nfet_g5v0d10v5.sym} 930 -310 0 0 {name=M1
+W=4
 L=0.5
 nf=1
-mult=2
+mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
